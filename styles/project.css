@@ -65,7 +65,7 @@ article p::first-letter{
     color: lightseagreen;
 }
 aside {
-    width: 15%;
+    width: 20%;
     float: right;
     background-color: #089;
     padding: 1em;
@@ -81,7 +81,7 @@ footer p.copyright{
 p.fixed{
     width:auto;
     position: fixed;
-    bottom: 40%;
+    bottom: 35%;
     right: 1;
     border: 3px solid darkgreen;
     background-color: lightgreen;
