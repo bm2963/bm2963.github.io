@@ -65,7 +65,7 @@ article p::first-letter{
     color: lightseagreen;
 }
 aside {
-    width: 20%;
+    width: 10%;
     float: right;
     background-color: #089;
     padding: 2em;
@@ -82,7 +82,7 @@ p.fixed{
     width:auto;
     position: fixed;
     bottom: 35%;
-    right: 0;
+    right: 5;
     border: 3px solid darkgreen;
     background-color: lightgreen;
 }
