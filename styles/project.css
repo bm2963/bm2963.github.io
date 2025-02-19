@@ -68,7 +68,7 @@ aside {
     width: 20%;
     float: right;
     background-color: #089;
-    padding: 1em;
+    padding: .5em;
 }
 footer{
     clear: both;
@@ -79,7 +79,7 @@ footer p.copyright{
     font-size: 80%;
 }
 p.fixed{
-    width:auto;
+    width:fit-content;
     position: fixed;
     bottom: 35%;
     right: 1;
