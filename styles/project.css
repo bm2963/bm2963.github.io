@@ -82,7 +82,7 @@ p.fixed{
     width:fit-content;
     position: fixed;
     bottom: 35%;
-    right: 1;
+    right: 0;
     border: 3px solid darkgreen;
     background-color: lightgreen;
 }
