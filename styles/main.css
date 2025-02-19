@@ -37,7 +37,7 @@ header img {
     margin-left: 2em;
 }
 .shadow {
-    text-shadow: 2px 2px 2px rgb(120, 128, 255);
+    text-shadow: 2px 2px 2px rgb(120, 0, 0);
 }
 main{
     clear: left;
