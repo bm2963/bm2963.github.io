@@ -1,5 +1,5 @@
 html {
-    background-image:linear-gradient(to bottom,white 0%, #fa8ae2 100%);
+    background-image:linear-gradient(to bottom,white 0%, #facd8a 100%);
 }
 
 body {
@@ -12,8 +12,7 @@ body {
     border: 1px solid black;
     border-radius: 25px;
     box-shadow: 5px 5px 0 0;
-    background-image:url("../images/neoncat.gif");
-    background-position:center;
+    background-image:url("../images/SH_orange.png");
     background-attachment: fixed;
 }
 a:hover, a:focus {
@@ -44,7 +43,6 @@ main{
 main h3 {
     margin: 3em 2em 1.5em;
     font-size: 105%;
-    color: white;
     border: 5px double blue;
     border-radius: 20px;
     box-shadow: 3px 3px 4px 4px red;
@@ -53,7 +51,6 @@ main h3 {
 main nav {
     margin: 1.5em 2em 1.5em;
     border: 5px dashed blue;
-    color: red;
     border-radius: 20px;
     box-shadow: 3px 3px 4px 4px red;
     padding: .5em;
@@ -65,7 +62,6 @@ main nav {
 main div {
 margin: 1.5em 2em 0 2em;
 border: 5px dotted blue;
-color: white;
 border-radius: 20px;
 box-shadow: 3px 3px 4px 4px red;
 padding: 1em;
