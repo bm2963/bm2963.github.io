@@ -83,6 +83,7 @@ article p::first-letter{
 aside {
     width: 20%;
     float: right;
+    position: fixed;
     background-color: #089;
     padding: .5em;
     
@@ -101,13 +102,4 @@ footer{
 footer p.copyright{
     text-align: center;
     font-size: 80%;
-}
-p.fixed{
-    width:auto;
-    position: fixed;
-    bottom: 5%;
-    right: 25%;
-    border: 3px solid darkgreen;
-    background-color: lightgreen;
-    padding: 15px 1em;
 }
