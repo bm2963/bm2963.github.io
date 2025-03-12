@@ -14,22 +14,92 @@
 #nav_menu ul li a.lastitem { border-right: none; }	
 #nav_menu ul li a.current { color: yellow;}
 
+html {
+    background-image:linear-gradient(to bottom,white 0%, #facd8a 100%);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width:1000px; 
+    background-color: white;
+    margin: 15px auto;
+    padding: 15px 1.5em;
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 5px 5px 0 0;
+}
+a:hover, a:focus {
+    font-style: italic;
+    color: orangered;
+}
+header{
+    clear: both;
+    border-bottom: 2px solid maroon;
+}
+header h1{
+    font-size: 175%;
+    color: maroon;
+    text-indent: 30px;
+}
+header h2{
+    font-size: 130%;
+    color: #089;
+    text-indent: 30px;
+}
+
+header img {
+    float: left;
+    margin-left: 2em;
+    border: 3px black;
+}
+.shadow {
+    text-shadow: 2px 2px 2px rgb(120, 128, 255);
+}
 article{
     clear: both;
+    width: 70%;
+    float: left;
+    column-count: 2;
+    column-rule: 2px dotted maroon;
+    column-gap: 2em;
+    margin-left: 2em;
 }
-aside ol{
-    list-style-type: upper-roman;
+article h3{
+    column-span: all;
+
 }
-aside ul{
-    list-style-type: square;
+article img{
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
 }
-nav{
+article p::first-letter{
+    font-size: 3em;
+    font-weight: bold;
+    font-style: italic;
+    color: lightseagreen;
+}
+aside {
+    width: 20%;
+    float: right;
+    background-color: #089;
+    padding: .5em;
+}
+footer{
+    clear: both;
+    border-top: 2px solid maroon;
+}
+footer p.copyright{
     text-align: center;
+    font-size: 80%;
 }
-h1{
-    text-align: center;
-    color: blueviolet;
-}
-h2{
-    color: rgb(226, 43, 43);
+p.fixed{
+    width:auto;
+    position: fixed;
+    bottom: 5%;
+    right: 25%;
+    border: 3px solid darkgreen;
+    background-color: lightgreen;
+    padding: 15px 1em;
 }
