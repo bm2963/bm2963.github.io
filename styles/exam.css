@@ -27,7 +27,7 @@ body {
     padding: 15px 1.5em;
     border: 1px solid black;
     background-image:url("../images/SH_orange.png");
-    background-size: 50;
+    background-size: 50%;
     background-position: right;
     background-repeat: repeat-y;
     border-radius: 25px;
