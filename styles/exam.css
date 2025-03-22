@@ -4,7 +4,7 @@
     text-align: center;
     display: block;
     width: 175px;
-    padding: 2em 2em;      /* padding above and below a
+    padding: 2em 0;      /* padding above and below a
                             elements */
     text-decoration: none;
     background-color: blue;
@@ -40,6 +40,7 @@ a:hover, a:focus {
 header{
     clear: both;
     border-bottom: 2px solid maroon;
+    padding: 1em 1em;
 }
 header h1{
     font-size: 175%;
