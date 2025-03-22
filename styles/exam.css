@@ -37,7 +37,7 @@ a:hover, a:focus {
     font-style: italic;
     color: orangered;
 }
-nav{
+header{
     clear: both;
     border-bottom: 2px solid maroon;
 }
