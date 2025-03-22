@@ -27,7 +27,7 @@ body {
     padding: 15px 1.5em;
     border: 1px solid black;
     background-image:url("../images/SH_orange.png");
-    background-position: right;
+    background-position: right 5%;
     background-repeat: repeat-y;
     border-radius: 25px;
     box-shadow: 5px 5px 0 0;
@@ -86,7 +86,7 @@ article p::first-letter{
 aside {
     width: 20%;
     float: right;
-    right: 15%;
+    right: 5%;
     position: fixed;
     background-color: #089;
     padding: .5em;
