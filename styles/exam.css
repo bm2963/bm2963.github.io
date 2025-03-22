@@ -87,7 +87,7 @@ aside {
     width: 20%;
     float: right;
     right: 5%;
-    position: fixed;
+    position: fixed right;
     background-color: #089;
     padding: .5em;
     
