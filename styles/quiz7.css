@@ -48,17 +48,18 @@ html, body {
         table.third th, table.third td {
         padding: 0.7em;
         vertical-align: middle;
+        border-top: solid red;
         }
         table.third thead tr:first-child{
             border-top: 2px red;
             border-bottom: 2px red;
         } 
         table.third tbody {
-            border-bottom: 2px solid rgb(255, 115, 0);
-            border-top: 2px solid rgb(255, 115, 0);
+            border-bottom: 2px solid red;
+            border-top: 2px solid red;
         } 
         table.third thead tr:last-child{
-            border-bottom: 2px orange;
+            border-bottom: 2px solid red;
         } 
         @media only screen and (max-width: 425px) {
             th, td {
