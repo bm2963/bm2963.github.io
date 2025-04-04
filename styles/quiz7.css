@@ -42,8 +42,8 @@ html, body {
         }
         table.third thead {
         background-color: lightgreen;
-        border-top: 2px red;
-        border-bottom: 2px red;
+        border-top: 2px solid red;
+        border-bottom: 2px solid red;
         }
         table.third th, table.third td {
         padding: 0.7em;
@@ -54,8 +54,8 @@ html, body {
             border-bottom: 2px red;
         } 
         table.third tbody {
-            border-bottom: 2px rgb(255, 115, 0);
-            border-top: 2px rgb(255, 115, 0);
+            border-bottom: 2px solid rgb(255, 115, 0);
+            border-top: 2px solid rgb(255, 115, 0);
         } 
         table.third thead tr:last-child{
             border-bottom: 2px orange;
