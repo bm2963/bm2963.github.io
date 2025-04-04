@@ -54,6 +54,9 @@ html, body {
             border-top: 2px orange;
             border-bottom: 2px orange;
         } 
+        table.third thead tr:third-child{
+            border-bottom: 2px orange;
+        } 
         @media only screen and (max-width: 425px) {
             th, td {
                 display: block;
