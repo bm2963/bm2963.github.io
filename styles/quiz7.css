@@ -37,7 +37,8 @@ html, body {
     /*-------------------------------------------------------------*/
     table.third {
         border-collapse: collapse;
-
+        border-top: 2px red;
+        border-bottom: 2px red;
         }
         table.third thead {
         background-color: lightgreen;
