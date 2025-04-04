@@ -37,6 +37,8 @@ html, body {
     /*-------------------------------------------------------------*/
     table.third {
         border-collapse: collapse;
+        border-top: 2px orange;
+        border-bottom: 2px orange;
         }
         table.third thead {
         background-color: lightgreen;
@@ -46,7 +48,8 @@ html, body {
         table.third th, table.third td {
         padding: 0.7em;
         vertical-align: middle;
-        border: 2px orange;
+        border-top: 2px orange;
+        border-bottom: 2px orange;
         }
         table.third thead tr:first-child{
         
