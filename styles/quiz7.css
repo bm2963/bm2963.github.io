@@ -48,7 +48,7 @@ html, body {
         table.third th, table.third td {
         padding: 0.7em;
         vertical-align: middle;
-        border-top: solid red;
+        border-bottom: solid red;
         }
         table.third thead tr:first-child{
         
