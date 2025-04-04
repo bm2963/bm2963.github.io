@@ -41,18 +41,18 @@ html, body {
         }
         table.third thead {
         background-color: lightgreen;
-        border-top: 2px orange;
-        border-bottom: 2px orange;
+        border-top: 2px red;
+        border-bottom: 2px red;
         }
         table.third th, table.third td {
         padding: 0.7em;
         vertical-align: middle;
-        border-top: 2px orange;
-        border-bottom: 2px orange;
+        border-top: 2px red;
+        border-bottom: 2px red;
         }
         table.third thead tr:first-child{
-            border-top: 2px orange;
-            border-bottom: 2px orange;
+            border-top: 2px red;
+            border-bottom: 2px red;
         } 
         table.third thead tr:last-child{
             border-bottom: 2px orange;
