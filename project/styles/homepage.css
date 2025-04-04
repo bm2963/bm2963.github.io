@@ -13,7 +13,7 @@ body {
   }
   header img {
     
-    top: auto;
+    top: 5%;
     float: left;
     margin-left: 2em;
     border: 3px black;
