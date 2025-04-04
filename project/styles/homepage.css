@@ -15,6 +15,9 @@ body {
     float: left;
     margin-left: 2em;
     border: 3px black;
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
   }
   nav {
     display: flex;
