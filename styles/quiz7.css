@@ -51,15 +51,11 @@ html, body {
         border-top: solid red;
         }
         table.third thead tr:first-child{
-            border-top: 2px red;
-            border-bottom: 2px red;
+        
         } 
         table.third tbody {
             border-bottom: 2px solid red;
             border-top: 2px solid red;
-        } 
-        table.third thead tr:last-child{
-    
         } 
         @media only screen and (max-width: 425px) {
             th, td {
