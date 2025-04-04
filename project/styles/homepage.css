@@ -12,7 +12,7 @@ body {
     text-align: center;
   }
   header img {
-    position: absolute;
+    position: fixed;
     top: auto;
     float: left;
     margin-left: 2em;
