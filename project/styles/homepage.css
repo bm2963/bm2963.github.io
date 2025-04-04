@@ -11,7 +11,11 @@ body {
     padding: 1rem 0;
     text-align: center;
   }
-  
+  header img {
+    float: left;
+    margin-left: 2em;
+    border: 3px black;
+  }
   nav {
     display: flex;
     justify-content: center;
