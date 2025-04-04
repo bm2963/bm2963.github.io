@@ -66,4 +66,12 @@ body {
     padding: 1rem 0;
     margin-top: 2rem;
   }
-  
+  @media only screen and (max-width: 425px) {
+    th, td {
+        display: block;
+    }
+    thead, td.number {
+        display: none;
+        padding: 0;
+    }    
+} 
