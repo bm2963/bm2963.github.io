@@ -75,11 +75,12 @@ body {
   }
   @media only screen and (max-width:700px)
   {/* Hide the checkbox */
+  /* Hide the checkbox */
 .menu-toggle {
   display: none;
 }
 
-/* Hamburger icon styling */
+/* Hamburger icon (hidden by default, shown on small screens) */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -89,7 +90,7 @@ body {
   cursor: pointer;
 }
 
-/* Base nav menu styling */
+/* Default nav menu (visible on large screens) */
 .nav-menu {
   display: flex;
   justify-content: center;
@@ -104,7 +105,7 @@ body {
   display: block;
 }
 
-/* Responsive behavior */
+/* On small screens (max-width: 768px) */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -116,7 +117,7 @@ body {
     align-items: flex-start;
   }
 
-  /* Show menu when checkbox is checked */
+  /* Show nav menu if checkbox is checked */
   .menu-toggle:checked + .hamburger + .nav-menu {
     display: flex;
   }
