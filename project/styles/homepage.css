@@ -17,7 +17,7 @@ body {
     font-size:28px;
   }
   .floating-logo {
-    position: fixed;
+    position:absolute;
     top: 10px;
     left: 10px;
     z-index: 1000; /* stay above other elements */
