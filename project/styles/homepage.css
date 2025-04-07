@@ -74,41 +74,56 @@ body {
     margin-top: 2rem;
   }
   @media only screen and (max-width:700px)
-  {
-      /* Hamburger Style */
-    .hamburger {
-     display: none;
-    font-size: 2rem;
-    background-color: #444;
-    color: white;
-    padding: 1rem;
-    cursor: pointer;
-    }
+  {/* Hide the checkbox */
+.menu-toggle {
+  display: none;
+}
 
-/* Responsive Navigation */
-    @media (max-width: 768px) {
-    .hamburger {
+/* Hamburger icon styling */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background-color: #444;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/* Base nav menu styling */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  background-color: #444;
+  flex-wrap: wrap;
+}
+
+.nav-menu a {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .hamburger {
     display: block;
-    }
+  }
 
-    nav {
+  .nav-menu {
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    }
+  }
 
-    nav.show {
-      display: flex;
-    }
+  /* Show menu when checkbox is checked */
+  .menu-toggle:checked + .hamburger + .nav-menu {
+    display: flex;
+  }
 
-    nav a {
+  .nav-menu a {
     width: 100%;
     border-top: 1px solid #555;
-    }
-}
-      footer{
-          border-top: 1px solid #f46b45;
-          text-align: center;
-          font-size: .6em;
-      }
   }
+    } 
+      }
