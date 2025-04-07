@@ -24,7 +24,7 @@ body {
     border: 3px black;
 
   }
-  nav {
+  .top-nav {
     display: flex;
     justify-content: center;
     background: navy;
