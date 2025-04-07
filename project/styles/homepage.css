@@ -16,13 +16,16 @@ body {
     font-family:"Times New Roman";
     font-size:28px;
   }
-  header img {
-    
-    top: 5%;
-    float: left;
-    margin-left: 2em;
-    border: 3px black;
-
+  .floating-logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000; /* stay above other elements */
+  }
+  
+  .floating-logo img {
+    height: 80px;
+    width: auto;
   }
   nav {
     display: flex;
@@ -83,25 +86,25 @@ body {
     }
 
 /* Responsive Navigation */
-@media (max-width: 768px) {
-  .hamburger {
+    @media (max-width: 768px) {
+    .hamburger {
     display: block;
-  }
+    }
 
-  nav {
+    nav {
     display: none;
     flex-direction: column;
     align-items: flex-start;
-  }
+    }
 
-  nav.show {
-    display: flex;
-  }
+    nav.show {
+      display: flex;
+    }
 
-  nav a {
+    nav a {
     width: 100%;
     border-top: 1px solid #555;
-  }
+    }
 }
       footer{
           border-top: 1px solid #f46b45;
