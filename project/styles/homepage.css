@@ -1,131 +1,207 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-  }
-  section{
-    font-family:"Times New Roman";
-    font-size:28px;
-  }
-  header {
-    background-color:  darkorange;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-    font-family:"Times New Roman";
-    font-size:28px;
-  }
-  .floating-logo {
-    position:absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1000; /* stay above other elements */
-  }
-  
-  .floating-logo img {
-    height: 80px;
-    width: auto;
-  }
-  nav {
-    display: flex;
-    justify-content: center;
-    background: navy;
-  }
-  
-  nav a {
-    color: #fff;
-    padding: 1rem;
-    text-decoration:underline;
-  }
-  
-  nav a:hover {
-    background: darkorange;
-  }
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+section{
+  font-family:"Times New Roman";
+  font-size:28px;
+}
+header {
+  background-color:  darkorange;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  font-family:"Times New Roman";
+  font-size:28px;
+}
+.floating-logo {
+  position:absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000; /* stay above other elements */
+}
 
-  .hero {
-    background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-  }
-  
-  .content {
-    padding: 2rem;
-    max-width: 1000px;
-    margin: auto;
-    background: #fff;
-  }
-  
-  footer {
-    background: navy;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-  }
-  @media only screen and (max-width:700px)
-  {/* Hide the checkbox */
-  /* Hide the checkbox */
-  .menu-toggle {
-    position: absolute;
-    left: -9999px;
-  }
+.floating-logo img {
+  height: 80px;
+  width: auto;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background: navy;
+}
+
+nav a {
+  color: #fff;
+  padding: 1rem;
+  text-decoration:underline;
+}
+
+nav a:hover {
+  background: darkorange;
+}
+.content-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2rem;
+padding: 2rem;
+background-color: #f9f9f9;
+}
+
+.card {
+background-color: white;
+border-radius: 12px;
+padding: 1.5rem;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+transition: transform 0.2s ease;
+}
+
+.card:hover {
+transform: translateY(-5px);
+}
+
+.card h2 {
+margin-bottom: 0.8rem;
+color: #d35400; /* SHSU orange? */
+}
+
+.card p {
+font-size: 1rem;
+color: #333;
+}
+.hero {
+  background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+/* Hero section setup */
+.hero {
+position: relative;
+height: 400px;
+overflow: hidden;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: center;
+animation: slideShow 18s infinite;
+z-index: 0;
+opacity: 0.8;
+}
+
+/* Text overlay on top of slideshow */
+.hero-overlay {
+position: relative;
+z-index: 1;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+text-shadow: 1px 1px 5px black;
+font-size: 2rem;
+}
+
+/* Keyframes to fade between images */
+@keyframes slideShow {
+0% {
+  background-image: url('/project/images/usitcc.png');
+}
+33% {
+  background-image: url('/project/images/itsa1.jpg');
+}
+66% {
+  background-image: url('/project/images/itsa2.heic');
+}
+100% {
+  background-image: url('/project/images/itsa3.heic');
+}
+}
+.content {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+}
+
+footer {
+  background: navy;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+@media only screen and (max-width:700px)
+{/* Hide the checkbox */
+/* Hide the checkbox */
+.menu-toggle {
+  position: absolute;
+  left: -9999px;
+}
 
 /* Hamburger icon (hidden by default, shown on small screens) */
 .hamburger {
-  display: none;
-  font-size: 2rem;
-  background-color: #444;
-  color: white;
-  padding: 1rem;
-  cursor: pointer;
+display: none;
+font-size: 2rem;
+background-color: #444;
+color: white;
+padding: 1rem;
+cursor: pointer;
 }
 
 /* Default nav menu (visible on large screens) */
 .nav-menu {
-  display: flex;
-  justify-content: center;
-  background-color: #444;
-  flex-wrap: wrap;
+display: flex;
+justify-content: center;
+background-color: #444;
+flex-wrap: wrap;
 }
 
 .nav-menu a {
-  color: white;
-  padding: 1rem;
-  text-decoration: none;
-  display: block;
+color: white;
+padding: 1rem;
+text-decoration: none;
+display: block;
 }
 
 /* On small screens (max-width: 768px) */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
+.hamburger {
+  display: block;
+}
 
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-  /* Show nav menu if checkbox is checked */
-  .menu-toggle:checked + .hamburger + .nav-menu {
-    display: flex;
-  }
+/* Show nav menu if checkbox is checked */
+.menu-toggle:checked + .hamburger + .nav-menu {
+  display: flex;
+}
 
-  .nav-menu a {
-    width: 100%;
-    border-top: 1px solid #555;
-  }
-    } 
-      }
+.nav-menu a {
+  width: 100%;
+  border-top: 1px solid #555;
+}
+  } 
+    }
