@@ -147,12 +147,15 @@ font-size: 2rem;
 /* Keyframes to fade between images */
 @keyframes slideShow {
 0% {
+  background-image: url('/project/images/shsubelltower.jpg');
+}
+25%{
   background-image: url('/project/images/usitcc.png');
 }
-33% {
+50% {
   background-image: url('/project/images/itsa1.jpg');
 }
-66% {
+75% {
   background-image: url('/project/images/itsa2.jpg');
 }
 100% {
