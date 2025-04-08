@@ -22,16 +22,33 @@ header h1, header h2 {
   color: white; /* SHSU Orange */
 }
 
+/* Default logo styles */
 .floating-logo {
-  position:absolute;
+  position: absolute;
   top: 10px;
   left: 10px;
-  z-index: 1000; /* stay above other elements */
+  z-index: 10;
 }
 
 .floating-logo img {
   height: 80px;
   width: auto;
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .floating-logo img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-logo img {
+    height: 50px;
+    top: 5px;
+    left: 5px;
+  }
 }
 nav {
   display: flex;
