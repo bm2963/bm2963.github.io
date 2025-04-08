@@ -129,10 +129,10 @@ font-size: 2rem;
   background-image: url('/project/images/itsa1.jpg');
 }
 66% {
-  background-image: url('/project/images/itsa2.heic');
+  background-image: url('/project/images/itsa2.jpg');
 }
 100% {
-  background-image: url('/project/images/itsa3.heic');
+  background-image: url('/project/images/itsa3.jpg');
 }
 }
 .content {
