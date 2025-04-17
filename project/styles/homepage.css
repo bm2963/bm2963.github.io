@@ -186,7 +186,7 @@ input.menu-toggle {
 
 /* Hamburger icon (hidden by default, shown on small screens) */
 label.hamburger {
-display: none;
+display: flex;
 font-size: 2rem;
 background-color: #444;
 color: white;
@@ -216,7 +216,7 @@ display: block;
 }
 
 .nav-menu {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
