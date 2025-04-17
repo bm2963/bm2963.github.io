@@ -179,15 +179,16 @@ footer {
 @media only screen and (max-width:700px)
 {/* Hide the checkbox */
 /* Hide the checkbox */
-.menu-toggle {
-  display: none;
+input.menu-toggle {
+  position: absolute;
+  left: -9999px;
 }
 
 /* Hamburger icon (hidden by default, shown on small screens) */
-.hamburger {
+label.hamburger {
 display: none;
 font-size: 2rem;
-background-color: navy;
+background-color: #444;
 color: white;
 padding: 1rem;
 cursor: pointer;
@@ -215,7 +216,7 @@ display: block;
 }
 
 .nav-menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
 }
