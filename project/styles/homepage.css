@@ -179,12 +179,12 @@ footer {
 @media only screen and (max-width:700px)
 {/* Hide the checkbox */
 /* Hide the checkbox */
-input.menu-toggle {
+.menu-toggle {
   display: none;
 }
 
 /* Hamburger icon (hidden by default, shown on small screens) */
-label.hamburger {
+.hamburger {
 display: none;
 font-size: 2rem;
 background-color: navy;
