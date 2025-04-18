@@ -149,17 +149,41 @@ font-size: 2rem;
 0% {
   background-image: url('/project/images/shsubelltower.jpg');
 }
-25%{
+8%{
   background-image: url('/project/images/usitcc.png');
 }
-50% {
+16% {
   background-image: url('/project/images/itsa1.jpg');
 }
-75% {
+24% {
   background-image: url('/project/images/itsa2.jpg');
 }
-100% {
+32% {
   background-image: url('/project/images/itsa3.jpg');
+}
+40% {
+  background-image: url('/project/images/New1.jpg');
+}
+48%  {
+  background-image: url('/project/images/New2.jpg');
+}
+ 56% {
+  background-image: url('/project/images/New3.jpg');
+}
+65% {
+  background-image: url('/project/images/New4.jpg');
+}
+73%  {
+  background-image: url('/project/images/New5.jpg');
+}
+81% {
+  background-image: url('/project/images/New6.jpg');
+}
+ 89% {
+  background-image: url('/project/images/new7.png');
+}
+ 100% {
+  background-image: url('/project/images/new8.png');
 }
 }
 .content {
