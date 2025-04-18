@@ -126,7 +126,7 @@ overflow: hidden;
   height: 100%;
   background-size: cover;
   background-position: center;
-  animation: slideShow 18s infinite;
+  animation: slideShow 45s infinite;
   z-index: 0;
   opacity: 0.8;
   }
