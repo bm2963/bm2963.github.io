@@ -127,6 +127,7 @@ height: 100%;
 background-size: cover;
 background-position: center;
 animation: slideshow 60s infinite;
+transition: background-image 1s ease-in-out;
 z-index: 0;
 opacity: 0.8;
 }
