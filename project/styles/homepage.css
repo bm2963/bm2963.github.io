@@ -296,8 +296,12 @@ footer {
     flex-direction: column;
     max-height: 0;
     overflow: hidden;
-    z-index: 10;
+    z-index: 9;;
     transition: max-height 0.3s ease-out;
+  }
+  .top-nav {
+    position: relative;
+    z-index: 10;
   }
 
   #menu-toggle:checked ~ .menu {
