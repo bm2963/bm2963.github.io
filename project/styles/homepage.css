@@ -301,7 +301,8 @@ footer {
   }
 
   #menu-toggle:checked ~ .menu {
-    max-height: 500px; /* or enough to fit all items */
+    max-height: 1000px; /* or enough to fit all items */
+    overflow: visible;
    }
 
   .menu li {
