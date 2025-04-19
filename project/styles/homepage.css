@@ -291,13 +291,12 @@ footer {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #222;
     width: 100%;
-    flex-direction: column;
+    z-index: 15;
+    background-color: #222;
     max-height: 0;
     overflow: hidden;
-    z-index: 15;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.3s ease;
   }
   .top-nav {
     position: relative;
