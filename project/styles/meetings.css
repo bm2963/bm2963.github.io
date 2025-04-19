@@ -206,8 +206,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-decoration: underline;
   padding: 0.5rem 1rem;
+  text-decoration: underline;
   background: linear-gradient(to left, navy, blue);
   color: white;
   z-index: 10;

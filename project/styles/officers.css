@@ -112,12 +112,11 @@ color: #333;
 }
 /* Hero section setup */
 .hero {
-  position: relative;
-  z-index: 1;
+position: relative;
+height: 400px;
+overflow: hidden;
 }
-.hero::before {
-  z-index: 0;
-}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -207,8 +206,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-decoration: underline;
   padding: 0.5rem 1rem;
+  text-decoration: underline;
   background: linear-gradient(to left, navy, blue);
   color: white;
   z-index: 10;

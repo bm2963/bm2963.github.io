@@ -112,8 +112,9 @@ color: #333;
 }
 /* Hero section setup */
 .hero {
-  position: relative;
-  z-index: 1;
+position: relative;
+height: 400px;
+overflow: hidden;
 }
 
 .hero::before {
@@ -206,6 +207,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
+  text-decoration: underline;
   background: linear-gradient(to left, navy, blue);
   color: white;
   z-index: 10;
@@ -285,22 +287,18 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 20;
   }
   .menu {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
-    z-index: 15;
     background-color: #222;
+    width: 100%;
+    flex-direction: column;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-  .top-nav {
-    position: relative;
-    z-index: 20;
+    z-index: 10;
+    transition: max-height 0.3s ease-out;
   }
 
   #menu-toggle:checked ~ .menu {

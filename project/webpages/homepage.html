@@ -4,87 +4,219 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ITSA Official Webpage</title>
-    <link rel="stylesheet" href="/project/styles/homepage copy.css">
+  <link rel="stylesheet" href="/project/styles/homepage.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(to bottom right, #f4f4f4, #e0e0e0);
+    }
+
+    .card {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    .card.reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      background-color: #fef6ed;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu a.current {
+      text-decoration: underline;
+      background-color: darkorange;
+    }
+
+    .hero h1 {
+      animation: fadeIn 2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .socials img {
+      height: 40px;
+      transition: transform 0.3s;
+    }
+
+    .socials img:hover {
+      transform: scale(1.2);
+    }
+
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .events {
+      max-width: 900px;
+      margin: 2rem auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .events h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: #d35400;
+    }
+
+    .events iframe {
+      width: 100%;
+      border: none;
+      height: 600px;
+    }
+
+    @media (max-width: 768px) {
+      .events iframe {
+        height: 500px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .events iframe {
+        height: 400px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <a href="https://www.shsu.edu/" target="_blank" class="floating-logo">
-      <img src="/project/images/newlogo2.png" alt="Website Logo" height="80" width="80">
-    </a>
-   <header>
+  <a href="https://www.shsu.edu/" target="_blank" class="floating-logo">
+    <img src="/project/images/newlogo2.png" alt="Website Logo" height="80" width="80">
+  </a>
+  <header>
     <h1>Sam Houston State University</h1>
     <h2>Official page for the ITSA</h2>
-       <div class="header-container">
-    </div>
+    <div class="header-container"></div>
   </header>
-   
+
   <section class="top-nav">
     <div>
-        <p> ITSA</p>
+      <p>ITSA</p>
     </div>
     <input id="menu-toggle" type="checkbox">
     <label class="menu-button-container" for="menu-toggle">
-    <div class="menu-button"></div>  
+      <div class="menu-button"></div>
     </label>
     <ul class="menu">
-        <li><a href="/project/webpages/homepagetest.html">Home</a></li>
-        <li><a href="/project/webpages/about.html">About</a></li>
-        <li><a href="/project/webpages/officers.html">ITSA Officers</a></li>
-        <li><a href="/project/webpages/meetings.html">ITSA Meetings</a></li>
-        <li><a href="/project/webpages/imagegallery.html">Image Gallery</a></li>
+      <li><a href="/project/webpages/homepagetest.html" class="current">Home</a></li>
+      <li><a href="/project/webpages/about.html">About</a></li>
+      <li><a href="/project/webpages/officers.html">ITSA Officers</a></li>
+      <li><a href="/project/webpages/meetings.html">ITSA Meetings</a></li>
+      <li><a href="/project/webpages/imagegallery.html">Image Gallery</a></li>
     </ul>
-</section>
-  
+  </section>
+
   <section class="hero">
     <div class="hero-overlay">
       <h1>Welcome to the ITSA</h1>
     </div>
   </section>
 
-  <a href="https://bm2963.github.io/project/webpages/about.html" class="card-link">
+  <section class="events">
+    <h2>🗓 ITSA Upcoming Events Calendar</h2>
+    <iframe src="https://calendar.google.com/calendar/embed?src=d6805ad1a782e4a6ae56e3ccd0005dc2adaf6f28733fca60b3f026489cfd21db%40group.calendar.google.com&src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" frameborder="0" scrolling="no"></iframe>
+
   <section class="content-grid">
-  <article class="card">
-    <h2>Who We Are</h2>
-    <p>The Information Technology Student Association (ITSA) is a community of SHSU students passionate about tech, leadership, and collaboration.</p>
-  </article>
-  </a>
-  <a href="https://bm2963.github.io/project/webpages/about.html" class="card-link">
-  <article class="card">
-    <h2>Our Mission</h2>
-    <p>We aim to empower students through tech-focused events, workshops, and mentorship to help build their future careers in IT and related fields.</p>
-  </article>
-  </a>
-  <a href="https://bm2963.github.io/project/webpages/imagegallery.html" class="card-link">
-  <article class="card">
-    <h2>Events & Workshops</h2>
-    <p>From coding bootcamps to career panels, we host a variety of events each semester to help you grow your skills and network.</p>
-  </article>
-  </a>
+    <a href="/project/webpages/about.html" class="card-link">
+      <article class="card">
+        <h2>Who We Are</h2>
+        <p>The Information Technology Student Association (ITSA) is a community of SHSU students passionate about tech, leadership, and collaboration.</p>
+      </article>
+    </a>
+    <a href="/project/webpages/about.html" class="card-link">
+      <article class="card">
+        <h2>Our Mission</h2>
+        <p>We aim to empower students through tech-focused events, workshops, and mentorship to help build their future careers in IT and related fields.</p>
+      </article>
+    </a>
+    <a href="/project/webpages/imagegallery.html" class="card-link">
+      <article class="card">
+        <h2>Events & Workshops</h2>
+        <p>From coding bootcamps to career panels, we host a variety of events each semester to help you grow your skills and network.</p>
+      </article>
+    </a>
+    <a href="/project/webpages/officers.html" class="card-link">
+      <article class="card">
+        <h2>Officer Team</h2>
+        <p>Meet the dedicated students leading our organization — planning events, coordinating with faculty, and helping the ITSA grow every year.</p>
+      </article>
+    </a>
+    <a href="https://shsu.campuslabs.com/engage/organization/itsa" target="_blank" class="card-link">
+      <article class="card">
+        <h2>Join Us</h2>
+        <p>Click here to join! Create an account in Org Link and simply search for Information technology Student association to join.</p>
+      </article>
+    </a>
+    <a href="https://www.allegiantair.com/" class="card-link">
+      <article class="card">
+        <h2>Stay Connected</h2>
+        <p>Follow us on social media or subscribe to our newsletter to stay updated on everything ITSA is doing this semester.</p>
+      </article>
+    </a>
+  </section>
 
-  <a href="https://bm2963.github.io/project/webpages/officers.html" class="card-link">
-  <article class="card">
-    <h2>Officer Team</h2>
-    <p>Meet the dedicated students leading our organization — planning events, coordinating with faculty, and helping the ITSA grow every year.</p>
-  </article>
-  </a>
-
-  <a href="https://shsu.campuslabs.com/engage/organization/itsa" target="_blank" class="card-link">
-  <article class="card">
-    <h2>Join Us</h2>
-    <p>Click here to join! Create an account in Org Link and simply search for Information technology Student association to join.</p>
-  </article>
-  </a>
-
-  <a href="https://www.allegiantair.com/" class="card-link">
-  <article class="card">
-    <h2>Stay Connected</h2>
-    <p>Follow us on social media or subscribe to our newsletter to stay updated on everything ITSA is doing this semester.</p>
-  </article>
-  </a>
-</section>
+  <div class="socials">
+    <a href="https://www.instagram.com/samhoustonstate/" target="_blank">
+      <img src="/project/images/instagram logo.png" alt="Instagram" />
+    </a>
+    <br>
+    <a href="https://www.facebook.com/samhoustonstate" target="_blank">
+      <img src="/project/images/facebook logo.png" alt="Facebook" />
+    </a>
+    <br>
+    <a href="https://www.shsu.edu.com/" target="_blank">
+      <img src="/project/images/newlogo2.png" alt="SHSU Home" />
+    </a>
+    <!-- Add more icons as needed -->
+  </div>
 
   <footer>
     <p>&copy; 2025 ITSA | Sam Houston State University. All rights reserved.</p>
   </footer>
 
+  <script>
+    const cards = document.querySelectorAll('.card');
+
+    const revealOnScroll = () => {
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          card.classList.add('reveal');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
 </body>
 </html>
