@@ -36,12 +36,54 @@ header h1, header h2 {
   width: auto;
   transition: all 0.3s ease;
 }
+/* Default shared styles */
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .floating-logo img {
     height: 60px;
   }
+}
+.officer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "advisor-k advisor-w"
+    "president president"
+    "officer-b officer-b"
+    "officer-e officer-e"
+    "officer-p officer-p";
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.advisor-k   { grid-area: advisor-k; }
+.advisor-w   { grid-area: advisor-w; }
+.president   { grid-area: president; }
+.officer-b   { grid-area: officer-b; }
+.officer-e   { grid-area: officer-e; }
+.officer-p   { grid-area: officer-p; }
+
+/* Shared article card style */
+.officer-grid article {
+  display: flex;
+  align-items: center;
+  border: 4px solid orange;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.officer-grid img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid orange;
+  margin-right: 20px;
 }
 
 @media (max-width: 480px) {
