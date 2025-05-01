@@ -3,82 +3,296 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ITSA Official Webpage</title>
-    <link rel="stylesheet" href="/project/styles/imagegallery.css">
-    <style>
-      .menu a {
-        text-decoration: underline;
+  <title>ITSA Accomplishments | SHSU</title>
+  <link rel="stylesheet" href="/project/styles/imagegallery.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: darkorange;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      font-family: "Times New Roman", serif;
+    }
+
+    header h1, header h2 {
+      font-family: 'Georgia', serif;
+      letter-spacing: 1px;
+    }
+
+    .floating-logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+    }
+
+    .floating-logo img {
+      height: 80px;
+      width: auto;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(to left, navy, blue);
+      color: white;
+    }
+
+    .menu-button-container { display: none; }
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li a {
+      color: white;
+      text-decoration: underline;
+      padding: 0.5rem;
+    }
+
+    .menu a.current {
+      background-color: darkorange;
+      border-radius: 5px;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .image-section {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .accomplishments {
+      text-align: center;
+    }
+
+    .accomplishments h2 {
+      font-family: 'Georgia', serif;
+      color: #d35400;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .accomplishments ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .accomplishments li {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      background: #fef5e7;
+      padding: 0.6rem 1rem;
+      border-left: 6px solid darkorange;
+      border-radius: 5px;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Awards Section */
+    .awards {
+      background-color: #fff8f0;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
+      border-radius: 10px;
+    }
+
+    .awards h2 {
+      font-size: 2rem;
+      color: #d35400;
+      margin-bottom: 1.5rem;
+      font-family: 'Georgia', serif;
+    }
+
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    .award-card {
+      background: white;
+      border-left: 6px solid darkorange;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    /* Timeline Section */
+    .timeline {
+      background-color: #f4f4f4;
+      padding: 2rem;
+      font-family: 'Georgia', serif;
+      margin-top: 2rem;
+      border-radius: 10px;
+    }
+
+    .timeline h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: navy;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-container {
+      border-left: 4px solid darkorange;
+      margin-left: 2rem;
+      padding-left: 1rem;
+    }
+
+    .timeline-item {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .timeline-year {
+      font-weight: bold;
+      color: darkorange;
+      font-size: 1.3rem;
+    }
+
+    .timeline-item p {
+      margin: 0.3rem 0 0 0.5rem;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background-color: navy;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+        background-color: #222;
+        padding: 1rem;
       }
-      .menu a.current {
-        text-decoration: underline;
-        background-color: darkorange;
+
+      .accomplishments li {
+        font-size: 1rem;
       }
-    </style>
+    }
+  </style>
 </head>
 <body>
-    <a href="https://www.shsu.edu/" target="_blank" class="floating-logo">
-      <img src="/project/images/newlogo2.png" alt="Website Logo" height="80" width="80">
-    </a>
-   <header>
+
+  <a href="https://www.shsu.edu/" target="_blank" class="floating-logo">
+    <img src="/project/images/newlogo2.png" alt="Website Logo">
+  </a>
+
+  <header>
     <h1>Sam Houston State University</h1>
-    <h2>Accomplishments Page Placeholder</h2>
-       <div class="header-container">
-    </div>
+    <h2>ITSA Accomplishments</h2>
   </header>
-   
+
   <section class="top-nav">
-    <div>
-        <p> ITSA</p>
-    </div>
-    <input id="menu-toggle" type="checkbox">
-    <label class="menu-button-container" for="menu-toggle">
-    <div class="menu-button"></div>  
-    </label>
+    <div><p>ITSA</p></div>
     <ul class="menu">
       <li><a href="/project/webpages/homepage.html">Home</a></li>
       <li><a href="/project/webpages/about.html">About</a></li>
       <li><a href="/project/webpages/officers.html">Officers</a></li>
       <li><a href="/project/webpages/meetings.html">Meetings</a></li>
-      <li><a href="/project/webpages/accomplishments.html"class="current">Accomplishments</a></li>
+      <li><a href="/project/webpages/accomplishments.html" class="current">Accomplishments</a></li>
       <li><a href="/project/webpages/imagegallery.html">Image Gallery</a></li>
     </ul>
-</section>
+  </section>
 
-  <section>
-    <article>
-        <h2>Placeholder</h2>
-        <p>Placeholder</p>
-      </article>
+  <div class="content">
+    <div class="image-section">
+      <img src="/project/images/403ea71e-6876-4294-85ff-bec3e74c0155.png" alt="IT Students Association Achievements">
+    </div>
 
-  <article>
-    <h2>Placeholder</h2>
-    <p>Placeholder</p>
-  </article>
+    <div class="accomplishments">
+      <h2>🎯 MIS Students in Action @ USITCC Competitions</h2>
+      <ul>
+        <li>🥈 2nd place – System Analysis and Design (2019)</li>
+        <li>🥉 3rd place – Database (2019)</li>
+        <li>🏅 Honorable Mention – Database (2018)</li>
+        <li>🏅 Honorable Mention – Business Analytics (2019)</li>
+      </ul>
+    </div>
 
-  <article>
-    <h2>Placeholder</h2>
-    <p>Placeholder</p>
-  </article>
+    <section class="awards">
+      <h2>🏅 Awards Showcase</h2>
+      <div class="awards-grid">
+        <div class="award-card">
+          <h3>System Analysis & Design</h3>
+          <p>🥈 2nd Place – USITCC 2019</p>
+        </div>
+        <div class="award-card">
+          <h3>Database</h3>
+          <p>🥉 3rd Place – USITCC 2019</p>
+        </div>
+        <div class="award-card">
+          <h3>Business Analytics</h3>
+          <p>🏅 Honorable Mention – 2019</p>
+        </div>
+        <div class="award-card">
+          <h3>Database</h3>
+          <p>🏅 Honorable Mention – 2018</p>
+        </div>
+      </div>
+    </section>
 
-  <article>
-    <h2>Placeholder</h2>
-    <p>Placeholder</p>
-  </article>
-
-  <article>
-    <h2>Placeholder</h2>
-    <p>Placeholder</p>
-  </article>
-
-  <article>
-    <h2>Placeholder</h2>
-    <p>Placeholder</p>
-  </article>
-</section>
+    <section class="timeline">
+      <h2>📅 Timeline of Accomplishments</h2>
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <span class="timeline-year">2024</span>
+          <p>Hosted first regional tech symposium with over 150 attendees.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2023</span>
+          <p>Launched mentoring program pairing students with SHSU alumni in tech careers.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2022</span>
+          <p>ITSA team advanced to finals in National Tech Business Case Competition.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2021</span>
+          <p>Organized first fully virtual coding bootcamp with over 50 participants.</p>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <footer>
     <p>&copy; 2025 ITSA | Sam Houston State University. All rights reserved.</p>
   </footer>
-
-</body>
+  </body>
 </html>
