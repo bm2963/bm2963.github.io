@@ -3,81 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ITSA Official Webpage</title>
-    <link rel="stylesheet" href="/project/styles/meetings.css">
-    <style>
-      .menu a {
-        text-decoration: underline;
-      }
-      .menu a.current {
-        text-decoration: underline;
-        background-color: darkorange;
-      }
-    </style>
+  <title>ITSA Meetings | SHSU</title>
+  <link rel="stylesheet" href="/project/styles/meetings.css">
+  <style>
+    .menu a {
+      text-decoration: underline;
+    }
+    .menu a.current {
+      text-decoration: underline;
+      background-color: darkorange;
+    }
+
+    .info-card h2::before {
+      content: "📌 ";
+    }
+
+    .info-section {
+      margin-bottom: 2rem;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .info-card p strong {
+      color: #1e3a5f;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .floating-logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    header h2 {
+      font-size: 1.5rem;
+      color: #4a6fa5;
+      margin-bottom: 1rem;
+    }
+
+    footer p:first-of-type {
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <a href="https://www.shsu.edu/" target="_blank" class="floating-logo">
-      <img src="/project/images/newlogo2.png" alt="Website Logo" height="80" width="80">
-    </a>
-   <header>
+  <a href="https://www.shsu.edu/" target="_blank" class="floating-logo">
+    <img src="/project/images/newlogo2.png" alt="Website Logo" height="80" width="80">
+  </a>
+
+  <header>
     <h1>Sam Houston State University</h1>
-    <h2>Meetings Page Placeholder</h2>
-       <div class="header-container">
-    </div>
+    <h2>Information Technology Student Association (ITSA)</h2>
   </header>
-   
+
   <section class="top-nav">
-    <div>
-        <p> ITSA</p>
-    </div>
+    <div><p>ITSA</p></div>
     <input id="menu-toggle" type="checkbox">
     <label class="menu-button-container" for="menu-toggle">
-    <div class="menu-button"></div>  
+      <div class="menu-button"></div>
     </label>
     <ul class="menu">
-        <li><a href="/project/webpages/homepage.html">Home</a></li>
-        <li><a href="/project/webpages/about.html">About</a></li>
-        <li><a href="/project/webpages/officers.html">ITSA Officers</a></li>
-        <li><a href="/project/webpages/meetings.html"class="current">ITSA Meetings</a></li>
-        <li><a href="/project/webpages/imagegallery.html">Image Gallery</a></li>
+      <li><a href="/project/webpages/homepage.html">Home</a></li>
+      <li><a href="/project/webpages/about.html">About</a></li>
+      <li><a href="/project/webpages/officers.html">ITSA Officers</a></li>
+      <li><a href="/project/webpages/meetings.html" class="current">ITSA Meetings</a></li>
+      <li><a href="/project/webpages/imagegallery.html">Image Gallery</a></li>
     </ul>
-</section>
+  </section>
 
-  <section>
-    <article>
-        <h2>Placeholder</h2>
-        <p>Placeholder</p>
-      </article>
+  <section class="center-wrapper">
+    <div class="container info-card">
 
-  <article>
-    <h2>Placeholder</h2>
-    <p>Placeholder</p>
-  </article>
+      <div class="info-section">
+        <h2>Meeting Location</h2>
+        <p>Academic Building 1, Room 340</p>
+      </div>
 
-  <article>
-    <h2>Placeholder</h2>
-    <p>Placeholder</p>
-  </article>
+      <div class="info-section">
+        <h2>Meeting Days & Time</h2>
+        <p>Tuesdays and Thursdays at 5:00 PM</p>
+      </div>
 
-  <article>
-    <h2>Placeholder</h2>
-    <p>Placeholder</p>
-  </article>
+      <div class="info-section">
+        <h2>What Are the Meetings About?</h2>
+        <p>
+          Our meetings focus on building IT skills, networking with professionals, preparing for certifications,
+          collaborating on tech projects, and exploring trends in information systems.<br><br>
+          <strong>All majors are welcome!</strong>
+        </p>
+      </div>
 
-  <article>
-    <h2>Placeholder</h2>
-    <p>Placeholder</p>
-  </article>
+      <div class="info-section">
+        <h2>Advisors</h2>
+        <p>
+          <strong>Dr. Kamphol Wipawayangkool</strong><br>
+          Email: <a href="mailto:kamphol@shsu.edu">kamphol@shsu.edu</a>
+        </p>
+        <p>
+          <strong>Dr. Janis Warner</strong><br>
+          Email: <a href="mailto:jwarner@shsu.edu">jwarner@shsu.edu</a>
+        </p>
+      </div>
 
-  <article>
-    <h2>Placeholder</h2>
-    <p>Placeholder</p>
-  </article>
-</section>
+    </div>
+  </section>
 
   <footer>
+    <p>Have questions? Feel free to reach out to either advisor by email.</p>
+    <br>
     <p>&copy; 2025 ITSA | Sam Houston State University. All rights reserved.</p>
   </footer>
-
-</body>
+  </body>
 </html>

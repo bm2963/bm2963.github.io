@@ -130,7 +130,87 @@ overflow: hidden;
   z-index: 0;
   opacity: 0.8;
   }
-
+/* Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  html, body {
+    height: 100%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #2c3e50;
+    text-align: center;
+  }
+ 
+  /* Flex wrapper for full center alignment */
+  .center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+ 
+  /* Main container */
+  .container {
+    max-width: 700px;
+    width: 100%;
+  }
+ 
+  /* Header */
+  header h1 {
+    font-size: 2.8rem;
+    color: #1e3a5f;
+    margin-bottom: 0.5rem;
+  }
+ 
+  header p {
+    font-size: 1.3rem;
+    color: #607d8b;
+    margin-bottom: 30px;
+  }
+ 
+  /* Info Card Section */
+  .info-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    text-align: center;
+  }
+ 
+  .info-card h2 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-top: 20px;
+  }
+ 
+  .info-card p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+  }
+ 
+  /* Footer */
+  footer {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #7f8c8d;
+  }
+ 
+  footer a,
+  .info-card a {
+    color: #1e88e5;
+    text-decoration: none;
+  }
+ 
+  footer a:hover,
+  .info-card a:hover {
+    text-decoration: underline;
+  }
 /* Text overlay on top of slideshow */
 .hero-overlay {
 position: relative;
