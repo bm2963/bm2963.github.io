@@ -56,7 +56,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.6rem 1.2rem;
-    background: linear-gradient(to left, #500000, #7a0000);
+    background: linear-gradient(to left, white, #7a0000);
     color: white;
   }
   
