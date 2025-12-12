@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administrative Analytics | CMIS Connect</title>
+
+  <!-- Google Font: Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/project/styles/homepage.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .page-wrap {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+    }
+
+    .page-hero {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      border-left: 8px solid #500000;
+    }
+
+    .page-hero h1 {
+      margin: 0 0 0.5rem 0;
+      color: #500000;
+      font-size: 2.3rem;
+      line-height: 1.2;
+    }
+
+    .page-hero p {
+      margin: 0.5rem 0 0;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .section-title {
+      margin: 2rem 0 1rem;
+      color: #500000;
+      font-size: 1.8rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Quick KPI strip */
+    .kpi-grid {
+      margin-top: 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .kpi {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      border: 2px solid rgba(80,0,0,0.10);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .kpi .label {
+      color: #500000;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      display: block;
+    }
+
+    .kpi .value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.1;
+    }
+
+    .kpi .note {
+      margin-top: 0.4rem;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    /* Cards tight */
+    .content-grid {
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    /* Insights box */
+    .insights {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      border: 2px solid rgba(80,0,0,0.12);
+    }
+
+    .insights ul {
+      margin: 0.75rem 0 0;
+      padding-left: 1.25rem;
+      color: #333;
+    }
+
+    .insights li {
+      margin: 0.45rem 0;
+    }
+
+    /* Placeholder for charts/screens */
+    .placeholder {
+      margin-top: 1rem;
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.25rem;
+      border: 2px dashed rgba(80,0,0,0.25);
+      color: #333;
+    }
+
+    .placeholder span {
+      color: #500000;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body id="analytics">
+
+  <!-- Floating Logo -->
+  <a href="/project/webpages/homepage.html" class="floating-logo">
+    <img src="/project/images/tamu/cmis.png" alt="CMIS Connect Logo" height="80" width="80">
+  </a>
+
+  <!-- Header -->
+  <header>
+    <h1>CMIS Connect</h1>
+    <h2>Texas A&amp;M University</h2>
+  </header>
+
+  <!-- Navigation -->
+  <section class="top-nav">
+    <div>
+      <p>CMIS Connect</p>
+    </div>
+
+    <input id="menu-toggle" type="checkbox">
+    <label class="menu-button-container" for="menu-toggle">
+      <div class="menu-button"></div>
+    </label>
+
+    <ul class="menu">
+      <li><a href="/project/webpages/homepage.html">Home</a></li>
+      <li><a href="/project/webpages/about.html">About</a></li>
+      <li><a href="/project/webpages/student-hub.html">Student Hub</a></li>
+      <li><a href="/project/webpages/case-management.html">Case Mgmt</a></li>
+      <li><a href="/project/webpages/sponsor-portal.html">Sponsor Portal</a></li>
+      <li><a href="/project/webpages/mentorship.html">Mentorship</a></li>
+      <li><a href="/project/webpages/analytics.html" class="current">Analytics</a></li>
+    </ul>
+  </section>
+
+  <main class="page-wrap">
+
+    <section class="page-hero">
+      <h1>Administrative Analytics Dashboard</h1>
+      <p>
+        A real-time dashboard for CMIS leadership that tracks engagement trends, competition outcomes,
+        sponsor participation, and overall community health — helping reduce manual reporting and improve decision-making.
+      </p>
+
+      <!-- KPI STRIP (sample values for prototype) -->
+      <div class="kpi-grid">
+        <div class="kpi">
+          <span class="label">Event Attendance (30 days)</span>
+          <div class="value">248</div>
+          <div class="note">Across workshops, meetings, and panels</div>
+        </div>
+        <div class="kpi">
+          <span class="label">Active Students</span>
+          <div class="value">132</div>
+          <div class="note">Students with engagement in last 60 days</div>
+        </div>
+        <div class="kpi">
+          <span class="label">Competitions This Term</span>
+          <div class="value">4</div>
+          <div class="note">Includes case + analytics challenges</div>
+        </div>
+        <div class="kpi">
+          <span class="label">Sponsor Participation</span>
+          <div class="value">18</div>
+          <div class="note">Judging, speakers, recruiting, sponsorship</div>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section-title">What Leaders Can Monitor</h2>
+
+    <section class="content-grid">
+      <article class="card">
+        <h2>Engagement Trends</h2>
+        <p>
+          Track registrations, attendance, repeat participation, and drop-off points over time to improve programming.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Event Performance</h2>
+        <p>
+          Compare events by turnout, satisfaction, and follow-on outcomes (internships, mentorship signups, competition entries).
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Competition Outcomes</h2>
+        <p>
+          Review team performance, scoring distributions, rubric consistency, and published results across competitions.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Sponsor Engagement</h2>
+        <p>
+          Track sponsor requests, participation frequency, event involvement, and engagement pipeline status.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Student Development</h2>
+        <p>
+          Monitor resume upload rates, mentorship activity, and involvement milestones to understand career readiness.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Operational Health</h2>
+        <p>
+          Identify bottlenecks (manual steps, approvals, delays) and highlight areas where automation improves efficiency.
+        </p>
+      </article>
+    </section>
+
+    <h2 class="section-title">Example Insights &amp; Alerts</h2>
+
+    <section class="insights">
+      <p style="margin:0; color:#333;">
+        CMIS Connect can surface actionable insights automatically, such as:
+      </p>
+      <ul>
+        <li><strong>Attendance risk:</strong> events trending below expected registration-to-attendance conversion.</li>
+        <li><strong>Engagement gaps:</strong> students registered but not participating after initial onboarding.</li>
+        <li><strong>Sponsor pipeline:</strong> pending sponsor requests with no follow-up after 7+ days.</li>
+        <li><strong>Competition fairness:</strong> large scoring variance between judges indicating rubric calibration needs.</li>
+        <li><strong>Mentorship health:</strong> matches created but no meetings logged after 30 days.</li>
+      </ul>
+    </section>
+
+    <div class="placeholder">
+      <span>Optional (later):</span> Insert wireframes here for the Dashboard Overview, KPI Trend Charts, Sponsor Pipeline view, and Competition Score Distribution charts.
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CMIS Connect | Texas A&amp;M University. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

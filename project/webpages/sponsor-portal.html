@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sponsor Access Portal | CMIS Connect</title>
+
+  <!-- Google Font: Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/project/styles/homepage.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .page-wrap {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+    }
+
+    .page-hero {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      border-left: 8px solid #500000;
+    }
+
+    .page-hero h1 {
+      margin: 0 0 0.5rem 0;
+      color: #500000;
+      font-size: 2.3rem;
+      line-height: 1.2;
+    }
+
+    .page-hero p {
+      margin: 0.5rem 0 0;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .section-title {
+      margin: 2rem 0 1rem;
+      color: #500000;
+      font-size: 1.8rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Quick capability strip */
+    .strip {
+      margin-top: 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .strip-item {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      border: 2px solid rgba(80,0,0,0.10);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .strip-item strong {
+      color: #500000;
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+
+    /* Cards tight */
+    .content-grid {
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    /* Sponsor request box */
+    .request-box {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      border: 2px solid rgba(80,0,0,0.12);
+    }
+
+    .request-box ul {
+      margin: 0.75rem 0 0;
+      padding-left: 1.25rem;
+      color: #333;
+    }
+
+    .request-box li {
+      margin: 0.45rem 0;
+    }
+
+    /* Placeholder for future wireframes/screenshots */
+    .placeholder {
+      margin-top: 1rem;
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.25rem;
+      border: 2px dashed rgba(80,0,0,0.25);
+      color: #333;
+    }
+
+    .placeholder span {
+      color: #500000;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body id="sponsor-portal">
+
+  <!-- Floating Logo -->
+  <a href="/project/webpages/homepage.html" class="floating-logo">
+    <img src="/project/images/tamu/cmis.png" alt="CMIS Connect Logo" height="80" width="80">
+  </a>
+
+  <!-- Header -->
+  <header>
+    <h1>CMIS Connect</h1>
+    <h2>Texas A&amp;M University</h2>
+  </header>
+
+  <!-- Navigation -->
+  <section class="top-nav">
+    <div>
+      <p>CMIS Connect</p>
+    </div>
+
+    <input id="menu-toggle" type="checkbox">
+    <label class="menu-button-container" for="menu-toggle">
+      <div class="menu-button"></div>
+    </label>
+
+    <ul class="menu">
+      <li><a href="/project/webpages/homepage.html">Home</a></li>
+      <li><a href="/project/webpages/about.html">About</a></li>
+      <li><a href="/project/webpages/student-hub.html">Student Hub</a></li>
+      <li><a href="/project/webpages/case-management.html">Case Mgmt</a></li>
+      <li><a href="/project/webpages/sponsor-portal.html" class="current">Sponsor Portal</a></li>
+      <li><a href="/project/webpages/mentorship.html">Mentorship</a></li>
+      <li><a href="/project/webpages/analytics.html">Analytics</a></li>
+    </ul>
+  </section>
+
+  <main class="page-wrap">
+
+    <section class="page-hero">
+      <h1>Sponsor Access Portal</h1>
+      <p>
+        A secure, sponsor-facing experience that enables industry partners to search opt-in student profiles,
+        download resumes, request speaker sessions, and participate in CMIS engagement.
+      </p>
+
+      <div class="strip">
+        <div class="strip-item">
+          <strong>Talent Search</strong>
+          Find opt-in students by skills, interests, and availability.
+        </div>
+        <div class="strip-item">
+          <strong>Resume Downloads</strong>
+          Access resumes and profiles in a centralized location.
+        </div>
+        <div class="strip-item">
+          <strong>Engagement Requests</strong>
+          Request speakers, workshops, and event participation.
+        </div>
+        <div class="strip-item">
+          <strong>Program Visibility</strong>
+          View upcoming CMIS events and engagement opportunities.
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Core Sponsor Capabilities</h2>
+
+    <section class="content-grid">
+      <article class="card">
+        <h2>Opt-In Student Directory</h2>
+        <p>
+          Browse opt-in student profiles with consistent fields (skills, tools, interests, graduation date, and preferred roles).
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Advanced Filters</h2>
+        <p>
+          Filter by skills (SQL, Python, analytics), career interests, involvement level, and availability for internships or projects.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Resume &amp; Profile Access</h2>
+        <p>
+          Download resumes and view portfolio links while respecting student privacy and opt-in permissions.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Speaker Session Requests</h2>
+        <p>
+          Submit requests for guest lectures, workshops, panel participation, or mentorship events through a structured form.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Event Participation</h2>
+        <p>
+          View CMIS event calendars and request sponsor involvement (judging, hosting, or providing case materials).
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Collaboration &amp; Follow-Up</h2>
+        <p>
+          Track engagement requests, see status updates, and coordinate with faculty/CMIS leadership for next steps.
+        </p>
+      </article>
+    </section>
+
+    <h2 class="section-title">Sponsor Engagement Requests</h2>
+
+    <section class="request-box">
+      <p style="margin:0; color:#333;">
+        CMIS Connect helps standardize sponsor engagement so requests are clear, trackable, and easy to fulfill.
+        Examples include:
+      </p>
+      <ul>
+        <li><strong>Speaker session:</strong> topic, preferred date range, audience, and format (in-person/virtual).</li>
+        <li><strong>Resume collection:</strong> target skills, graduation range, internship vs full-time.</li>
+        <li><strong>Event sponsorship:</strong> judging support, recruiting presence, or funding.</li>
+        <li><strong>Case competition involvement:</strong> provide case materials, judge participation, or prizes.</li>
+      </ul>
+    </section>
+
+    <div class="placeholder">
+      <span>Optional (later):</span> Insert wireframes here for Sponsor Search, Student Profile Preview, and Engagement Request Form screens.
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CMIS Connect | Texas A&amp;M University. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

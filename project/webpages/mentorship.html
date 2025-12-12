@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentorship Matching | CMIS Connect</title>
+
+  <!-- Google Font: Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/project/styles/homepage.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .page-wrap {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+    }
+
+    .page-hero {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      border-left: 8px solid #500000;
+    }
+
+    .page-hero h1 {
+      margin: 0 0 0.5rem 0;
+      color: #500000;
+      font-size: 2.3rem;
+      line-height: 1.2;
+    }
+
+    .page-hero p {
+      margin: 0.5rem 0 0;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .section-title {
+      margin: 2rem 0 1rem;
+      color: #500000;
+      font-size: 1.8rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Quick capability strip */
+    .strip {
+      margin-top: 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .strip-item {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      border: 2px solid rgba(80,0,0,0.10);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .strip-item strong {
+      color: #500000;
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+
+    /* Cards tight */
+    .content-grid {
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    /* Matching logic box */
+    .match-box {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      border: 2px solid rgba(80,0,0,0.12);
+    }
+
+    .match-box ul {
+      margin: 0.75rem 0 0;
+      padding-left: 1.25rem;
+      color: #333;
+    }
+
+    .match-box li {
+      margin: 0.45rem 0;
+    }
+
+    /* Placeholder for future wireframes/screenshots */
+    .placeholder {
+      margin-top: 1rem;
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.25rem;
+      border: 2px dashed rgba(80,0,0,0.25);
+      color: #333;
+    }
+
+    .placeholder span {
+      color: #500000;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body id="mentorship">
+
+  <!-- Floating Logo -->
+  <a href="/project/webpages/homepage.html" class="floating-logo">
+    <img src="/project/images/tamu/cmis.png" alt="CMIS Connect Logo" height="80" width="80">
+  </a>
+
+  <!-- Header -->
+  <header>
+    <h1>CMIS Connect</h1>
+    <h2>Texas A&amp;M University</h2>
+  </header>
+
+  <!-- Navigation -->
+  <section class="top-nav">
+    <div>
+      <p>CMIS Connect</p>
+    </div>
+
+    <input id="menu-toggle" type="checkbox">
+    <label class="menu-button-container" for="menu-toggle">
+      <div class="menu-button"></div>
+    </label>
+
+    <ul class="menu">
+      <li><a href="/project/webpages/homepage.html">Home</a></li>
+      <li><a href="/project/webpages/about.html">About</a></li>
+      <li><a href="/project/webpages/student-hub.html">Student Hub</a></li>
+      <li><a href="/project/webpages/case-management.html">Case Mgmt</a></li>
+      <li><a href="/project/webpages/sponsor-portal.html">Sponsor Portal</a></li>
+      <li><a href="/project/webpages/mentorship.html" class="current">Mentorship</a></li>
+      <li><a href="/project/webpages/analytics.html">Analytics</a></li>
+    </ul>
+  </section>
+
+  <main class="page-wrap">
+
+    <section class="page-hero">
+      <h1>Mentorship Matching System</h1>
+      <p>
+        A structured program that connects students with alumni and industry mentors based on skills,
+        career interests, and availability — making mentorship easier to launch and easier to sustain.
+      </p>
+
+      <div class="strip">
+        <div class="strip-item">
+          <strong>Skill-Based Matching</strong>
+          Match students and mentors by tools, roles, and goals.
+        </div>
+        <div class="strip-item">
+          <strong>Career Interests</strong>
+          Align students with mentors in relevant industries and paths.
+        </div>
+        <div class="strip-item">
+          <strong>Availability Preferences</strong>
+          Filter by meeting frequency and time commitments.
+        </div>
+        <div class="strip-item">
+          <strong>Structured Engagement</strong>
+          Keep mentorship organized with goals and checkpoints.
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Core Mentorship Features</h2>
+
+    <section class="content-grid">
+      <article class="card">
+        <h2>Student Intake Profile</h2>
+        <p>
+          Students submit interests, career goals, target roles, and skill areas to help create a strong match.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Mentor Profile</h2>
+        <p>
+          Alumni and industry mentors list expertise, preferred mentoring topics, availability, and communication preferences.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Matching &amp; Recommendations</h2>
+        <p>
+          The platform recommends pairings based on skills, interests, and availability—while allowing manual review.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Meeting Structure</h2>
+        <p>
+          Provide a simple cadence: goals, meeting notes, and suggested discussion prompts to keep mentorship consistent.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Mentorship Milestones</h2>
+        <p>
+          Track progress with milestones like resume review, mock interviews, career mapping, and networking checkpoints.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Program Oversight</h2>
+        <p>
+          CMIS administrators can monitor activity levels, match success, and overall mentorship engagement health.
+        </p>
+      </article>
+    </section>
+
+    <h2 class="section-title">How Matching Works</h2>
+
+    <section class="match-box">
+      <p style="margin:0; color:#333;">
+        Matching is designed to be fair, scalable, and easy to manage:
+      </p>
+      <ul>
+        <li><strong>Skill overlap:</strong> tools, technologies, and role alignment (ex: analytics, cloud, data, PM).</li>
+        <li><strong>Career interests:</strong> industry, job functions, and long-term goals.</li>
+        <li><strong>Availability:</strong> meeting frequency, preferred communication method, and time zones.</li>
+        <li><strong>Preferences:</strong> mentoring topics (resume, interviewing, leadership, internship guidance).</li>
+        <li><strong>Opt-in controls:</strong> both mentors and students can accept/decline suggested matches.</li>
+      </ul>
+    </section>
+
+    <div class="placeholder">
+      <span>Optional (later):</span> Insert wireframes here for Mentor Matching, Profile Setup, and Mentorship Dashboard screens.
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CMIS Connect | Texas A&amp;M University. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
