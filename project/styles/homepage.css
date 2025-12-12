@@ -124,13 +124,18 @@
   /* =========================
      HERO SLIDES
      ========================= */
-  @keyframes slideShow {
-    0%   { background-image: url('/project/images/new1.jpg'); }
-    25%  { background-image: url('/project/images/new3.jpg'); }
-    50%  { background-image: url('/project/images/new5.jpg'); }
-    75%  { background-image: url('/project/images/new7.png'); }
-    100% { background-image: url('/project/images/new8.png'); }
-  }
+     @keyframes slideShow {
+      0%   { background-image: url('/project/images/shsubelltower.jpg'); }
+      12%  { background-image: url('/project/images/usitcc.png'); }
+      24%  { background-image: url('/project/images/itsa1.jpg'); }
+      36%  { background-image: url('/project/images/itsa2.jpg'); }
+      48%  { background-image: url('/project/images/New1.jpg'); }
+      60%  { background-image: url('/project/images/New3.jpg'); }
+      72%  { background-image: url('/project/images/New5.jpg'); }
+      84%  { background-image: url('/project/images/new7.png'); }
+      100% { background-image: url('/project/images/new8.png'); }
+    }
+    
   
   /* =========================
      EVENTS
