@@ -49,15 +49,16 @@
   }
   
   /* =========================
-     TOP NAV
+     TOP NAV  ✅ FIXED HERE
      ========================= */
   .top-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.6rem 1.2rem;
-    background: linear-gradient(to left, white, white);
+    background: white;
     color: #500000;
+    border-bottom: 2px solid #500000;
   }
   
   .menu {
@@ -69,19 +70,22 @@
   }
   
   .menu li a {
-    color: white;
+    color: #500000;                 /* ✅ maroon text */
     text-decoration: none;
-    padding: 0.5rem 0.75rem;
-    border-radius: 6px;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.2s ease;
   }
   
   .menu li a:hover {
-    background: rgba(255,255,255,0.15);
+    background: rgba(80, 0, 0, 0.08);
   }
   
+  /* CURRENT PAGE */
   .menu li a.current {
-    background: white;
-    color: #500000;
+    background: #500000;
+    color: white;
     font-weight: 600;
   }
   
@@ -124,18 +128,17 @@
   /* =========================
      HERO SLIDES
      ========================= */
-     @keyframes slideShow {
-      0%   { background-image: url('/project/images/tamu/mays1.jpg'); }
-      12%  { background-image: url('/project/images/tamu/mays2.jpg'); }
-      24%  { background-image: url('/project/images/tamu/mays3.jpg'); }
-      36%  { background-image: url('/project/images/tamu/mays4.jpg'); }
-      48%  { background-image: url('/project/images/tamu/mays5.jpg'); }
-      60%  { background-image: url('/project/images/tamu/mays6.jpg'); }
-      72%  { background-image: url('/project/images/tamu/mays7.jpg'); }
-      84%  { background-image: url('/project/images/tamu/mays8.jpg'); }
-      100% { background-image: url('/project/images/tamu/mays9.jpg'); }
-    }
-    
+  @keyframes slideShow {
+    0%   { background-image: url('/project/images/tamu/mays1.jpg'); }
+    12%  { background-image: url('/project/images/tamu/mays2.jpg'); }
+    24%  { background-image: url('/project/images/tamu/mays3.jpg'); }
+    36%  { background-image: url('/project/images/tamu/mays4.jpg'); }
+    48%  { background-image: url('/project/images/tamu/mays5.jpg'); }
+    60%  { background-image: url('/project/images/tamu/mays6.jpg'); }
+    72%  { background-image: url('/project/images/tamu/mays7.jpg'); }
+    84%  { background-image: url('/project/images/tamu/mays8.jpg'); }
+    100% { background-image: url('/project/images/tamu/mays9.jpg'); }
+  }
   
   /* =========================
      EVENTS
@@ -220,9 +223,10 @@
       left: 0;
       width: 100%;
       flex-direction: column;
-      background: #500000;
+      background: white;
       max-height: 0;
       overflow: hidden;
+      border-bottom: 2px solid #500000;
     }
   
     #menu-toggle:checked ~ .menu {
