@@ -16,11 +16,7 @@
   <style>
     html { scroll-behavior: smooth; }
 
-    .page-wrap {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1.25rem;
-    }
+    .page-wrap { max-width: 1100px; margin: 2rem auto; padding: 0 1.25rem; }
 
     .page-hero {
       background: #ffffff;
@@ -30,34 +26,17 @@
       border-left: 8px solid #500000;
     }
 
-    .page-hero h1 {
-      margin: 0 0 0.5rem 0;
-      color: #500000;
-      font-size: 2.3rem;
-      line-height: 1.2;
-    }
+    .page-hero h1 { margin: 0 0 0.5rem 0; color: #500000; font-size: 2.3rem; line-height: 1.2; }
+    .page-hero p { margin: 0.5rem 0 0; color: #333; font-size: 1.1rem; }
 
-    .page-hero p {
-      margin: 0.5rem 0 0;
-      color: #333;
-      font-size: 1.1rem;
-    }
+    .section-title { margin: 2rem 0 1rem; color: #500000; font-size: 1.8rem; letter-spacing: 0.5px; }
 
-    .section-title {
-      margin: 2rem 0 1rem;
-      color: #500000;
-      font-size: 1.8rem;
-      letter-spacing: 0.5px;
-    }
-
-    /* Quick capability strip */
     .strip {
       margin-top: 1.25rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
     }
-
     .strip-item {
       background: #fff;
       border-radius: 12px;
@@ -65,52 +44,133 @@
       border: 2px solid rgba(80,0,0,0.10);
       box-shadow: 0 3px 8px rgba(0,0,0,0.06);
     }
+    .strip-item strong { color: #500000; display: block; margin-bottom: 0.25rem; font-weight: 600; }
 
-    .strip-item strong {
-      color: #500000;
-      display: block;
-      margin-bottom: 0.25rem;
-      font-weight: 600;
-    }
+    .content-grid { padding: 0; margin-top: 1rem; }
 
-    /* Cards tight */
-    .content-grid {
-      padding: 0;
-      margin-top: 1rem;
-    }
-
-    /* Matching logic box */
-    .match-box {
+    .panel {
       background: #ffffff;
       border-radius: 14px;
       padding: 1.5rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.10);
       border: 2px solid rgba(80,0,0,0.12);
-    }
-
-    .match-box ul {
-      margin: 0.75rem 0 0;
-      padding-left: 1.25rem;
-      color: #333;
-    }
-
-    .match-box li {
-      margin: 0.45rem 0;
-    }
-
-    /* Placeholder for future wireframes/screenshots */
-    .placeholder {
       margin-top: 1rem;
-      background: #fff;
-      border-radius: 14px;
-      padding: 1.25rem;
-      border: 2px dashed rgba(80,0,0,0.25);
-      color: #333;
     }
 
-    .placeholder span {
-      color: #500000;
+    .note {
+      margin-top: 0.75rem;
+      background: rgba(80,0,0,0.08);
+      border: 1px solid rgba(80,0,0,0.18);
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      color: #333;
+      font-size: 0.98rem;
+    }
+    .note strong { color: #500000; }
+
+    .hidden { display: none !important; }
+
+    /* Forms */
+    label { display:block; margin-top: 0.75rem; font-weight: 600; color:#500000; }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.55rem 0.65rem;
+      margin-top: 0.25rem;
+      font-family: 'Oswald', sans-serif;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.18);
+      outline: none;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+
+    .grid2 {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    .btn-row { display:flex; flex-wrap:wrap; gap: 0.6rem; margin-top: 0.9rem; }
+    .btn {
+      border: none;
+      border-radius: 10px;
+      padding: 0.6rem 0.95rem;
+      cursor: pointer;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
       font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .btn-primary { background:#500000; color:#fff; }
+    .btn-primary:hover { filter: brightness(0.95); }
+    .btn-ghost { background: rgba(80,0,0,0.10); color:#500000; }
+    .btn-ghost:hover { background: rgba(80,0,0,0.14); }
+
+    /* Pills */
+    .pill-row { display:flex; flex-wrap:wrap; gap: 0.45rem; margin-top: 0.6rem; }
+    .pill {
+      background: #fff;
+      border: 1px solid rgba(80,0,0,0.18);
+      color: #500000;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+
+    /* Matches */
+    .matches {
+      margin-top: 1rem;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .match-card {
+      background:#fff;
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+      border: 2px solid rgba(80,0,0,0.10);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+    .match-card h3 { margin:0; color:#500000; font-size: 1.35rem; }
+    .meta { margin-top: 0.4rem; color:#333; font-size: 0.98rem; }
+    .score {
+      display:inline-block;
+      margin-top: 0.5rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(80,0,0,0.10);
+      color:#500000;
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    /* Tracker */
+    .tracker {
+      margin-top: 1rem;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .track-card {
+      background:#fff;
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+      border: 2px solid rgba(80,0,0,0.10);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+    .status {
+      display:inline-block;
+      margin-top: 0.45rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(80,0,0,0.10);
+      color:#500000;
+      font-weight: 800;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -130,9 +190,7 @@
 
   <!-- Navigation -->
   <section class="top-nav">
-    <div>
-      <p>CMIS Connect</p>
-    </div>
+    <div><p>CMIS Connect</p></div>
 
     <input id="menu-toggle" type="checkbox">
     <label class="menu-button-container" for="menu-toggle">
@@ -152,96 +210,298 @@
 
   <main class="page-wrap">
 
+    <!-- PUBLIC OVERVIEW -->
     <section class="page-hero">
       <h1>Mentorship Matching System</h1>
       <p>
-        A structured program that connects students with alumni and industry mentors based on skills,
-        career interests, and availability — making mentorship easier to launch and easier to sustain.
+        A structured mentorship experience that matches students with alumni and industry mentors using skill-based criteria,
+        career interests, and availability preferences — helping strengthen the CMIS community long-term.
       </p>
 
       <div class="strip">
         <div class="strip-item">
           <strong>Skill-Based Matching</strong>
-          Match students and mentors by tools, roles, and goals.
+          Match by skills to grow and career direction.
         </div>
         <div class="strip-item">
-          <strong>Career Interests</strong>
-          Align students with mentors in relevant industries and paths.
+          <strong>Availability-Aware</strong>
+          Improve success rates with schedule compatibility.
         </div>
         <div class="strip-item">
-          <strong>Availability Preferences</strong>
-          Filter by meeting frequency and time commitments.
+          <strong>Guided Requests</strong>
+          Standardize outreach so mentors can respond faster.
         </div>
         <div class="strip-item">
-          <strong>Structured Engagement</strong>
-          Keep mentorship organized with goals and checkpoints.
+          <strong>Session Tracking</strong>
+          Track requests, sessions, and mentorship outcomes.
         </div>
+      </div>
+
+      <div class="note">
+        <strong>Prototype note:</strong> This page demonstrates the intended workflow. In production, profile data,
+        approvals, and scheduling would be managed through secure services and role-based access.
       </div>
     </section>
 
-    <h2 class="section-title">Core Mentorship Features</h2>
-
+    <h2 class="section-title">Core Mentorship Capabilities</h2>
     <section class="content-grid">
       <article class="card">
-        <h2>Student Intake Profile</h2>
-        <p>
-          Students submit interests, career goals, target roles, and skill areas to help create a strong match.
-        </p>
+        <h2>Student Match Profile</h2>
+        <p>Students specify goals, interests, and skills to grow so the system can recommend best-fit mentors.</p>
       </article>
-
       <article class="card">
-        <h2>Mentor Profile</h2>
-        <p>
-          Alumni and industry mentors list expertise, preferred mentoring topics, availability, and communication preferences.
-        </p>
+        <h2>Mentor Profiles</h2>
+        <p>Mentors share expertise areas, mentoring style, and availability to support successful pairing.</p>
       </article>
-
       <article class="card">
-        <h2>Matching &amp; Recommendations</h2>
-        <p>
-          The platform recommends pairings based on skills, interests, and availability—while allowing manual review.
-        </p>
+        <h2>Match Suggestions</h2>
+        <p>Students receive ranked mentor recommendations based on overlap and availability fit.</p>
       </article>
-
       <article class="card">
-        <h2>Meeting Structure</h2>
-        <p>
-          Provide a simple cadence: goals, meeting notes, and suggested discussion prompts to keep mentorship consistent.
-        </p>
+        <h2>Mentorship Requests</h2>
+        <p>Structured request messages standardize outreach and improve mentor response rates.</p>
       </article>
-
       <article class="card">
-        <h2>Mentorship Milestones</h2>
-        <p>
-          Track progress with milestones like resume review, mock interviews, career mapping, and networking checkpoints.
-        </p>
+        <h2>Session Scheduling</h2>
+        <p>Simple scheduling flow to coordinate virtual/in-person sessions and track upcoming meetings.</p>
       </article>
-
       <article class="card">
-        <h2>Program Oversight</h2>
-        <p>
-          CMIS administrators can monitor activity levels, match success, and overall mentorship engagement health.
-        </p>
+        <h2>Tracking & Governance</h2>
+        <p>Opt-in model, basic rules of engagement, and clear expectations for respectful interactions.</p>
       </article>
     </section>
 
-    <h2 class="section-title">How Matching Works</h2>
-
-    <section class="match-box">
+    <!-- Mentorship Access (Option B style) -->
+    <h2 class="section-title">Mentorship Access</h2>
+    <section class="panel">
       <p style="margin:0; color:#333;">
-        Matching is designed to be fair, scalable, and easy to manage:
+        The tools below support both <strong>students</strong> (to create a match profile and request mentors) and
+        <strong>mentors</strong> (to publish expertise and availability). This prototype demonstrates the matching flow and tracking.
       </p>
-      <ul>
-        <li><strong>Skill overlap:</strong> tools, technologies, and role alignment (ex: analytics, cloud, data, PM).</li>
-        <li><strong>Career interests:</strong> industry, job functions, and long-term goals.</li>
-        <li><strong>Availability:</strong> meeting frequency, preferred communication method, and time zones.</li>
-        <li><strong>Preferences:</strong> mentoring topics (resume, interviewing, leadership, internship guidance).</li>
-        <li><strong>Opt-in controls:</strong> both mentors and students can accept/decline suggested matches.</li>
-      </ul>
+      <div class="note">
+        <strong>Prototype note:</strong> Authentication and consent/opt-in controls would be required in production.
+      </div>
     </section>
 
-    <div class="placeholder">
-      <span>Optional (later):</span> Insert wireframes here for Mentor Matching, Profile Setup, and Mentorship Dashboard screens.
+    <!-- Role Login -->
+    <section class="panel" id="login-panel">
+      <h2 style="margin:0; color:#500000;">Login (Prototype)</h2>
+      <p style="margin:0.5rem 0 0; color:#333;">
+        Choose your role to access mentorship tools (no real authentication).
+      </p>
+
+      <label for="role">Role</label>
+      <select id="role">
+        <option value="student">Student</option>
+        <option value="mentor">Mentor (Alumni/Industry)</option>
+      </select>
+
+      <div class="grid2">
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@tamu.edu / mentor@company.com">
+        </div>
+        <div>
+          <label for="display">Display Name</label>
+          <input id="display" type="text" placeholder="Your name">
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btn-login" type="button">Login</button>
+        <button class="btn btn-ghost" id="btn-demo-student" type="button">Demo Student</button>
+        <button class="btn btn-ghost" id="btn-demo-mentor" type="button">Demo Mentor</button>
+      </div>
+
+      <div class="note">
+        <strong>Note:</strong> Your info is stored in this browser only (localStorage) for prototype behavior.
+      </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section class="panel hidden" id="dash-panel">
+      <h2 style="margin:0; color:#500000;">Mentorship Dashboard</h2>
+      <p style="margin:0.5rem 0 0; color:#333;">
+        Logged in as <strong id="whoami">User</strong>.
+      </p>
+
+      <div class="btn-row">
+        <button class="btn btn-ghost" id="btn-logout" type="button">Logout</button>
+        <button class="btn btn-ghost" id="btn-clear" type="button">Clear My Data (Prototype)</button>
+      </div>
+
+      <div class="note">
+        <strong>Tip:</strong> Students will see “Match Profile” + “Find Matches”. Mentors will see “Mentor Profile”.
+      </div>
+    </section>
+
+    <!-- STUDENT: Match Profile -->
+    <h2 class="section-title hidden" id="student-title">Student Match Profile</h2>
+    <section class="panel hidden" id="student-panel">
+      <p style="margin:0; color:#333;">
+        Create your mentorship preferences so CMIS Connect can recommend mentors aligned to your goals.
+      </p>
+
+      <label for="stu-interest">Career Interest</label>
+      <select id="stu-interest">
+        <option value="Data">Data</option>
+        <option value="Consulting">Consulting</option>
+        <option value="Product">Product</option>
+        <option value="Security">Security</option>
+        <option value="Cloud">Cloud</option>
+      </select>
+
+      <label for="stu-skill">Primary Skill to Grow</label>
+      <select id="stu-skill">
+        <option value="SQL">SQL</option>
+        <option value="Python">Python</option>
+        <option value="Power BI">Power BI</option>
+        <option value="Analytics">Analytics</option>
+        <option value="Cloud">Cloud</option>
+      </select>
+
+      <div class="grid2">
+        <div>
+          <label for="stu-format">Meeting Preference</label>
+          <select id="stu-format">
+            <option value="Virtual">Virtual</option>
+            <option value="In-person">In-person</option>
+            <option value="Hybrid">Hybrid</option>
+          </select>
+        </div>
+        <div>
+          <label for="stu-frequency">Frequency</label>
+          <select id="stu-frequency">
+            <option value="Biweekly">Biweekly</option>
+            <option value="Monthly">Monthly</option>
+            <option value="One-time">One-time</option>
+          </select>
+        </div>
+      </div>
+
+      <label for="stu-availability">Availability (short)</label>
+      <input id="stu-availability" type="text" placeholder="Example: Weeknights after 6pm, Fridays">
+
+      <label for="stu-goals">Goals / What you want from mentorship</label>
+      <textarea id="stu-goals" placeholder="Example: interview prep, career guidance, technical growth, networking..."></textarea>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btn-save-student" type="button">Save Match Profile</button>
+        <button class="btn btn-ghost" id="btn-find-matches" type="button">Find Matches</button>
+        <button class="btn btn-ghost" id="btn-demo-profile" type="button">Fill Demo Profile</button>
+      </div>
+
+      <div class="note hidden" id="student-msg"></div>
+    </section>
+
+    <!-- STUDENT: Match Results -->
+    <h2 class="section-title hidden" id="matches-title">Top Mentor Matches</h2>
+    <section class="panel hidden" id="matches-panel">
+      <p style="margin:0; color:#333;">
+        Ranked mentor suggestions based on interest/skill overlap and availability fit (prototype).
+      </p>
+      <div class="matches" id="matches-list"></div>
+    </section>
+
+    <!-- MENTOR: Profile -->
+    <h2 class="section-title hidden" id="mentor-title">Mentor Profile</h2>
+    <section class="panel hidden" id="mentor-panel">
+      <p style="margin:0; color:#333;">
+        Publish your expertise and availability to help students find you through CMIS Connect.
+      </p>
+
+      <div class="grid2">
+        <div>
+          <label for="men-area">Expertise Area</label>
+          <select id="men-area">
+            <option value="Data">Data</option>
+            <option value="Consulting">Consulting</option>
+            <option value="Product">Product</option>
+            <option value="Security">Security</option>
+            <option value="Cloud">Cloud</option>
+          </select>
+        </div>
+        <div>
+          <label for="men-skill">Primary Mentoring Skill</label>
+          <select id="men-skill">
+            <option value="SQL">SQL</option>
+            <option value="Python">Python</option>
+            <option value="Power BI">Power BI</option>
+            <option value="Analytics">Analytics</option>
+            <option value="Cloud">Cloud</option>
+          </select>
+        </div>
+      </div>
+
+      <label for="men-style">Mentoring Style</label>
+      <select id="men-style">
+        <option value="Career Guidance">Career Guidance</option>
+        <option value="Technical Coaching">Technical Coaching</option>
+        <option value="Interview Prep">Interview Prep</option>
+        <option value="Networking & Growth">Networking & Growth</option>
+      </select>
+
+      <label for="men-availability">Availability</label>
+      <input id="men-availability" type="text" placeholder="Example: Tuesdays 5–7pm, weekends flexible">
+
+      <label for="men-bio">Short Bio</label>
+      <textarea id="men-bio" placeholder="Your background, what you enjoy mentoring on, and what students can expect..."></textarea>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btn-save-mentor" type="button">Save Mentor Profile</button>
+        <button class="btn btn-ghost" id="btn-demo-mentor-profile" type="button">Fill Demo Mentor Profile</button>
+      </div>
+
+      <div class="note hidden" id="mentor-msg"></div>
+    </section>
+
+    <!-- Request Tracker -->
+    <h2 class="section-title hidden" id="tracker-title">My Mentorship Requests</h2>
+    <section class="panel hidden" id="tracker-panel">
+      <p style="margin:0; color:#333;">
+        Track mentorship requests and sessions (prototype). Data is stored in this browser.
+      </p>
+      <div class="tracker" id="tracker-list"></div>
+    </section>
+
+    <!-- Scheduling -->
+    <h2 class="section-title hidden" id="schedule-title">Schedule a Session (Prototype)</h2>
+    <section class="panel hidden" id="schedule-panel">
+      <p style="margin:0; color:#333;">
+        Schedule a mentorship session after a match is accepted (prototype placeholder).
+      </p>
+
+      <div class="grid2">
+        <div>
+          <label for="sess-date">Date</label>
+          <input id="sess-date" type="date">
+        </div>
+        <div>
+          <label for="sess-time">Time</label>
+          <input id="sess-time" type="time">
+        </div>
+      </div>
+
+      <label for="sess-format">Format</label>
+      <select id="sess-format">
+        <option value="Virtual">Virtual</option>
+        <option value="In-person">In-person</option>
+        <option value="Hybrid">Hybrid</option>
+      </select>
+
+      <label for="sess-notes">Notes</label>
+      <textarea id="sess-notes" placeholder="Agenda, goals for the session, links, etc."></textarea>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btn-add-session" type="button">Add Upcoming Session</button>
+      </div>
+
+      <div class="note hidden" id="session-msg"></div>
+    </section>
+
+    <div class="note" style="margin-top:1.25rem;">
+      <strong>Governance reminder:</strong> In production, this system would support opt-in consent, appropriate privacy controls,
+      and basic rules of engagement (respectful communication, time expectations, and reporting paths).
     </div>
 
   </main>
@@ -249,6 +509,503 @@
   <footer>
     <p>&copy; 2025 CMIS Connect | Texas A&amp;M University. All rights reserved.</p>
   </footer>
+
+  <script>
+    // ----------------------------
+    // LocalStorage keys
+    // ----------------------------
+    const LS_SESSION = "cmis_mentorship_session";
+    const LS_STUDENT_PROFILE = "cmis_student_match_profile";
+    const LS_MENTOR_PROFILE = "cmis_mentor_profile";
+    const LS_REQUESTS = "cmis_mentorship_requests";
+    const LS_SESSIONS = "cmis_mentorship_sessions";
+
+    // Demo mentors (plus optionally the logged-in mentor profile)
+    const demoMentors = [
+      {
+        id: "m1",
+        name: "Casey Rivera (Alumni)",
+        area: "Data",
+        skill: "SQL",
+        style: "Career Guidance",
+        availability: "Weeknights after 6pm",
+        bio: "Former CMIS student, now in analytics. Enjoys mentoring on career paths and internships."
+      },
+      {
+        id: "m2",
+        name: "Jordan Kim (Industry)",
+        area: "Consulting",
+        skill: "Analytics",
+        style: "Interview Prep",
+        availability: "Fridays + weekends",
+        bio: "Consultant focused on analytics and strategy. Happy to do mock interviews and case prep."
+      },
+      {
+        id: "m3",
+        name: "Taylor Singh (Alumni)",
+        area: "Cloud",
+        skill: "Cloud",
+        style: "Technical Coaching",
+        availability: "Tues/Thurs evenings",
+        bio: "Cloud engineer. Mentors students on foundational cloud concepts and building portfolios."
+      },
+      {
+        id: "m4",
+        name: "Morgan Chen (Industry)",
+        area: "Security",
+        skill: "Python",
+        style: "Networking & Growth",
+        availability: "Virtual, flexible schedule",
+        bio: "Security analyst. Mentors on networking, professional development, and skills roadmap."
+      }
+    ];
+
+    // ----------------------------
+    // Elements
+    // ----------------------------
+    const loginPanel = document.getElementById("login-panel");
+    const dashPanel = document.getElementById("dash-panel");
+    const whoami = document.getElementById("whoami");
+
+    const studentTitle = document.getElementById("student-title");
+    const studentPanel = document.getElementById("student-panel");
+    const matchesTitle = document.getElementById("matches-title");
+    const matchesPanel = document.getElementById("matches-panel");
+    const matchesList = document.getElementById("matches-list");
+
+    const mentorTitle = document.getElementById("mentor-title");
+    const mentorPanel = document.getElementById("mentor-panel");
+
+    const trackerTitle = document.getElementById("tracker-title");
+    const trackerPanel = document.getElementById("tracker-panel");
+    const trackerList = document.getElementById("tracker-list");
+
+    const scheduleTitle = document.getElementById("schedule-title");
+    const schedulePanel = document.getElementById("schedule-panel");
+
+    // ----------------------------
+    // Storage helpers
+    // ----------------------------
+    function loadJSON(key, fallback) {
+      try { return JSON.parse(localStorage.getItem(key)) ?? fallback; }
+      catch (e) { return fallback; }
+    }
+    function saveJSON(key, value) {
+      localStorage.setItem(key, JSON.stringify(value));
+    }
+    function clearKey(key) {
+      localStorage.removeItem(key);
+    }
+
+    function getSession() {
+      return loadJSON(LS_SESSION, null);
+    }
+
+    function setSession(s) {
+      saveJSON(LS_SESSION, s);
+    }
+
+    function clearAllUserData() {
+      clearKey(LS_SESSION);
+      // keep demo mentors in code, but clear stored profiles/requests
+      clearKey(LS_STUDENT_PROFILE);
+      clearKey(LS_MENTOR_PROFILE);
+      clearKey(LS_REQUESTS);
+      clearKey(LS_SESSIONS);
+    }
+
+    // ----------------------------
+    // UI show/hide
+    // ----------------------------
+    function hideAllRoleSections() {
+      studentTitle.classList.add("hidden");
+      studentPanel.classList.add("hidden");
+      matchesTitle.classList.add("hidden");
+      matchesPanel.classList.add("hidden");
+
+      mentorTitle.classList.add("hidden");
+      mentorPanel.classList.add("hidden");
+
+      trackerTitle.classList.add("hidden");
+      trackerPanel.classList.add("hidden");
+
+      scheduleTitle.classList.add("hidden");
+      schedulePanel.classList.add("hidden");
+    }
+
+    function showStudentUI() {
+      hideAllRoleSections();
+      studentTitle.classList.remove("hidden");
+      studentPanel.classList.remove("hidden");
+      trackerTitle.classList.remove("hidden");
+      trackerPanel.classList.remove("hidden");
+      scheduleTitle.classList.remove("hidden");
+      schedulePanel.classList.remove("hidden");
+      renderTracker();
+    }
+
+    function showMentorUI() {
+      hideAllRoleSections();
+      mentorTitle.classList.remove("hidden");
+      mentorPanel.classList.remove("hidden");
+      trackerTitle.classList.remove("hidden");
+      trackerPanel.classList.remove("hidden");
+      scheduleTitle.classList.remove("hidden");
+      schedulePanel.classList.remove("hidden");
+      renderTracker();
+    }
+
+    function showLoggedIn(session) {
+      loginPanel.classList.add("hidden");
+      dashPanel.classList.remove("hidden");
+      whoami.textContent = `${session.display} • ${session.role === "student" ? "Student" : "Mentor"}`;
+      if (session.role === "student") showStudentUI();
+      else showMentorUI();
+    }
+
+    function showLoggedOut() {
+      dashPanel.classList.add("hidden");
+      loginPanel.classList.remove("hidden");
+      hideAllRoleSections();
+    }
+
+    // ----------------------------
+    // Matching logic (simple score)
+    // ----------------------------
+    function buildMentorPool() {
+      const mentorProfile = loadJSON(LS_MENTOR_PROFILE, null);
+      const pool = [...demoMentors];
+
+      // If a mentor is logged in and saved their profile, include it as a mentor in the pool
+      if (mentorProfile && mentorProfile.name) {
+        pool.unshift({
+          id: "m_self",
+          name: mentorProfile.name + " (You)",
+          area: mentorProfile.area,
+          skill: mentorProfile.skill,
+          style: mentorProfile.style,
+          availability: mentorProfile.availability,
+          bio: mentorProfile.bio
+        });
+      }
+      return pool;
+    }
+
+    function scoreMentor(studentProfile, mentor) {
+      let score = 60;
+      if (mentor.area === studentProfile.interest) score += 20;
+      if (mentor.skill === studentProfile.skill) score += 15;
+
+      // Very simple "availability fit" check (keyword overlap)
+      const a = (mentor.availability || "").toLowerCase();
+      const b = (studentProfile.availability || "").toLowerCase();
+      if (a && b) {
+        const tokens = ["weekend", "friday", "monday", "tuesday", "wednesday", "thursday", "evening", "night", "morning"];
+        const overlap = tokens.some(t => a.includes(t) && b.includes(t));
+        if (overlap) score += 5;
+      }
+
+      // Clamp 0-99
+      return Math.max(50, Math.min(99, score));
+    }
+
+    // ----------------------------
+    // Tracker: requests + sessions
+    // ----------------------------
+    function getRequests() { return loadJSON(LS_REQUESTS, []); }
+    function setRequests(r) { saveJSON(LS_REQUESTS, r); }
+
+    function getSessions() { return loadJSON(LS_SESSIONS, []); }
+    function setSessions(s) { saveJSON(LS_SESSIONS, s); }
+
+    function renderTracker() {
+      const session = getSession();
+      if (!session) return;
+
+      const reqs = getRequests().filter(r => r.ownerEmail === session.email);
+      const sess = getSessions().filter(s => s.ownerEmail === session.email);
+
+      const cards = [];
+
+      if (!reqs.length && !sess.length) {
+        trackerList.innerHTML = `
+          <div class="track-card">
+            <h3 style="margin:0; color:#500000;">Nothing to track yet</h3>
+            <div style="margin-top:0.5rem; color:#333;">
+              Students can request mentors after viewing matches. Mentors can accept requests (conceptual).
+            </div>
+            <div class="status" style="margin-top:0.75rem;">Prototype</div>
+          </div>
+        `;
+        return;
+      }
+
+      reqs.forEach(r => {
+        cards.push(`
+          <div class="track-card">
+            <h3 style="margin:0; color:#500000;">Mentorship Request</h3>
+            <div class="meta"><strong>To:</strong> ${r.mentorName}</div>
+            <div class="meta"><strong>Message:</strong> ${r.message || "—"}</div>
+            <div class="status">${r.status}</div>
+          </div>
+        `);
+      });
+
+      sess.forEach(s => {
+        cards.push(`
+          <div class="track-card">
+            <h3 style="margin:0; color:#500000;">Upcoming Session</h3>
+            <div class="meta"><strong>Date:</strong> ${s.date || "TBD"} • <strong>Time:</strong> ${s.time || "TBD"}</div>
+            <div class="meta"><strong>Format:</strong> ${s.format}</div>
+            <div class="meta"><strong>Notes:</strong> ${s.notes || "—"}</div>
+            <div class="status">Scheduled</div>
+          </div>
+        `);
+      });
+
+      trackerList.innerHTML = cards.join("");
+    }
+
+    // ----------------------------
+    // Login handlers
+    // ----------------------------
+    document.getElementById("btn-login").addEventListener("click", () => {
+      const role = document.getElementById("role").value;
+      const email = document.getElementById("email").value.trim();
+      const display = document.getElementById("display").value.trim();
+
+      if (!email || !display) {
+        alert("Enter email + display name (prototype).");
+        return;
+      }
+
+      const s = { role, email, display, createdAt: new Date().toISOString() };
+      setSession(s);
+      showLoggedIn(s);
+    });
+
+    document.getElementById("btn-demo-student").addEventListener("click", () => {
+      document.getElementById("role").value = "student";
+      document.getElementById("email").value = "demo.student@tamu.edu";
+      document.getElementById("display").value = "Demo Student";
+      const s = { role: "student", email: "demo.student@tamu.edu", display: "Demo Student", createdAt: new Date().toISOString() };
+      setSession(s);
+      showLoggedIn(s);
+    });
+
+    document.getElementById("btn-demo-mentor").addEventListener("click", () => {
+      document.getElementById("role").value = "mentor";
+      document.getElementById("email").value = "demo.mentor@company.com";
+      document.getElementById("display").value = "Demo Mentor";
+      const s = { role: "mentor", email: "demo.mentor@company.com", display: "Demo Mentor", createdAt: new Date().toISOString() };
+      setSession(s);
+      showLoggedIn(s);
+    });
+
+    document.getElementById("btn-logout").addEventListener("click", () => {
+      clearKey(LS_SESSION);
+      showLoggedOut();
+    });
+
+    document.getElementById("btn-clear").addEventListener("click", () => {
+      clearAllUserData();
+      alert("Prototype: cleared mentorship data stored in this browser.");
+      showLoggedOut();
+    });
+
+    // ----------------------------
+    // Student profile save + demo + match
+    // ----------------------------
+    const studentMsg = document.getElementById("student-msg");
+
+    document.getElementById("btn-demo-profile").addEventListener("click", () => {
+      document.getElementById("stu-interest").value = "Data";
+      document.getElementById("stu-skill").value = "SQL";
+      document.getElementById("stu-format").value = "Hybrid";
+      document.getElementById("stu-frequency").value = "Biweekly";
+      document.getElementById("stu-availability").value = "Weeknights after 6pm, Fridays";
+      document.getElementById("stu-goals").value = "Career guidance + internship prep. I want help building a strong resume and learning what skills employers value most.";
+      studentMsg.classList.add("hidden");
+    });
+
+    document.getElementById("btn-save-student").addEventListener("click", () => {
+      const profile = {
+        interest: document.getElementById("stu-interest").value,
+        skill: document.getElementById("stu-skill").value,
+        format: document.getElementById("stu-format").value,
+        frequency: document.getElementById("stu-frequency").value,
+        availability: document.getElementById("stu-availability").value.trim(),
+        goals: document.getElementById("stu-goals").value.trim()
+      };
+
+      saveJSON(LS_STUDENT_PROFILE, profile);
+
+      studentMsg.classList.remove("hidden");
+      studentMsg.className = "note";
+      studentMsg.innerHTML = "<strong>Saved!</strong> Your match profile has been stored in this browser (prototype).";
+    });
+
+    document.getElementById("btn-find-matches").addEventListener("click", () => {
+      const session = getSession();
+      if (!session || session.role !== "student") return;
+
+      const profile = loadJSON(LS_STUDENT_PROFILE, null);
+      if (!profile) {
+        alert("Save your match profile first (prototype).");
+        return;
+      }
+
+      const pool = buildMentorPool();
+      const ranked = pool
+        .map(m => ({ ...m, score: scoreMentor(profile, m) }))
+        .sort((a,b) => b.score - a.score)
+        .slice(0, 6);
+
+      matchesTitle.classList.remove("hidden");
+      matchesPanel.classList.remove("hidden");
+
+      matchesList.innerHTML = ranked.map(m => {
+        return `
+          <div class="match-card">
+            <h3>${m.name}</h3>
+            <div class="meta"><strong>Area:</strong> ${m.area} • <strong>Mentors in:</strong> ${m.skill}</div>
+            <div class="meta"><strong>Style:</strong> ${m.style}</div>
+            <div class="meta"><strong>Availability:</strong> ${m.availability}</div>
+            <div class="pill-row">
+              <span class="pill">${m.area}</span>
+              <span class="pill">${m.skill}</span>
+              <span class="pill">${m.style}</span>
+            </div>
+            <div class="score">${m.score}% match</div>
+
+            <label for="msg_${m.id}">Request Message</label>
+            <textarea id="msg_${m.id}" placeholder="Short intro + what you want help with..."></textarea>
+
+            <div class="btn-row">
+              <button class="btn btn-primary" type="button" onclick="requestMentor('${m.id}')">Request Match</button>
+              <button class="btn btn-ghost" type="button" onclick="fillReq('${m.id}')">Fill Demo Message</button>
+            </div>
+
+            <div class="note" style="margin-top:0.75rem;">
+              <strong>Bio:</strong> ${m.bio}
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      matchesPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    window.fillReq = function(mentorId) {
+      const el = document.getElementById("msg_" + mentorId);
+      if (!el) return;
+      el.value = "Hi! I’m a CMIS student looking for guidance on career paths and internship prep. Would you be open to a quick mentorship chat?";
+    };
+
+    window.requestMentor = function(mentorId) {
+      const session = getSession();
+      if (!session || session.role !== "student") return;
+
+      const pool = buildMentorPool();
+      const mentor = pool.find(m => m.id === mentorId);
+      if (!mentor) return;
+
+      const msg = (document.getElementById("msg_" + mentorId)?.value || "").trim();
+
+      const req = {
+        id: "req_" + Math.random().toString(16).slice(2),
+        ownerEmail: session.email,
+        mentorId: mentorId,
+        mentorName: mentor.name,
+        message: msg,
+        status: "Submitted",
+        createdAt: new Date().toISOString()
+      };
+
+      const reqs = getRequests();
+      reqs.unshift(req);
+      setRequests(reqs);
+
+      alert("Prototype: mentorship request saved. Check 'My Mentorship Requests' below.");
+      renderTracker();
+    };
+
+    // ----------------------------
+    // Mentor profile save + demo
+    // ----------------------------
+    const mentorMsg = document.getElementById("mentor-msg");
+
+    document.getElementById("btn-demo-mentor-profile").addEventListener("click", () => {
+      const session = getSession();
+      const name = session ? session.display : "Mentor Name";
+
+      document.getElementById("men-area").value = "Consulting";
+      document.getElementById("men-skill").value = "Analytics";
+      document.getElementById("men-style").value = "Interview Prep";
+      document.getElementById("men-availability").value = "Fridays after 4pm, weekends flexible (virtual)";
+      document.getElementById("men-bio").value = "I enjoy mentoring students on recruiting, resume improvement, interview prep, and building confidence for career transitions.";
+      mentorMsg.classList.add("hidden");
+    });
+
+    document.getElementById("btn-save-mentor").addEventListener("click", () => {
+      const session = getSession();
+      if (!session || session.role !== "mentor") return;
+
+      const profile = {
+        name: session.display,
+        area: document.getElementById("men-area").value,
+        skill: document.getElementById("men-skill").value,
+        style: document.getElementById("men-style").value,
+        availability: document.getElementById("men-availability").value.trim(),
+        bio: document.getElementById("men-bio").value.trim()
+      };
+
+      saveJSON(LS_MENTOR_PROFILE, profile);
+
+      mentorMsg.classList.remove("hidden");
+      mentorMsg.className = "note";
+      mentorMsg.innerHTML = "<strong>Saved!</strong> Your mentor profile is now included in the match pool (prototype).";
+    });
+
+    // ----------------------------
+    // Scheduling
+    // ----------------------------
+    const sessionMsg = document.getElementById("session-msg");
+
+    document.getElementById("btn-add-session").addEventListener("click", () => {
+      const session = getSession();
+      if (!session) return;
+
+      const item = {
+        id: "sess_" + Math.random().toString(16).slice(2),
+        ownerEmail: session.email,
+        date: document.getElementById("sess-date").value,
+        time: document.getElementById("sess-time").value,
+        format: document.getElementById("sess-format").value,
+        notes: document.getElementById("sess-notes").value.trim(),
+        createdAt: new Date().toISOString()
+      };
+
+      const all = getSessions();
+      all.unshift(item);
+      setSessions(all);
+
+      sessionMsg.classList.remove("hidden");
+      sessionMsg.className = "note";
+      sessionMsg.innerHTML = "<strong>Added!</strong> Upcoming session saved in this browser (prototype).";
+
+      renderTracker();
+    });
+
+    // ----------------------------
+    // Init
+    // ----------------------------
+    (function init() {
+      const session = getSession();
+      if (session && session.email) showLoggedIn(session);
+      else showLoggedOut();
+    })();
+  </script>
 
 </body>
 </html>
