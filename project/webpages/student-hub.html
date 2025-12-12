@@ -3,22 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | CMIS Connect</title>
+  <title>Student Engagement Hub | CMIS Connect</title>
 
   <!-- Google Font: Oswald -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Main CSS (same as homepage) -->
+  <!-- Main CSS -->
   <link rel="stylesheet" href="/project/styles/homepage.css">
 
   <style>
     html { scroll-behavior: smooth; }
 
-    /* Page-only helpers (keeps your main CSS clean) */
     .page-wrap {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 2rem auto;
       padding: 0 1.25rem;
     }
@@ -39,9 +38,9 @@
     }
 
     .page-hero p {
-      margin: 0;
-      font-size: 1.1rem;
+      margin: 0.5rem 0 0;
       color: #333;
+      font-size: 1.1rem;
     }
 
     .section-title {
@@ -51,41 +50,157 @@
       letter-spacing: 0.5px;
     }
 
-    /* Make cards on this page slightly tighter */
     .content-grid {
       padding: 0;
       margin-top: 1rem;
     }
 
-    /* Simple “callout” card */
-    .callout {
-      margin-top: 2rem;
-      background: #ffffff;
+    /* ===== Student Access (Login/Register) ===== */
+    .access-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .panel {
+      background: #fff;
       border-radius: 14px;
       padding: 1.5rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.10);
       border: 2px solid rgba(80,0,0,0.12);
     }
 
-    .callout h3 {
-      margin: 0 0 0.5rem 0;
+    .panel h3 {
+      margin: 0 0 0.75rem 0;
       color: #500000;
       font-size: 1.4rem;
     }
 
-    .callout ul {
-      margin: 0.75rem 0 0;
-      padding-left: 1.25rem;
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 0.85rem;
       color: #333;
     }
 
-    .callout li {
-      margin: 0.35rem 0;
+    .field label {
+      font-weight: 600;
+      color: #500000;
+    }
+
+    .field input {
+      padding: 0.65rem 0.75rem;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.18);
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .field input:focus {
+      border-color: rgba(80,0,0,0.55);
+      box-shadow: 0 0 0 3px rgba(80,0,0,0.12);
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 10px;
+      padding: 0.65rem 1rem;
+      cursor: pointer;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background: #500000;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(0.95);
+    }
+
+    .btn-ghost {
+      background: rgba(80,0,0,0.08);
+      color: #500000;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(80,0,0,0.12);
+    }
+
+    .msg {
+      margin-top: 0.75rem;
+      font-size: 0.98rem;
+      color: #333;
+    }
+
+    .msg.ok { color: #0b6b2b; }
+    .msg.err { color: #a61b1b; }
+
+    /* Logged-in banner + gated section */
+    .user-banner {
+      margin-top: 1rem;
+      background: #fff;
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
+      border: 2px solid rgba(80,0,0,0.12);
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .user-banner strong { color: #500000; }
+
+    .student-dashboard {
+      display: none; /* shown after login */
+      margin-top: 1.25rem;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .mini {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.25rem;
+      border: 2px solid rgba(80,0,0,0.10);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .mini h4 {
+      margin: 0 0 0.35rem 0;
+      color: #500000;
+      font-size: 1.2rem;
+    }
+
+    .mini p { margin: 0; color: #333; }
+
+    .note {
+      margin-top: 0.75rem;
+      color: #333;
+      font-size: 0.95rem;
+      opacity: 0.9;
     }
   </style>
 </head>
 
-<body id="about">
+<body id="student-hub">
 
   <!-- Floating Logo -->
   <a href="/project/webpages/homepage.html" class="floating-logo">
@@ -98,7 +213,7 @@
     <h2>Texas A&amp;M University</h2>
   </header>
 
-  <!-- Navigation (same as homepage) -->
+  <!-- Navigation -->
   <section class="top-nav">
     <div>
       <p>CMIS Connect</p>
@@ -110,100 +225,152 @@
     </label>
 
     <ul class="menu">
-        <li><a href="/project/webpages/homepage.html">Home</a></li>
-        <li><a href="/project/webpages/about.html">About</a></li>
-        <li><a href="/project/webpages/student-hub.html" class="current">Student Hub</a>        </li>
-        <li><a href="/project/webpages/case-management.html">Case Mgmt</a></li>
-        <li><a href="/project/webpages/sponsor-portal.html">Sponsor Portal</a></li>
-        <li><a href="/project/webpages/mentorship.html">Mentorship</a></li>
-        <li><a href="/project/webpages/analytics.html">Analytics</a></li>
+      <li><a href="/project/webpages/homepage.html">Home</a></li>
+      <li><a href="/project/webpages/about.html">About</a></li>
+      <li><a href="/project/webpages/student-hub.html" class="current">Student Hub</a></li>
+      <li><a href="/project/webpages/case-management.html">Case Mgmt</a></li>
+      <li><a href="/project/webpages/sponsor-portal.html">Sponsor Portal</a></li>
+      <li><a href="/project/webpages/mentorship.html">Mentorship</a></li>
+      <li><a href="/project/webpages/analytics.html">Analytics</a></li>
     </ul>
   </section>
 
-  <!-- Page Content -->
   <main class="page-wrap">
 
     <section class="page-hero">
-      <h1>About CMIS Connect</h1>
+      <h1>Student Engagement Hub</h1>
       <p>
-        CMIS Connect is a conceptual platform designed to unify CMIS programs into one streamlined digital experience.
-        It supports students, faculty, sponsors, and alumni with a centralized space for engagement, operations, and long-term community growth.
+        A single portal where CMIS students can register for events, track involvement, upload resumes,
+        and view upcoming opportunities — all in one place.
+      </p>
+      <p class="note">
+        Prototype note: This demo uses browser storage to simulate accounts (no real backend).
       </p>
     </section>
 
-    <h2 class="section-title">Our Vision &amp; Goal</h2>
+    <!-- Student Access -->
+    <h2 class="section-title">Student Access</h2>
 
-    <section class="content-grid">
-      <article class="card">
-        <h2>Vision</h2>
-        <p>
-          To unify all CMIS programs into one intuitive digital platform that streamlines student engagement,
-          enhances faculty operations, strengthens industry partnerships, and empowers alumni involvement.
-        </p>
-      </article>
+    <div class="access-grid">
+      <!-- Login -->
+      <section class="panel" aria-label="Student Login">
+        <h3>Login</h3>
 
-      <article class="card">
-        <h2>Goal</h2>
-        <p>
-          Improve the CMIS community experience by providing one platform that supports students, faculty,
-          sponsors, and alumni — while reducing manual administrative work and improving accuracy across operations.
-        </p>
-      </article>
+        <div class="field">
+          <label for="login-email">Email</label>
+          <input id="login-email" type="email" placeholder="netid@tamu.edu" autocomplete="email">
+        </div>
 
-      <article class="card">
-        <h2>Why It Matters</h2>
-        <p>
-          CMIS activities often live across multiple tools and manual processes. CMIS Connect brings everything together so
-          opportunities are easier to find, workflows are more efficient, and engagement becomes measurable and sustainable.
-        </p>
-      </article>
-    </section>
+        <div class="field">
+          <label for="login-pass">Password</label>
+          <input id="login-pass" type="password" placeholder="Enter your password" autocomplete="current-password">
+        </div>
 
-    <h2 class="section-title">Who It Serves</h2>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="btn-login" type="button">Login</button>
+          <button class="btn btn-ghost" id="btn-demo" type="button">Use Demo Account</button>
+        </div>
 
-    <section class="content-grid">
-      <article class="card">
-        <h2>Students</h2>
-        <p>
-          Register for events, track involvement, build a professional profile, upload resumes, and discover opportunities.
-        </p>
-      </article>
+        <div class="msg" id="login-msg" aria-live="polite"></div>
+      </section>
 
-      <article class="card">
-        <h2>Faculty</h2>
-        <p>
-          Manage competitions, logistics, communication, scoring workflows, and publishing results — all in one place.
-        </p>
-      </article>
+      <!-- Register -->
+      <section class="panel" aria-label="Student Registration">
+        <h3>Register</h3>
 
-      <article class="card">
-        <h2>Industry Partners</h2>
-        <p>
-          Engage with opt-in student talent, request involvement, participate in events, and support CMIS initiatives.
-        </p>
-      </article>
+        <div class="field">
+          <label for="reg-name">Full Name</label>
+          <input id="reg-name" type="text" placeholder="First Last" autocomplete="name">
+        </div>
 
-      <article class="card">
-        <h2>Alumni</h2>
-        <p>
-          Reconnect through mentorship, give back through involvement, and help students grow through real-world guidance.
-        </p>
-      </article>
-    </section>
+        <div class="field">
+          <label for="reg-email">Email</label>
+          <input id="reg-email" type="email" placeholder="netid@tamu.edu" autocomplete="email">
+        </div>
 
-    <section class="callout">
-      <h3>What this website represents</h3>
-      <p style="margin:0; color:#333;">
-        This website is a prototype that demonstrates what CMIS Connect could look like as a unified platform.
-        Each page represents a major capability area of the product.
+        <div class="field">
+          <label for="reg-pass">Password</label>
+          <input id="reg-pass" type="password" placeholder="Create a password" autocomplete="new-password">
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-primary" id="btn-register" type="button">Create Account</button>
+        </div>
+
+        <div class="msg" id="reg-msg" aria-live="polite"></div>
+      </section>
+    </div>
+
+    <!-- Logged in banner -->
+    <div class="user-banner" id="user-banner">
+      <div>
+        <strong id="user-name">Student</strong>
+        <span id="user-email" style="color:#333;">(email)</span>
+      </div>
+      <button class="btn btn-ghost" id="btn-logout" type="button">Logout</button>
+    </div>
+
+    <!-- Student Dashboard (gated) -->
+    <section class="student-dashboard" id="student-dashboard">
+      <h2 class="section-title">Student Dashboard (Prototype)</h2>
+
+      <div class="mini-grid">
+        <div class="mini">
+          <h4>Upcoming Events</h4>
+          <p>View & register for upcoming CMIS events.</p>
+        </div>
+        <div class="mini">
+          <h4>Involvement Tracker</h4>
+          <p>Track attendance, points, and milestones.</p>
+        </div>
+        <div class="mini">
+          <h4>Resume Upload</h4>
+          <p>Upload or update your resume (opt-in for sponsors).</p>
+        </div>
+        <div class="mini">
+          <h4>Opportunities Feed</h4>
+          <p>Explore internships, competitions, and mentorship openings.</p>
+        </div>
+      </div>
+
+      <p class="note">
+        Next step later: we can add “Register for Event” buttons, a resume upload input, and an opportunities list—still prototype-only.
       </p>
-      <ul>
-        <li>Student Engagement Hub</li>
-        <li>Case Competition Management</li>
-        <li>Sponsor Access Portal</li>
-        <li>Mentorship Matching System</li>
-        <li>Administrative Analytics Dashboard</li>
-      </ul>
+    </section>
+
+    <!-- Core Features (still useful even before login) -->
+    <h2 class="section-title">Core Student Features</h2>
+
+    <section class="content-grid">
+      <article class="card">
+        <h2>Event Registration</h2>
+        <p>Browse CMIS events and workshops, register in seconds, and receive confirmations and reminders.</p>
+      </article>
+
+      <article class="card">
+        <h2>Involvement Tracker</h2>
+        <p>View your attendance history, engagement points, competitions joined, and milestones over time.</p>
+      </article>
+
+      <article class="card">
+        <h2>Resume &amp; Profile Upload</h2>
+        <p>Upload a resume, maintain an opt-in student profile, and keep it updated for recruiting and sponsor access.</p>
+      </article>
+
+      <article class="card">
+        <h2>Opportunities Feed</h2>
+        <p>Explore internships, speaker sessions, competitions, mentorship openings, and CMIS announcements in one feed.</p>
+      </article>
+
+      <article class="card">
+        <h2>Notifications</h2>
+        <p>Get updates through alerts (email or in-app) for deadlines, new events, and opportunity postings.</p>
+      </article>
+
+      <article class="card">
+        <h2>Student Resources</h2>
+        <p>Access templates, prep materials, FAQs, and links that support events, competitions, and career development.</p>
+      </article>
     </section>
 
   </main>
@@ -211,6 +378,153 @@
   <footer>
     <p>&copy; 2025 CMIS Connect | Texas A&amp;M University. All rights reserved.</p>
   </footer>
+
+  <script>
+    // ----- Prototype Auth (localStorage) -----
+    const USERS_KEY = "cmis_users";
+    const SESSION_KEY = "cmis_session";
+
+    const $ = (id) => document.getElementById(id);
+
+    const loginMsg = $("login-msg");
+    const regMsg = $("reg-msg");
+
+    const userBanner = $("user-banner");
+    const dash = $("student-dashboard");
+    const userNameEl = $("user-name");
+    const userEmailEl = $("user-email");
+
+    function readUsers() {
+      try { return JSON.parse(localStorage.getItem(USERS_KEY)) || []; }
+      catch { return []; }
+    }
+
+    function writeUsers(users) {
+      localStorage.setItem(USERS_KEY, JSON.stringify(users));
+    }
+
+    function setSession(session) {
+      localStorage.setItem(SESSION_KEY, JSON.stringify(session));
+    }
+
+    function getSession() {
+      try { return JSON.parse(localStorage.getItem(SESSION_KEY)); }
+      catch { return null; }
+    }
+
+    function clearMessages() {
+      loginMsg.className = "msg";
+      regMsg.className = "msg";
+      loginMsg.textContent = "";
+      regMsg.textContent = "";
+    }
+
+    function setMsg(el, text, type) {
+      el.className = "msg " + (type === "ok" ? "ok" : "err");
+      el.textContent = text;
+    }
+
+    function showLoggedIn(user) {
+      userBanner.style.display = "flex";
+      dash.style.display = "block";
+      userNameEl.textContent = user.name || "Student";
+      userEmailEl.textContent = `(${user.email})`;
+    }
+
+    function showLoggedOut() {
+      userBanner.style.display = "none";
+      dash.style.display = "none";
+      userNameEl.textContent = "Student";
+      userEmailEl.textContent = "(email)";
+    }
+
+    // Register
+    $("btn-register").addEventListener("click", () => {
+      clearMessages();
+
+      const name = $("reg-name").value.trim();
+      const email = $("reg-email").value.trim().toLowerCase();
+      const pass = $("reg-pass").value;
+
+      if (!name || !email || !pass) {
+        return setMsg(regMsg, "Please fill out all fields to register.", "err");
+      }
+
+      const users = readUsers();
+      const exists = users.some(u => u.email === email);
+
+      if (exists) {
+        return setMsg(regMsg, "That email is already registered. Try logging in.", "err");
+      }
+
+      users.push({ name, email, pass });
+      writeUsers(users);
+
+      setMsg(regMsg, "Account created! You can log in now.", "ok");
+
+      // Convenience: prefill login
+      $("login-email").value = email;
+      $("login-pass").value = pass;
+    });
+
+    // Login
+    $("btn-login").addEventListener("click", () => {
+      clearMessages();
+
+      const email = $("login-email").value.trim().toLowerCase();
+      const pass = $("login-pass").value;
+
+      const users = readUsers();
+      const user = users.find(u => u.email === email && u.pass === pass);
+
+      if (!user) {
+        return setMsg(loginMsg, "Login failed. Check your email/password (prototype).", "err");
+      }
+
+      setSession({ email: user.email });
+      setMsg(loginMsg, "Logged in successfully!", "ok");
+      showLoggedIn(user);
+    });
+
+    // Demo account
+    $("btn-demo").addEventListener("click", () => {
+      clearMessages();
+
+      const demo = { name: "Demo Student", email: "demo@tamu.edu", pass: "demo123" };
+      const users = readUsers();
+
+      if (!users.some(u => u.email === demo.email)) {
+        users.push(demo);
+        writeUsers(users);
+      }
+
+      $("login-email").value = demo.email;
+      $("login-pass").value = demo.pass;
+
+      setSession({ email: demo.email });
+      setMsg(loginMsg, "Demo account logged in!", "ok");
+      showLoggedIn(demo);
+    });
+
+    // Logout
+    $("btn-logout").addEventListener("click", () => {
+      localStorage.removeItem(SESSION_KEY);
+      clearMessages();
+      showLoggedOut();
+      setMsg(loginMsg, "You have been logged out.", "ok");
+    });
+
+    // On load: restore session
+    (function init() {
+      const session = getSession();
+      if (!session || !session.email) return showLoggedOut();
+
+      const users = readUsers();
+      const user = users.find(u => u.email === session.email);
+      if (user) showLoggedIn(user);
+      else showLoggedOut();
+    })();
+  </script>
 
 </body>
 </html>
