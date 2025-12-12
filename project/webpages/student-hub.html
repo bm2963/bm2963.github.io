@@ -303,12 +303,21 @@
 
     <!-- Logged in banner -->
     <div class="user-banner" id="user-banner">
-      <div>
-        <strong id="user-name">Student</strong>
-        <span id="user-email" style="color:#333;">(email)</span>
+        <div>
+          <strong id="user-name">Student</strong>
+          <span id="user-email">(email)</span>
+        </div>
+      
+        <div class="btn-row">
+          <a href="/project/webpages/student-profile.html" class="btn btn-primary">
+            View Profile
+          </a>
+          <button class="btn btn-ghost" id="btn-logout" type="button">
+            Logout
+          </button>
+        </div>
       </div>
-      <button class="btn btn-ghost" id="btn-logout" type="button">Logout</button>
-    </div>
+      
 
     <!-- Student Dashboard (gated) -->
     <section class="student-dashboard" id="student-dashboard">
