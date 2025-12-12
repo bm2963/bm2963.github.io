@@ -56,8 +56,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.6rem 1.2rem;
-    background: linear-gradient(to left, white, #7a0000);
-    color: white;
+    background: linear-gradient(to left, white, white);
+    color: #500000;
   }
   
   .menu {
@@ -125,15 +125,15 @@
      HERO SLIDES
      ========================= */
      @keyframes slideShow {
-      0%   { background-image: url('/project/images/shsubelltower.jpg'); }
-      12%  { background-image: url('/project/images/usitcc.png'); }
-      24%  { background-image: url('/project/images/itsa1.jpg'); }
-      36%  { background-image: url('/project/images/itsa2.jpg'); }
-      48%  { background-image: url('/project/images/New1.jpg'); }
-      60%  { background-image: url('/project/images/New3.jpg'); }
-      72%  { background-image: url('/project/images/New5.jpg'); }
-      84%  { background-image: url('/project/images/new7.png'); }
-      100% { background-image: url('/project/images/new8.png'); }
+      0%   { background-image: url('/project/images/tamu/mays1.jpg'); }
+      12%  { background-image: url('/project/images/tamu/mays2.jpg'); }
+      24%  { background-image: url('/project/images/tamu/mays3.jpg'); }
+      36%  { background-image: url('/project/images/tamu/mays4.jpg'); }
+      48%  { background-image: url('/project/images/tamu/mays5.jpg'); }
+      60%  { background-image: url('/project/images/tamu/mays6.jpg'); }
+      72%  { background-image: url('/project/images/tamu/mays7.jpg'); }
+      84%  { background-image: url('/project/images/tamu/mays8.jpg'); }
+      100% { background-image: url('/project/images/tamu/mays9.jpg'); }
     }
     
   
