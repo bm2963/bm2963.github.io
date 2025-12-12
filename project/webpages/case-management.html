@@ -5,252 +5,258 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Case Competition Management | CMIS Connect</title>
 
-  <!-- Google Font: Oswald -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
   <link rel="stylesheet" href="/project/styles/homepage.css">
 
   <style>
-    html { scroll-behavior: smooth; }
+    .page-wrap { max-width: 1100px; margin: 2rem auto; padding: 0 1.25rem; }
 
-    .page-wrap {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1.25rem;
-    }
-
-    .page-hero {
-      background: #ffffff;
+    .panel {
+      background: white;
       border-radius: 14px;
-      padding: 2rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       border-left: 8px solid #500000;
     }
 
-    .page-hero h1 {
-      margin: 0 0 0.5rem 0;
-      color: #500000;
-      font-size: 2.3rem;
-      line-height: 1.2;
-    }
-
-    .page-hero p {
-      margin: 0.5rem 0 0;
-      color: #333;
-      font-size: 1.1rem;
-    }
-
-    .section-title {
-      margin: 2rem 0 1rem;
+    .panel h2 {
+      margin-top: 0;
       color: #500000;
       font-size: 1.8rem;
-      letter-spacing: 0.5px;
     }
 
-    /* Quick capability strip */
-    .strip {
-      margin-top: 1.25rem;
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1rem;
-    }
-
-    .strip-item {
-      background: #fff;
-      border-radius: 12px;
-      padding: 1rem 1.25rem;
-      border: 2px solid rgba(80,0,0,0.10);
-      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
-    }
-
-    .strip-item strong {
-      color: #500000;
-      display: block;
-      margin-bottom: 0.25rem;
-      font-weight: 600;
-    }
-
-    /* Cards on this page: keep spacing tighter */
-    .content-grid {
-      padding: 0;
       margin-top: 1rem;
     }
 
-    /* Simple workflow box */
-    .workflow {
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
-      border: 2px solid rgba(80,0,0,0.12);
+    label { font-weight: 600; color: #500000; display:block; margin-top:0.6rem; }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.5rem;
+      font-family: 'Oswald', sans-serif;
+      margin-top: 0.25rem;
     }
 
-    .workflow ol {
-      margin: 0.75rem 0 0;
-      padding-left: 1.25rem;
-      color: #333;
-    }
-
-    .workflow li {
-      margin: 0.55rem 0;
-    }
-
-    /* Placeholder for future wireframes */
-    .placeholder {
-      margin-top: 1rem;
-      background: #fff;
-      border-radius: 14px;
-      padding: 1.25rem;
-      border: 2px dashed rgba(80,0,0,0.25);
-      color: #333;
-    }
-
-    .placeholder span {
-      color: #500000;
+    button {
+      margin-top: 0.75rem;
+      padding: 0.55rem 1rem;
+      font-family: 'Oswald', sans-serif;
       font-weight: 600;
+      background: #500000;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button.secondary {
+      background: rgba(80,0,0,0.12);
+      color: #500000;
+    }
+
+    .hidden { display: none; }
+
+    .note {
+      background: rgba(80,0,0,0.08);
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .list-item {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ddd;
     }
   </style>
 </head>
 
-<body id="case-management">
+<body>
 
-  <!-- Floating Logo -->
-  <a href="/project/webpages/homepage.html" class="floating-logo">
-    <img src="/project/images/tamu/cmis.png" alt="CMIS Connect Logo" height="80" width="80">
-  </a>
+<header>
+  <h1>CMIS Connect</h1>
+  <h2>Texas A&amp;M University</h2>
+</header>
 
-  <!-- Header -->
-  <header>
-    <h1>CMIS Connect</h1>
-    <h2>Texas A&amp;M University</h2>
-  </header>
+<section class="top-nav">
+  <div><p>CMIS Connect</p></div>
+  <ul class="menu">
+    <li><a href="/project/webpages/homepage.html">Home</a></li>
+    <li><a href="/project/webpages/student-hub.html">Student Hub</a></li>
+    <li><a href="/project/webpages/case-management.html" class="current">Case Mgmt</a></li>
+  </ul>
+</section>
 
-  <!-- Navigation (same structure across site) -->
-  <section class="top-nav">
-    <div>
-      <p>CMIS Connect</p>
+<main class="page-wrap">
+
+  <!-- PUBLIC OVERVIEW -->
+  <section class="panel">
+    <h2>Case Competition Management</h2>
+    <p>
+      This module allows faculty to manage the full lifecycle of CMIS case competitions —
+      from setup and team formation to judging, scoring, and results publication.
+    </p>
+    <div class="note">
+      <strong>Prototype note:</strong> Advanced functionality appears after faculty login.
     </div>
-
-    <input id="menu-toggle" type="checkbox">
-    <label class="menu-button-container" for="menu-toggle">
-      <div class="menu-button"></div>
-    </label>
-
-    <ul class="menu">
-      <li><a href="/project/webpages/homepage.html">Home</a></li>
-      <li><a href="/project/webpages/about.html">About</a></li>
-      <li><a href="/project/webpages/student-hub.html">Student Hub</a></li>
-      <li><a href="/project/webpages/case-management.html" class="current">Case Mgmt</a></li>
-      <li><a href="/project/webpages/sponsor-portal.html">Sponsor Portal</a></li>
-      <li><a href="/project/webpages/mentorship.html">Mentorship</a></li>
-      <li><a href="/project/webpages/analytics.html">Analytics</a></li>
-    </ul>
   </section>
 
-  <main class="page-wrap">
+  <!-- FACULTY LOGIN -->
+  <section class="panel" id="login-panel">
+    <h2>Faculty Login</h2>
+    <label>Email</label>
+    <input id="faculty-email" type="email" placeholder="faculty@tamu.edu">
 
-    <section class="page-hero">
-      <h1>Case Competition Management</h1>
-      <p>
-        A faculty-facing module that digitizes the entire case competition lifecycle — from team setup and submissions
-        to judging assignments, scoring, and results publication.
-      </p>
+    <label>Password</label>
+    <input type="password" placeholder="••••••">
 
-      <div class="strip">
-        <div class="strip-item">
-          <strong>Team Management</strong>
-          Create teams, roster students, and track eligibility.
-        </div>
-        <div class="strip-item">
-          <strong>Submission Workflow</strong>
-          Collect deliverables and enforce deadlines in one place.
-        </div>
-        <div class="strip-item">
-          <strong>Rubrics &amp; Scoring</strong>
-          Standardize evaluation and reduce manual calculation errors.
-        </div>
-        <div class="strip-item">
-          <strong>Judging Assignments</strong>
-          Assign judges, manage conflicts, and publish results.
-        </div>
-      </div>
-    </section>
+    <button id="login-btn">Login (Prototype)</button>
+  </section>
 
-    <h2 class="section-title">Core Faculty Capabilities</h2>
+  <!-- DASHBOARD -->
+  <section class="panel hidden" id="dashboard">
 
-    <section class="content-grid">
-      <article class="card">
-        <h2>Competition Setup</h2>
-        <p>
-          Create competition events, define rules, add timelines, attach case packets, and publish requirements to students.
-        </p>
-      </article>
+    <h2>Faculty Dashboard</h2>
 
-      <article class="card">
-        <h2>Team &amp; Roster Management</h2>
-        <p>
-          Manage teams, student rosters, roles, and participation status. Track who is eligible and confirm registrations.
-        </p>
-      </article>
+    <!-- CREATE COMPETITION -->
+    <div class="panel">
+      <h3>Create Competition</h3>
+      <label>Competition Name</label>
+      <input id="comp-name">
 
-      <article class="card">
-        <h2>Digital Submissions</h2>
-        <p>
-          Collect slide decks, reports, and supporting files. Automatically timestamp submissions and enforce due dates.
-        </p>
-      </article>
+      <label>Deadline</label>
+      <input type="date" id="comp-deadline">
 
-      <article class="card">
-        <h2>Rubrics Builder</h2>
-        <p>
-          Build standardized rubrics by category, weight, and scoring scale. Reuse templates across semesters.
-        </p>
-      </article>
+      <label>Description</label>
+      <textarea id="comp-desc"></textarea>
 
-      <article class="card">
-        <h2>Judge Assignment</h2>
-        <p>
-          Assign judges to teams, avoid conflicts of interest, and provide judging instructions and scoring access.
-        </p>
-      </article>
-
-      <article class="card">
-        <h2>Scoring &amp; Results</h2>
-        <p>
-          Aggregate scores automatically, generate rankings, and publish results. Keep an audit trail for transparency.
-        </p>
-      </article>
-    </section>
-
-    <h2 class="section-title">Competition Workflow</h2>
-
-    <section class="workflow">
-      <p style="margin:0; color:#333;">
-        CMIS Connect supports a simple, repeatable process for each competition:
-      </p>
-      <ol>
-        <li><strong>Faculty creates a competition</strong> (deadlines, rules, deliverables, rubric template).</li>
-        <li><strong>Students register and form teams</strong> (or faculty assigns teams as needed).</li>
-        <li><strong>Teams submit deliverables</strong> (slides/reports) through the platform.</li>
-        <li><strong>Faculty assigns judges</strong> and shares scoring access + instructions.</li>
-        <li><strong>Judges score using rubrics</strong> (standardized and weighted scoring).</li>
-        <li><strong>Results are published</strong> to students and sponsors (as allowed).</li>
-        <li><strong>Analytics update automatically</strong> for outcomes, participation, and engagement metrics.</li>
-      </ol>
-    </section>
-
-    <div class="placeholder">
-      <span>Optional (later):</span> Insert wireframes here for Team Management, Submission Upload, Rubric Builder, and Judge Scoring screens.
+      <button onclick="addCompetition()">Create Competition</button>
     </div>
 
-  </main>
+    <!-- COMPETITIONS -->
+    <div class="panel">
+      <h3>Competitions</h3>
+      <div id="competition-list"></div>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 CMIS Connect | Texas A&amp;M University. All rights reserved.</p>
-  </footer>
+    <!-- RUBRIC -->
+    <div class="panel">
+      <h3>Rubric Builder</h3>
+      <label>Category</label>
+      <input id="rubric-name">
+
+      <label>Weight (%)</label>
+      <input id="rubric-weight" type="number">
+
+      <button onclick="addRubric()">Add Category</button>
+      <div id="rubric-list"></div>
+    </div>
+
+    <!-- JUDGING -->
+    <div class="panel">
+      <h3>Judge Scoring (Prototype)</h3>
+      <label>Team Name</label>
+      <input id="judge-team">
+
+      <label>Score</label>
+      <input type="number" id="judge-score">
+
+      <button onclick="addScore()">Submit Score</button>
+      <div id="score-list"></div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="panel">
+      <h3>Results</h3>
+      <button class="secondary" onclick="toggleResults()">Publish / Hide Results</button>
+      <div id="results" class="hidden"></div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 CMIS Connect | Texas A&amp;M University</p>
+</footer>
+
+<script>
+  const loginPanel = document.getElementById("login-panel");
+  const dashboard = document.getElementById("dashboard");
+
+  const competitions = JSON.parse(localStorage.getItem("cmis_comps")) || [];
+  const rubric = JSON.parse(localStorage.getItem("cmis_rubric")) || [];
+  const scores = JSON.parse(localStorage.getItem("cmis_scores")) || [];
+
+  document.getElementById("login-btn").onclick = () => {
+    loginPanel.classList.add("hidden");
+    dashboard.classList.remove("hidden");
+    renderAll();
+  };
+
+  function addCompetition() {
+    competitions.push({
+      name: compName.value,
+      deadline: compDeadline.value
+    });
+    localStorage.setItem("cmis_comps", JSON.stringify(competitions));
+    renderComps();
+  }
+
+  function addRubric() {
+    rubric.push({ name: rubricName.value, weight: rubricWeight.value });
+    localStorage.setItem("cmis_rubric", JSON.stringify(rubric));
+    renderRubric();
+  }
+
+  function addScore() {
+    scores.push({ team: judgeTeam.value, score: Number(judgeScore.value) });
+    localStorage.setItem("cmis_scores", JSON.stringify(scores));
+    renderScores();
+  }
+
+  function toggleResults() {
+    document.getElementById("results").classList.toggle("hidden");
+    renderResults();
+  }
+
+  function renderComps() {
+    competitionList.innerHTML = competitions.map(c =>
+      `<div class="list-item"><strong>${c.name}</strong> – due ${c.deadline}</div>`
+    ).join("");
+  }
+
+  function renderRubric() {
+    rubricList.innerHTML = rubric.map(r =>
+      `<div class="list-item">${r.name} (${r.weight}%)</div>`
+    ).join("");
+  }
+
+  function renderScores() {
+    scoreList.innerHTML = scores.map(s =>
+      `<div class="list-item">${s.team}: ${s.score}</div>`
+    ).join("");
+  }
+
+  function renderResults() {
+    results.innerHTML = scores
+      .sort((a,b)=>b.score-a.score)
+      .map((s,i)=>`<div class="list-item">${i+1}. ${s.team} – ${s.score}</div>`)
+      .join("");
+  }
+
+  function renderAll() {
+    renderComps(); renderRubric(); renderScores();
+  }
+</script>
 
 </body>
 </html>
