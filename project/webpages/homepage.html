@@ -29,7 +29,7 @@
 
     * { -webkit-tap-highlight-color: transparent; }
 
-    /* Home-only: About section wrappers (keeps main CSS untouched) */
+    /* Home-only About wrappers */
     .page-wrap {
       max-width: 1100px;
       margin: 2rem auto;
@@ -62,6 +62,12 @@
       color: #500000;
       font-size: 1.8rem;
       letter-spacing: 0.5px;
+    }
+
+    /* Tighten grids inside the about section */
+    .about-grid {
+      padding: 0;
+      margin-top: 1rem;
     }
 
     .callout {
@@ -113,9 +119,10 @@
       <div class="menu-button"></div>
     </label>
 
-    <!-- ✅ FIXED: single UL only (no nested menu UL) -->
+    <!-- ✅ single UL only -->
     <ul class="menu">
       <li><a href="/project/webpages/homepage.html" class="current">Home</a></li>
+      <li><a href="/project/webpages/homepage.html#about">About</a></li>
       <li><a href="/project/webpages/student-hub.html">Student Hub</a></li>
       <li><a href="/project/webpages/case-management.html">Case Mgmt</a></li>
       <li><a href="/project/webpages/sponsor-portal.html">Sponsor Portal</a></li>
@@ -131,7 +138,7 @@
     </div>
   </section>
 
-  <!-- Events -->
+  <!-- ✅ KEEP: Events Calendar -->
   <section class="events">
     <h2>CMIS Events &amp; Engagement</h2>
     <iframe
@@ -144,57 +151,8 @@
     </iframe>
   </section>
 
-  <!-- Product Highlights -->
-  <section class="content-grid">
-
-    <article class="card">
-      <h2>Vision</h2>
-      <p>
-        Unify all CMIS programs into one intuitive digital platform that streamlines engagement,
-        enhances faculty operations, strengthens industry partnerships, and empowers alumni.
-      </p>
-    </article>
-
-    <article class="card">
-      <h2>Goal</h2>
-      <p>
-        Improve the CMIS community experience by providing a single platform for students,
-        faculty, sponsors, and alumni while reducing administrative overhead.
-      </p>
-    </article>
-
-    <article class="card">
-      <h2>For Students</h2>
-      <p>
-        Access events, competitions, mentorship, and career development tools from one dashboard.
-      </p>
-    </article>
-
-    <article class="card">
-      <h2>For Faculty</h2>
-      <p>
-        Manage competitions, communication, and logistics through efficient digital workflows.
-      </p>
-    </article>
-
-    <article class="card">
-      <h2>For Industry Partners</h2>
-      <p>
-        Securely engage with CMIS programs and identify student talent through a centralized portal.
-      </p>
-    </article>
-
-    <article class="card">
-      <h2>For Alumni</h2>
-      <p>
-        Participate in mentorship and engagement opportunities that strengthen the CMIS network.
-      </p>
-    </article>
-
-  </section>
-
   <!-- =======================
-       ABOUT (Merged)
+       ABOUT (kept)
        ======================= -->
   <main class="page-wrap" id="about">
 
@@ -207,7 +165,7 @@
     </section>
 
     <h2 class="section-title">Our Vision &amp; Goal</h2>
-    <section class="content-grid" style="padding:0; margin-top:1rem;">
+    <section class="content-grid about-grid">
       <article class="card">
         <h2>Vision</h2>
         <p>
@@ -234,7 +192,7 @@
     </section>
 
     <h2 class="section-title">Who It Serves</h2>
-    <section class="content-grid" style="padding:0; margin-top:1rem;">
+    <section class="content-grid about-grid">
       <article class="card">
         <h2>Students</h2>
         <p>Register for events, track involvement, build a professional profile, upload resumes, and discover opportunities.</p>
