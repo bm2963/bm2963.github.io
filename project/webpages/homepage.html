@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ITSA Official Webpage</title>
+  <title>CMIS Connect | Texas A&amp;M University</title>
+
+  <!-- Google Font: Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="/project/styles/homepage.css">
+
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background: linear-gradient(to bottom right, #f4f4f4, #e0e0e0);
-    }
-
+    /* Animation only — colors/fonts handled in CSS */
     .card {
       opacity: 0;
       transform: translateY(20px);
@@ -28,194 +28,130 @@
       transform: translateY(0);
     }
 
-    .card:hover {
-      background-color: #fef6ed;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    }
-    .menu a {
-      text-decoration: underline;
-    }
-    .menu a.current {
-      text-decoration: underline;
-      background-color: darkorange;
-    }
-
-    .hero h1 {
-      animation: fadeIn 2s ease-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .socials img {
-      height: 40px;
-      transition: transform 0.3s;
-    }
-
-    .socials img:hover {
-      transform: scale(1.2);
-    }
-
     * {
       -webkit-tap-highlight-color: transparent;
     }
-
-    .events {
-      max-width: 900px;
-      margin: 2rem auto;
-      background-color: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-
-    .events h2 {
-      margin-bottom: 1rem;
-      font-size: 2rem;
-      color: #d35400;
-    }
-
-    .events iframe {
-      width: 100%;
-      border: none;
-      height: 600px;
-    }
-
-    @media (max-width: 768px) {
-      .events iframe {
-        height: 500px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .events iframe {
-        height: 400px;
-      }
-    }
   </style>
 </head>
-<body>
-  <a href="#homepage" target="_blank" class="floating-logo">
-    <img src="/project/images/tamu/cmis.png" alt="Website Logo" height="80" width="80">
+
+<body id="homepage">
+
+  <!-- Floating Logo -->
+  <a href="#homepage" class="floating-logo">
+    <img src="/project/images/tamu/cmis.png" alt="CMIS Connect Logo" height="80" width="80">
   </a>
+
+  <!-- Header -->
   <header>
     <h1>CMIS Connect</h1>
-    <h2>Texas A&M University</h2>
-    <div class="header-container"></div>
+    <h2>Texas A&amp;M University</h2>
   </header>
 
+  <!-- Navigation -->
   <section class="top-nav">
     <div>
       <p>CMIS Connect</p>
     </div>
+
     <input id="menu-toggle" type="checkbox">
     <label class="menu-button-container" for="menu-toggle">
       <div class="menu-button"></div>
     </label>
+
     <ul class="menu">
       <li><a href="/project/webpages/homepage.html" class="current">Home</a></li>
       <li><a href="/project/webpages/about.html">About</a></li>
-      <li><a href="/project/webpages/officers.html">Officers</a></li>
-      <li><a href="/project/webpages/meetings.html">Events</a></li>
-      <li><a href="/project/webpages/accomplishments.html">Accomplishments</a></li>
-      <li><a href="/project/webpages/imagegallery.html">Image Gallery</a></li>
+      <li><a href="/project/webpages/officers.html">Stakeholders</a></li>
+      <li><a href="/project/webpages/meetings.html">Features</a></li>
+      <li><a href="/project/webpages/accomplishments.html">Metrics</a></li>
+      <li><a href="/project/webpages/imagegallery.html">Wireframes</a></li>
     </ul>
   </section>
 
+  <!-- Hero -->
   <section class="hero">
     <div class="hero-overlay">
       <h1>Welcome to CMIS Connect</h1>
     </div>
   </section>
 
+  <!-- Events -->
   <section class="events">
-    <h2>🗓 CMIS Events Calendar</h2>
-    <iframe src="https://calendar.google.com/calendar/embed?src=d6805ad1a782e4a6ae56e3ccd0005dc2adaf6f28733fca60b3f026489cfd21db%40group.calendar.google.com&color=%23D35400&src=en.usa%23holiday%40group.v.calendar.google.com&color=%230F4B9E&ctz=America%2FLos_Angeles" style="border: 0" frameborder="0" scrolling="no"></iframe>
+    <h2>CMIS Events &amp; Engagement</h2>
+    <iframe
+      src="https://calendar.google.com/calendar/embed?src=d6805ad1a782e4a6ae56e3ccd0005dc2adaf6f28733fca60b3f026489cfd21db%40group.calendar.google.com&ctz=America%2FLos_Angeles"
+      scrolling="no">
+    </iframe>
+  </section>
 
-<section class="content-grid" id="highlights">
+  <!-- Product Highlights -->
+  <section class="content-grid">
 
-  <article class="card">
-    <h2>Vision</h2>
-    <p>
-      To unify all CMIS programs into one intuitive digital platform that streamlines student engagement, enhances faculty operations,
-      strengthens industry partnerships, and empowers alumni involvement.
-    </p>
-  </article>
+    <article class="card">
+      <h2>Vision</h2>
+      <p>
+        Unify all CMIS programs into one intuitive digital platform that streamlines engagement,
+        enhances faculty operations, strengthens industry partnerships, and empowers alumni.
+      </p>
+    </article>
 
-  <article class="card">
-    <h2>Goal</h2>
-    <p>
-      Improve the CMIS community experience by providing a single platform that supports students, faculty, sponsors, and alumni — while
-      reducing manual work and improving accuracy across operations.
-    </p>
-  </article>
+    <article class="card">
+      <h2>Goal</h2>
+      <p>
+        Improve the CMIS community experience by providing a single platform for students,
+        faculty, sponsors, and alumni while reducing administrative overhead.
+      </p>
+    </article>
 
-  <article class="card">
-    <h2>For Students</h2>
-    <p>
-      Easy access to events, competitions, mentorship, and career development tools — all in one place.
-    </p>
-  </article>
+    <article class="card">
+      <h2>For Students</h2>
+      <p>
+        Access events, competitions, mentorship, and career development tools from one dashboard.
+      </p>
+    </article>
 
-  <article class="card">
-    <h2>For Faculty</h2>
-    <p>
-      Efficient digital workflows for managing case competitions, event logistics, and communication with students.
-    </p>
-  </article>
+    <article class="card">
+      <h2>For Faculty</h2>
+      <p>
+        Manage competitions, communication, and logistics through efficient digital workflows.
+      </p>
+    </article>
 
-  <article class="card">
-    <h2>For Industry Partners</h2>
-    <p>
-      Securely search for student talent, request involvement, and engage with CMIS programs through a dedicated sponsor experience.
-    </p>
-  </article>
+    <article class="card">
+      <h2>For Industry Partners</h2>
+      <p>
+        Securely engage with CMIS programs and identify student talent through a centralized portal.
+      </p>
+    </article>
 
-  <article class="card">
-    <h2>For Alumni</h2>
-    <p>
-      Structured mentorship and involvement opportunities that strengthen alumni relationships and long-term community support.
-    </p>
-  </article>
+    <article class="card">
+      <h2>For Alumni</h2>
+      <p>
+        Participate in mentorship and engagement opportunities that strengthen the CMIS network.
+      </p>
+    </article>
 
-</section>
+  </section>
 
-
+  <!-- Socials -->
   <div class="socials">
     <a href="https://www.instagram.com/tamu/" target="_blank">
-      <img src="/project/images/instagram logo.png" alt="Instagram" />
+      <img src="/project/images/instagram logo.png" alt="Instagram">
     </a>
-    <br>
     <a href="https://www.facebook.com/tamu" target="_blank">
-      <img src="/project/images/facebook logo.png" alt="Facebook" />
+      <img src="/project/images/facebook logo.png" alt="Facebook">
     </a>
-    <br>
-    <a href="https://www.tamu.edu/index.html" target="_blank">
-      <img src="/project/images/newlogo2.png" alt="TAMU Home" />
+    <a href="https://www.tamu.edu/" target="_blank">
+      <img src="/project/images/newlogo2.png" alt="Texas A&M">
     </a>
-    <!-- Add more icons as needed -->
   </div>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 ITSA | Sam Houston State University. All rights reserved.</p>
+    <p>&copy; 2025 CMIS Connect | Texas A&amp;M University. All rights reserved.</p>
   </footer>
 
+  <!-- Reveal animation -->
   <script>
     const cards = document.querySelectorAll('.card');
 
@@ -231,5 +167,6 @@
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll();
   </script>
+
 </body>
 </html>
