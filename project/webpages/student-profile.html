@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Profile | CMIS Connect</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/project/styles/homepage.css">
+
+  <style>
+    .page-wrap {
+      max-width: 980px;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+    }
+
+    .profile-card {
+      background: white;
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-left: 8px solid #500000;
+    }
+
+    .profile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .profile-header h1 {
+      margin: 0;
+      color: #500000;
+      font-size: 2rem;
+      line-height: 1.15;
+    }
+
+    .tag {
+      background: rgba(80,0,0,0.10);
+      color: #500000;
+      padding: 0.25rem 0.65rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 10px;
+      padding: 0.6rem 0.95rem;
+      cursor: pointer;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-primary {
+      background: #500000;
+      color: #fff;
+    }
+
+    .btn-primary:hover { filter: brightness(0.95); }
+
+    .btn-ghost {
+      background: rgba(80,0,0,0.08);
+      color: #500000;
+    }
+
+    .btn-ghost:hover { background: rgba(80,0,0,0.12); }
+
+    .subline {
+      margin: 0.2rem 0;
+      color: #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .box {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 1rem;
+      border: 1px solid rgba(0,0,0,0.10);
+    }
+
+    .box h2 {
+      margin: 0 0 0.35rem 0;
+      color: #500000;
+      font-size: 1.3rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+    }
+
+    .pill {
+      background: white;
+      border: 1px solid rgba(80,0,0,0.18);
+      color: #500000;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .muted {
+      color: #333;
+      opacity: 0.9;
+      font-size: 0.98rem;
+      margin: 0.25rem 0 0;
+    }
+
+    /* Toggle bar */
+    .view-bar {
+      margin: 1.25rem 0 0;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      background: #fff;
+      border: 2px solid rgba(80,0,0,0.12);
+    }
+
+    .view-bar strong { color: #500000; }
+
+    .toggle {
+      display: inline-flex;
+      gap: 0.4rem;
+      align-items: center;
+      font-weight: 600;
+      color: #500000;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .toggle input { transform: scale(1.1); }
+
+    /* Resume upload */
+    .upload {
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .upload input[type="file"] {
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .filename {
+      font-weight: 600;
+      color: #500000;
+    }
+
+    /* Sponsor & faculty view sections */
+    .hidden { display: none; }
+
+    .notice {
+      margin-top: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      background: rgba(80,0,0,0.06);
+      border: 1px solid rgba(80,0,0,0.18);
+      color: #333;
+    }
+
+    .notice strong { color: #500000; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      text-decoration: none;
+      color: #500000;
+      font-weight: 700;
+    }
+
+    /* Keep the top-nav simple on this page */
+    .simple-nav .menu {
+      gap: 0.6rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>CMIS Connect</h1>
+    <h2>Texas A&amp;M University</h2>
+  </header>
+
+  <!-- Navigation (simple for profile) -->
+  <section class="top-nav simple-nav">
+    <div><p>CMIS Connect</p></div>
+    <ul class="menu">
+      <li><a href="/project/webpages/homepage.html">Home</a></li>
+      <li><a href="/project/webpages/student-hub.html" class="current">Student Hub</a></li>
+    </ul>
+  </section>
+
+  <main class="page-wrap">
+
+    <section class="profile-card">
+
+      <div class="profile-header">
+        <div>
+          <h1 id="display-name">Demo Student</h1>
+          <div class="tag">CMIS Major</div>
+        </div>
+
+        <div class="top-actions">
+          <!-- Prototype: non-functional -->
+          <button class="btn btn-primary" id="btn-edit" type="button">Edit Profile</button>
+          <a class="btn btn-ghost" href="/project/webpages/student-hub.html">Back to Hub</a>
+        </div>
+      </div>
+
+      <p class="subline"><strong>Email:</strong> <span id="display-email">demo@tamu.edu</span></p>
+      <p class="subline"><strong>Graduation:</strong> Spring 2026</p>
+      <p class="subline"><strong>Opt-in for Sponsor Directory:</strong> Yes</p>
+
+      <!-- View toggles -->
+      <div class="view-bar">
+        <strong>View Mode:</strong>
+
+        <label class="toggle" title="Shows what an industry sponsor would see">
+          <input type="checkbox" id="toggle-sponsor">
+          Sponsor View
+        </label>
+
+        <label class="toggle" title="Read-only administrative view for faculty/CMIS leadership">
+          <input type="checkbox" id="toggle-faculty">
+          Faculty/Admin View
+        </label>
+      </div>
+
+      <div class="notice">
+        <strong>Prototype note:</strong> These toggles simulate different stakeholder views (no real authentication).
+      </div>
+
+      <div class="grid">
+
+        <!-- Skills -->
+        <section class="box">
+          <h2>Skills</h2>
+          <div class="pill-row">
+            <span class="pill">SQL</span>
+            <span class="pill">Python</span>
+            <span class="pill">Data Analytics</span>
+            <span class="pill">Cloud Fundamentals</span>
+            <span class="pill">Power BI</span>
+          </div>
+          <p class="muted">Primary interests: analytics, data engineering, and cloud.</p>
+        </section>
+
+        <!-- Engagement -->
+        <section class="box">
+          <h2>Engagement</h2>
+          <p class="muted">✔ 5 CMIS Events Attended</p>
+          <p class="muted">✔ 1 Case Competition</p>
+          <p class="muted">✔ Mentorship Program Participant</p>
+          <p class="muted">Involvement score (prototype): <strong>82</strong></p>
+        </section>
+
+        <!-- Resume upload -->
+        <section class="box">
+          <h2>Resume</h2>
+
+          <div class="upload">
+            <div class="muted">
+              Status: <span class="filename" id="resume-status">Resume uploaded (PDF)</span>
+            </div>
+
+            <label class="muted" for="resume-file"><strong>Upload/Update Resume (prototype)</strong></label>
+            <input id="resume-file" type="file" accept=".pdf,.doc,.docx">
+
+            <div class="muted">
+              Selected file: <span class="filename" id="resume-file-name">None</span>
+            </div>
+
+            <button class="btn btn-primary" id="btn-save-resume" type="button">
+              Save Resume
+            </button>
+
+            <div class="muted" id="resume-msg" style="margin-top:0.25rem;"></div>
+          </div>
+        </section>
+
+        <!-- Goals -->
+        <section class="box">
+          <h2>Career Goals</h2>
+          <p class="muted"><strong>Target Roles:</strong> Data Analyst, Business Analyst, Cloud Associate</p>
+          <p class="muted"><strong>Seeking:</strong> Summer internship (2026)</p>
+          <p class="muted"><strong>Preferred Industry:</strong> Technology / Consulting</p>
+        </section>
+
+      </div>
+
+      <!-- Sponsor view (what sponsors would see) -->
+      <section class="box" id="sponsor-view" style="margin-top:1rem;">
+        <h2>Sponsor View</h2>
+        <p class="muted">
+          This section simulates a sponsor-facing preview. In Sponsor View mode, personal details are limited and
+          sponsors see only opt-in fields.
+        </p>
+
+        <div class="grid">
+          <div class="box" style="background:#fff;">
+            <h2 style="margin-top:0;">Public Profile</h2>
+            <p class="muted"><strong>Name:</strong> Demo Student</p>
+            <p class="muted"><strong>Graduation:</strong> Spring 2026</p>
+            <p class="muted"><strong>Skills:</strong> SQL, Python, Power BI, Analytics</p>
+            <p class="muted"><strong>Portfolio:</strong> (prototype) linkedin.com/in/demo-student</p>
+          </div>
+
+          <div class="box" style="background:#fff;">
+            <h2 style="margin-top:0;">Sponsor Actions (Prototype)</h2>
+            <p class="muted">• Download Resume</p>
+            <p class="muted">• Request Interview / Coffee Chat</p>
+            <p class="muted">• Invite to Speaker Session / Workshop</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Faculty/Admin read-only view -->
+      <section class="box" id="faculty-view" style="margin-top:1rem;">
+        <h2>Faculty/Admin View (Read-Only)</h2>
+        <p class="muted">
+          This simulates a CMIS leadership view used for oversight and support (read-only).
+        </p>
+
+        <div class="grid">
+          <div class="box" style="background:#fff;">
+            <h2 style="margin-top:0;">Verification &amp; Flags</h2>
+            <p class="muted"><strong>Profile completeness:</strong> 92%</p>
+            <p class="muted"><strong>Resume on file:</strong> Yes</p>
+            <p class="muted"><strong>Sponsor opt-in:</strong> Yes</p>
+            <p class="muted"><strong>Flag:</strong> None</p>
+          </div>
+
+          <div class="box" style="background:#fff;">
+            <h2 style="margin-top:0;">Engagement Summary</h2>
+            <p class="muted"><strong>Events attended:</strong> 5</p>
+            <p class="muted"><strong>Competitions:</strong> 1</p>
+            <p class="muted"><strong>Mentorship status:</strong> Active</p>
+            <p class="muted"><strong>Notes:</strong> Strong participation in workshops (prototype).</p>
+          </div>
+        </div>
+      </section>
+
+      <a class="back-link" href="/project/webpages/student-hub.html">← Back to Student Hub</a>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CMIS Connect | Texas A&amp;M University. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // ---- Optional: Pull logged-in demo name/email from localStorage if you used the Student Hub prototype ----
+    // Uses the same keys you already had:
+    // USERS_KEY = "cmis_users"; SESSION_KEY = "cmis_session";
+    (function initProfile() {
+      try {
+        const session = JSON.parse(localStorage.getItem("cmis_session"));
+        const users = JSON.parse(localStorage.getItem("cmis_users")) || [];
+        if (session && session.email) {
+          const user = users.find(u => u.email === session.email);
+          if (user) {
+            document.getElementById("display-name").textContent = user.name || "Student";
+            document.getElementById("display-email").textContent = user.email;
+          }
+        }
+      } catch (e) {
+        // ignore
+      }
+    })();
+
+    // ---- Toggle views ----
+    const sponsorToggle = document.getElementById("toggle-sponsor");
+    const facultyToggle = document.getElementById("toggle-faculty");
+    const sponsorView = document.getElementById("sponsor-view");
+    const facultyView = document.getElementById("faculty-view");
+
+    function updateViews() {
+      sponsorView.classList.toggle("hidden", !sponsorToggle.checked);
+      facultyView.classList.toggle("hidden", !facultyToggle.checked);
+    }
+
+    // Default: hide both until toggled on (keeps page clean)
+    sponsorView.classList.add("hidden");
+    facultyView.classList.add("hidden");
+
+    sponsorToggle.addEventListener("change", updateViews);
+    facultyToggle.addEventListener("change", updateViews);
+
+    // ---- Resume upload placeholder ----
+    const resumeFile = document.getElementById("resume-file");
+    const fileName = document.getElementById("resume-file-name");
+    const saveBtn = document.getElementById("btn-save-resume");
+    const resumeStatus = document.getElementById("resume-status");
+    const resumeMsg = document.getElementById("resume-msg");
+
+    // Load last saved filename (prototype only)
+    const savedResumeName = localStorage.getItem("cmis_resume_name");
+    if (savedResumeName) {
+      resumeStatus.textContent = savedResumeName;
+    }
+
+    resumeFile.addEventListener("change", () => {
+      fileName.textContent = resumeFile.files?.[0]?.name || "None";
+      resumeMsg.textContent = "";
+    });
+
+    saveBtn.addEventListener("click", () => {
+      const picked = resumeFile.files?.[0];
+      if (!picked) {
+        resumeMsg.style.color = "#a61b1b";
+        resumeMsg.textContent = "Please choose a file first (prototype).";
+        return;
+      }
+
+      // Prototype: store filename only (no actual upload on GitHub Pages)
+      localStorage.setItem("cmis_resume_name", picked.name);
+      resumeStatus.textContent = picked.name;
+
+      resumeMsg.style.color = "#0b6b2b";
+      resumeMsg.textContent = "Saved! (Prototype: filename stored in your browser.)";
+    });
+
+    // ---- Edit Profile prototype ----
+    document.getElementById("btn-edit").addEventListener("click", () => {
+      alert("Prototype: Edit Profile would open an editable form here (requires backend to save permanently).");
+    });
+  </script>
+
+</body>
+</html>
