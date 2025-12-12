@@ -16,11 +16,7 @@
   <style>
     html { scroll-behavior: smooth; }
 
-    .page-wrap {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1.25rem;
-    }
+    .page-wrap { max-width: 1100px; margin: 2rem auto; padding: 0 1.25rem; }
 
     .page-hero {
       background: #ffffff;
@@ -30,25 +26,10 @@
       border-left: 8px solid #500000;
     }
 
-    .page-hero h1 {
-      margin: 0 0 0.5rem 0;
-      color: #500000;
-      font-size: 2.3rem;
-      line-height: 1.2;
-    }
+    .page-hero h1 { margin: 0 0 0.5rem 0; color: #500000; font-size: 2.3rem; line-height: 1.2; }
+    .page-hero p { margin: 0.5rem 0 0; color: #333; font-size: 1.1rem; }
 
-    .page-hero p {
-      margin: 0.5rem 0 0;
-      color: #333;
-      font-size: 1.1rem;
-    }
-
-    .section-title {
-      margin: 2rem 0 1rem;
-      color: #500000;
-      font-size: 1.8rem;
-      letter-spacing: 0.5px;
-    }
+    .section-title { margin: 2rem 0 1rem; color: #500000; font-size: 1.8rem; letter-spacing: 0.5px; }
 
     /* Quick capability strip */
     .strip {
@@ -57,7 +38,6 @@
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
     }
-
     .strip-item {
       background: #fff;
       border-radius: 12px;
@@ -65,40 +45,165 @@
       border: 2px solid rgba(80,0,0,0.10);
       box-shadow: 0 3px 8px rgba(0,0,0,0.06);
     }
+    .strip-item strong { color: #500000; display: block; margin-bottom: 0.25rem; font-weight: 600; }
 
-    .strip-item strong {
-      color: #500000;
-      display: block;
-      margin-bottom: 0.25rem;
-      font-weight: 600;
-    }
+    /* Keep default site cards tighter on this page */
+    .content-grid { padding: 0; margin-top: 1rem; }
 
-    /* Cards tight */
-    .content-grid {
-      padding: 0;
-      margin-top: 1rem;
-    }
-
-    /* Sponsor request box */
-    .request-box {
+    /* Panels (Sponsor-only area) */
+    .panel {
       background: #ffffff;
       border-radius: 14px;
       padding: 1.5rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.10);
       border: 2px solid rgba(80,0,0,0.12);
+      margin-top: 1rem;
     }
 
-    .request-box ul {
-      margin: 0.75rem 0 0;
-      padding-left: 1.25rem;
+    .note {
+      margin-top: 0.75rem;
+      background: rgba(80,0,0,0.08);
+      border: 1px solid rgba(80,0,0,0.18);
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
       color: #333;
+      font-size: 0.98rem;
+    }
+    .note strong { color: #500000; }
+
+    /* Dashboard tiles */
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .tile {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      border: 2px solid rgba(80,0,0,0.10);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+    .tile strong { color: #500000; display:block; margin-bottom: 0.25rem; }
+    .tile .small { color:#333; font-size: 0.98rem; opacity: 0.95; }
+
+    /* Forms */
+    label { display:block; margin-top: 0.75rem; font-weight: 600; color:#500000; }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.55rem 0.65rem;
+      margin-top: 0.25rem;
+      font-family: 'Oswald', sans-serif;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.18);
+      outline: none;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+
+    .btn-row { display:flex; flex-wrap:wrap; gap: 0.6rem; margin-top: 0.9rem; }
+    .btn {
+      border: none;
+      border-radius: 10px;
+      padding: 0.6rem 0.95rem;
+      cursor: pointer;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .btn-primary { background:#500000; color:#fff; }
+    .btn-primary:hover { filter: brightness(0.95); }
+    .btn-ghost { background: rgba(80,0,0,0.10); color:#500000; }
+    .btn-ghost:hover { background: rgba(80,0,0,0.14); }
+
+    .hidden { display:none !important; }
+
+    /* Talent search */
+    .filters {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.9rem;
+      margin-top: 0.75rem;
     }
 
-    .request-box li {
-      margin: 0.45rem 0;
+    .directory {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
     }
 
-    /* Placeholder for future wireframes/screenshots */
+    .student-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+      border: 2px solid rgba(80,0,0,0.10);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .student-card h3 { margin: 0; color:#500000; font-size: 1.35rem; }
+    .meta { margin-top: 0.4rem; color:#333; font-size: 0.98rem; }
+    .pill-row { display:flex; flex-wrap:wrap; gap: 0.45rem; margin-top: 0.65rem; }
+    .pill {
+      background: #fff;
+      border: 1px solid rgba(80,0,0,0.18);
+      color: #500000;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+
+    /* Profile preview */
+    .preview {
+      margin-top: 1rem;
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.25rem;
+      border: 2px solid rgba(80,0,0,0.12);
+    }
+    .preview h3 { margin: 0 0 0.4rem; color:#500000; }
+    .preview .row { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin-top: 0.6rem; }
+    .preview .box { background:#f9f9f9; border: 1px solid rgba(0,0,0,0.10); border-radius: 12px; padding: 0.9rem; }
+    .preview .box strong { color:#500000; }
+
+    /* Request tracker */
+    .requests {
+      margin-top: 1rem;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .req-card {
+      background:#fff;
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+      border: 2px solid rgba(80,0,0,0.10);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+    .status {
+      display:inline-block;
+      margin-top: 0.4rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(80,0,0,0.10);
+      color:#500000;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* Calendar */
+    .calendar-wrap iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+
+    /* Placeholder (keep for wireframes/screenshots) */
     .placeholder {
       margin-top: 1rem;
       background: #fff;
@@ -107,11 +212,7 @@
       border: 2px dashed rgba(80,0,0,0.25);
       color: #333;
     }
-
-    .placeholder span {
-      color: #500000;
-      font-weight: 600;
-    }
+    .placeholder span { color: #500000; font-weight: 600; }
   </style>
 </head>
 
@@ -152,6 +253,7 @@
 
   <main class="page-wrap">
 
+    <!-- PUBLIC OVERVIEW -->
     <section class="page-hero">
       <h1>Sponsor Access Portal</h1>
       <p>
@@ -177,6 +279,11 @@
           View upcoming CMIS events and engagement opportunities.
         </div>
       </div>
+
+      <div class="note">
+        <strong>Privacy-first:</strong> Only <em>opt-in</em> student profiles appear in this portal. In production, sponsor access would be
+        authenticated, logged, and aligned to privacy policies.
+      </div>
     </section>
 
     <h2 class="section-title">Core Sponsor Capabilities</h2>
@@ -184,64 +291,277 @@
     <section class="content-grid">
       <article class="card">
         <h2>Opt-In Student Directory</h2>
-        <p>
-          Browse opt-in student profiles with consistent fields (skills, tools, interests, graduation date, and preferred roles).
-        </p>
+        <p>Browse opt-in student profiles with consistent fields (skills, tools, interests, graduation date, and preferred roles).</p>
       </article>
-
       <article class="card">
         <h2>Advanced Filters</h2>
-        <p>
-          Filter by skills (SQL, Python, analytics), career interests, involvement level, and availability for internships or projects.
-        </p>
+        <p>Filter by skills (SQL, Python, analytics), career interests, involvement level, and availability for internships or projects.</p>
       </article>
-
       <article class="card">
         <h2>Resume &amp; Profile Access</h2>
-        <p>
-          Download resumes and view portfolio links while respecting student privacy and opt-in permissions.
-        </p>
+        <p>Download resumes and view portfolio links while respecting student privacy and opt-in permissions.</p>
       </article>
-
       <article class="card">
         <h2>Speaker Session Requests</h2>
-        <p>
-          Submit requests for guest lectures, workshops, panel participation, or mentorship events through a structured form.
-        </p>
+        <p>Submit requests for guest lectures, workshops, panel participation, or mentorship events through a structured form.</p>
       </article>
-
       <article class="card">
         <h2>Event Participation</h2>
-        <p>
-          View CMIS event calendars and request sponsor involvement (judging, hosting, or providing case materials).
-        </p>
+        <p>View CMIS event calendars and request sponsor involvement (judging, hosting, or providing case materials).</p>
       </article>
-
       <article class="card">
         <h2>Collaboration &amp; Follow-Up</h2>
-        <p>
-          Track engagement requests, see status updates, and coordinate with faculty/CMIS leadership for next steps.
-        </p>
+        <p>Track engagement requests, see status updates, and coordinate with faculty/CMIS leadership for next steps.</p>
       </article>
     </section>
 
-    <h2 class="section-title">Sponsor Engagement Requests</h2>
+    <!-- Sponsor Management Access (Option B style) -->
+    <h2 class="section-title">Sponsor Management Access</h2>
 
-    <section class="request-box">
+    <section class="panel">
       <p style="margin:0; color:#333;">
-        CMIS Connect helps standardize sponsor engagement so requests are clear, trackable, and easy to fulfill.
-        Examples include:
+        The tools below are designed for industry partners engaging with CMIS programs. Sponsors can search opt-in student profiles,
+        submit structured engagement requests, and track request status updates.
       </p>
-      <ul>
-        <li><strong>Speaker session:</strong> topic, preferred date range, audience, and format (in-person/virtual).</li>
-        <li><strong>Resume collection:</strong> target skills, graduation range, internship vs full-time.</li>
-        <li><strong>Event sponsorship:</strong> judging support, recruiting presence, or funding.</li>
-        <li><strong>Case competition involvement:</strong> provide case materials, judge participation, or prizes.</li>
-      </ul>
+      <div class="note">
+        <strong>Prototype note:</strong> Authentication, approvals, and secure downloads would be enforced in a production system.
+      </div>
+    </section>
+
+    <!-- Sponsor Login -->
+    <section class="panel" id="sponsor-login">
+      <h2 style="margin:0; color:#500000;">Sponsor Login (Prototype)</h2>
+      <p style="margin:0.5rem 0 0; color:#333;">
+        Use demo login to preview sponsor tools (no real authentication).
+      </p>
+
+      <label for="sponsor-email">Sponsor Email</label>
+      <input id="sponsor-email" type="email" placeholder="sponsor@company.com" />
+
+      <label for="sponsor-company">Company / Organization</label>
+      <input id="sponsor-company" type="text" placeholder="Example: Accenture, Deloitte, etc." />
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btn-sponsor-login" type="button">Login</button>
+        <button class="btn btn-ghost" id="btn-demo-login" type="button">Use Demo Sponsor</button>
+      </div>
+
+      <div class="note">
+        <strong>Tip:</strong> After login, you’ll see a directory, request form, request tracker, and event calendar.
+      </div>
+    </section>
+
+    <!-- Sponsor Dashboard (hidden until login) -->
+    <section class="panel hidden" id="sponsor-dashboard">
+      <h2 style="margin:0; color:#500000;">Sponsor Dashboard</h2>
+      <p style="margin:0.5rem 0 0; color:#333;">
+        Logged in as <strong id="whoami">Sponsor</strong>.
+      </p>
+
+      <div class="tiles">
+        <div class="tile">
+          <strong>Talent Search</strong>
+          <div class="small">Browse opt-in profiles and filter by skills, interests, and availability.</div>
+        </div>
+        <div class="tile">
+          <strong>Engagement Requests</strong>
+          <div class="small">Submit structured requests for speakers, workshops, judging, or sponsorship.</div>
+        </div>
+        <div class="tile">
+          <strong>Request Tracker</strong>
+          <div class="small">Track your submissions and view “conceptual” status updates.</div>
+        </div>
+        <div class="tile">
+          <strong>Program Visibility</strong>
+          <div class="small">Review upcoming CMIS events and opportunities to participate.</div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-ghost" id="btn-logout" type="button">Logout</button>
+        <button class="btn btn-ghost" id="btn-clear-requests" type="button">Clear My Requests (Prototype)</button>
+      </div>
+    </section>
+
+    <!-- Talent Search -->
+    <h2 class="section-title hidden" id="talent-title">Opt-In Student Directory (Prototype)</h2>
+
+    <section class="panel hidden" id="talent-panel">
+      <p style="margin:0; color:#333;">
+        Search and filter opt-in students. In production, sponsors would only see students who consent to sponsor access.
+      </p>
+
+      <div class="filters">
+        <div>
+          <label for="filter-search">Search</label>
+          <input id="filter-search" type="text" placeholder="Search by name, skill, role..." />
+        </div>
+        <div>
+          <label for="filter-skill">Skill</label>
+          <select id="filter-skill">
+            <option value="">Any</option>
+            <option value="SQL">SQL</option>
+            <option value="Python">Python</option>
+            <option value="Power BI">Power BI</option>
+            <option value="Cloud">Cloud</option>
+            <option value="Analytics">Analytics</option>
+          </select>
+        </div>
+        <div>
+          <label for="filter-interest">Interest</label>
+          <select id="filter-interest">
+            <option value="">Any</option>
+            <option value="Data">Data</option>
+            <option value="Consulting">Consulting</option>
+            <option value="Product">Product</option>
+            <option value="Security">Security</option>
+          </select>
+        </div>
+        <div>
+          <label for="filter-availability">Availability</label>
+          <select id="filter-availability">
+            <option value="">Any</option>
+            <option value="Internship">Internship</option>
+            <option value="Full-time">Full-time</option>
+            <option value="Project">Project</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btn-apply-filters" type="button">Apply Filters</button>
+        <button class="btn btn-ghost" id="btn-reset-filters" type="button">Reset</button>
+      </div>
+
+      <div class="directory" id="student-directory"></div>
+
+      <div class="preview hidden" id="profile-preview">
+        <h3>Student Profile Preview</h3>
+        <p style="margin:0.25rem 0 0; color:#333;" id="preview-sub"></p>
+
+        <div class="row">
+          <div class="box">
+            <strong>Skills</strong>
+            <div id="preview-skills" style="margin-top:0.35rem;"></div>
+          </div>
+          <div class="box">
+            <strong>Interests &amp; Target Roles</strong>
+            <div id="preview-interests" style="margin-top:0.35rem;"></div>
+          </div>
+          <div class="box">
+            <strong>Actions (Prototype)</strong>
+            <div style="margin-top:0.35rem; color:#333;">
+              • View Full Profile<br>
+              • Download Resume<br>
+              • Request Intro / Coffee Chat
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <a class="btn btn-primary" id="btn-full-profile" href="/project/webpages/student-profile.html">View Full Profile</a>
+          <button class="btn btn-ghost" id="btn-close-preview" type="button">Close Preview</button>
+        </div>
+
+        <div class="note">
+          <strong>Prototype note:</strong> “Download Resume” would retrieve a secure file from storage. Here it is represented conceptually.
+        </div>
+      </div>
+    </section>
+
+    <!-- Engagement Request Form -->
+    <h2 class="section-title hidden" id="request-title">Engagement Request Form</h2>
+
+    <section class="panel hidden" id="request-panel">
+      <p style="margin:0; color:#333;">
+        Submit a structured request so CMIS faculty can review and coordinate next steps.
+      </p>
+
+      <label for="req-type">Request Type</label>
+      <select id="req-type">
+        <option value="Speaker Session">Speaker Session</option>
+        <option value="Workshop / Training">Workshop / Training</option>
+        <option value="Recruiting / Resume Review">Recruiting / Resume Review</option>
+        <option value="Case Competition Involvement">Case Competition Involvement</option>
+        <option value="Event Sponsorship">Event Sponsorship</option>
+      </select>
+
+      <label for="req-topic">Topic / Skills Desired</label>
+      <input id="req-topic" type="text" placeholder="Example: AI in Business, Data Analytics, Cloud careers" />
+
+      <div class="filters" style="margin-top:0.25rem;">
+        <div>
+          <label for="req-date-start">Preferred Start Date</label>
+          <input id="req-date-start" type="date" />
+        </div>
+        <div>
+          <label for="req-date-end">Preferred End Date</label>
+          <input id="req-date-end" type="date" />
+        </div>
+        <div>
+          <label for="req-format">Format</label>
+          <select id="req-format">
+            <option value="In-person">In-person</option>
+            <option value="Virtual">Virtual</option>
+            <option value="Hybrid">Hybrid</option>
+          </select>
+        </div>
+        <div>
+          <label for="req-audience">Audience</label>
+          <select id="req-audience">
+            <option value="Undergraduate Students">Undergraduate Students</option>
+            <option value="Graduate Students">Graduate Students</option>
+            <option value="Mixed / All">Mixed / All</option>
+            <option value="Faculty / Judges">Faculty / Judges</option>
+          </select>
+        </div>
+      </div>
+
+      <label for="req-notes">Notes / Details</label>
+      <textarea id="req-notes" placeholder="Add any context, preferred times, constraints, and logistics..."></textarea>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btn-submit-request" type="button">Submit Request</button>
+        <button class="btn btn-ghost" id="btn-fill-demo-request" type="button">Fill Demo Request</button>
+      </div>
+
+      <div class="note" id="req-msg" style="display:none;"></div>
+    </section>
+
+    <!-- Request Tracker -->
+    <h2 class="section-title hidden" id="tracker-title">My Requests (Tracker)</h2>
+
+    <section class="panel hidden" id="tracker-panel">
+      <p style="margin:0; color:#333;">
+        Track your engagement requests. Status updates shown below are conceptual.
+      </p>
+
+      <div class="requests" id="request-list"></div>
+
+      <div class="note">
+        <strong>In production:</strong> statuses would update via workflow approvals (Submitted → Under Review → Scheduled → Completed).
+      </div>
+    </section>
+
+    <!-- Calendar (Program Visibility) -->
+    <h2 class="section-title hidden" id="calendar-title">CMIS Events &amp; Opportunities</h2>
+
+    <section class="panel hidden calendar-wrap" id="calendar-panel">
+      <p style="margin:0; color:#333;">
+        View upcoming CMIS events and opportunities to participate (recruiting, panels, judging, workshops).
+      </p>
+      <div style="margin-top:0.75rem;">
+        <!-- If you already have a CMIS calendar embed you prefer, swap the src here -->
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=c_aa04b7ddd08555ab1fcb0e74394290252e6c731a07e9bc0413554445cea109de%40group.calendar.google.com&ctz=America%2FChicago"
+          scrolling="no"
+          title="CMIS Calendar">
+        </iframe>
+      </div>
     </section>
 
     <div class="placeholder">
-      <span>Optional (later):</span> Insert wireframes here for Sponsor Search, Student Profile Preview, and Engagement Request Form screens.
+      <span>Optional (later):</span> Insert wireframes/screenshots here for Sponsor Search, Student Profile Preview, Engagement Request Form, and Request Tracker screens.
     </div>
 
   </main>
@@ -249,6 +569,395 @@
   <footer>
     <p>&copy; 2025 CMIS Connect | Texas A&amp;M University. All rights reserved.</p>
   </footer>
+
+  <script>
+    // ----------------------------
+    // Prototype state (localStorage)
+    // ----------------------------
+    const LS_SESSION = "cmis_sponsor_session";
+    const LS_REQUESTS = "cmis_sponsor_requests";
+
+    const loginSection = document.getElementById("sponsor-login");
+    const dashboardSection = document.getElementById("sponsor-dashboard");
+
+    const talentTitle = document.getElementById("talent-title");
+    const talentPanel = document.getElementById("talent-panel");
+
+    const requestTitle = document.getElementById("request-title");
+    const requestPanel = document.getElementById("request-panel");
+
+    const trackerTitle = document.getElementById("tracker-title");
+    const trackerPanel = document.getElementById("tracker-panel");
+
+    const calendarTitle = document.getElementById("calendar-title");
+    const calendarPanel = document.getElementById("calendar-panel");
+
+    const whoami = document.getElementById("whoami");
+
+    const emailInput = document.getElementById("sponsor-email");
+    const companyInput = document.getElementById("sponsor-company");
+
+    // Demo student directory data (opt-in)
+    const students = [
+      {
+        id: "s1",
+        name: "Avery Johnson",
+        grad: "Spring 2026",
+        skills: ["SQL", "Python", "Analytics"],
+        interest: "Data",
+        availability: "Internship",
+        roles: "Data Analyst, Business Analyst",
+        optIn: true
+      },
+      {
+        id: "s2",
+        name: "Jordan Lee",
+        grad: "Fall 2026",
+        skills: ["Power BI", "Analytics", "SQL"],
+        interest: "Consulting",
+        availability: "Project",
+        roles: "Business Analyst, Consulting Intern",
+        optIn: true
+      },
+      {
+        id: "s3",
+        name: "Morgan Patel",
+        grad: "Spring 2027",
+        skills: ["Cloud", "Python", "Security"],
+        interest: "Security",
+        availability: "Internship",
+        roles: "Cloud Associate, Security Analyst",
+        optIn: true
+      },
+      {
+        id: "s4",
+        name: "Taylor Nguyen",
+        grad: "Fall 2025",
+        skills: ["SQL", "Product", "Analytics"].filter(Boolean), // harmless
+        interest: "Product",
+        availability: "Full-time",
+        roles: "Product Analyst, BI Analyst",
+        optIn: true
+      }
+    ].filter(s => s.optIn);
+
+    // ----------------------------
+    // Helpers
+    // ----------------------------
+    function getSession() {
+      try { return JSON.parse(localStorage.getItem(LS_SESSION)); } catch (e) { return null; }
+    }
+
+    function setSession(session) {
+      localStorage.setItem(LS_SESSION, JSON.stringify(session));
+    }
+
+    function clearSession() {
+      localStorage.removeItem(LS_SESSION);
+    }
+
+    function getRequests() {
+      try { return JSON.parse(localStorage.getItem(LS_REQUESTS)) || []; } catch (e) { return []; }
+    }
+
+    function setRequests(reqs) {
+      localStorage.setItem(LS_REQUESTS, JSON.stringify(reqs));
+    }
+
+    function humanDate(d) {
+      if (!d) return "TBD";
+      return d;
+    }
+
+    function randomStatus() {
+      const statuses = ["Submitted", "Under Review", "Scheduled"];
+      return statuses[Math.floor(Math.random() * statuses.length)];
+    }
+
+    // ----------------------------
+    // UI show/hide
+    // ----------------------------
+    function showSponsorTools(session) {
+      loginSection.classList.add("hidden");
+      dashboardSection.classList.remove("hidden");
+
+      talentTitle.classList.remove("hidden");
+      talentPanel.classList.remove("hidden");
+
+      requestTitle.classList.remove("hidden");
+      requestPanel.classList.remove("hidden");
+
+      trackerTitle.classList.remove("hidden");
+      trackerPanel.classList.remove("hidden");
+
+      calendarTitle.classList.remove("hidden");
+      calendarPanel.classList.remove("hidden");
+
+      whoami.textContent = `${session.company || "Sponsor"} (${session.email || "demo"})`;
+
+      renderDirectory(students);
+      renderRequests();
+    }
+
+    function showLogin() {
+      loginSection.classList.remove("hidden");
+      dashboardSection.classList.add("hidden");
+
+      talentTitle.classList.add("hidden");
+      talentPanel.classList.add("hidden");
+
+      requestTitle.classList.add("hidden");
+      requestPanel.classList.add("hidden");
+
+      trackerTitle.classList.add("hidden");
+      trackerPanel.classList.add("hidden");
+
+      calendarTitle.classList.add("hidden");
+      calendarPanel.classList.add("hidden");
+    }
+
+    // ----------------------------
+    // Render: Directory
+    // ----------------------------
+    const dirEl = document.getElementById("student-directory");
+    const previewEl = document.getElementById("profile-preview");
+    const previewSub = document.getElementById("preview-sub");
+    const previewSkills = document.getElementById("preview-skills");
+    const previewInterests = document.getElementById("preview-interests");
+    const btnFullProfile = document.getElementById("btn-full-profile");
+
+    function renderDirectory(list) {
+      dirEl.innerHTML = list.map(s => {
+        const pills = s.skills.map(sk => `<span class="pill">${sk}</span>`).join("");
+        return `
+          <div class="student-card">
+            <h3>${s.name}</h3>
+            <div class="meta"><strong>Graduation:</strong> ${s.grad}</div>
+            <div class="meta"><strong>Interest:</strong> ${s.interest} | <strong>Availability:</strong> ${s.availability}</div>
+            <div class="pill-row">${pills}</div>
+            <div class="btn-row" style="margin-top:0.9rem;">
+              <button class="btn btn-primary" type="button" onclick="openPreview('${s.id}')">View Profile</button>
+              <button class="btn btn-ghost" type="button" onclick="downloadResume('${s.id}')">Download Resume</button>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    window.openPreview = function(studentId) {
+      const s = students.find(x => x.id === studentId);
+      if (!s) return;
+
+      previewSub.textContent = `${s.name} • ${s.grad} • ${s.availability}`;
+      previewSkills.innerHTML = s.skills.map(sk => `<span class="pill">${sk}</span>`).join(" ");
+      previewInterests.innerHTML = `
+        <div style="color:#333; margin-top:0.2rem;"><strong>Interest:</strong> ${s.interest}</div>
+        <div style="color:#333; margin-top:0.2rem;"><strong>Target Roles:</strong> ${s.roles}</div>
+      `;
+
+      // Link to your existing student-profile page (prototype)
+      btnFullProfile.href = "/project/webpages/student-profile.html";
+
+      previewEl.classList.remove("hidden");
+      previewEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
+    document.getElementById("btn-close-preview").addEventListener("click", () => {
+      previewEl.classList.add("hidden");
+    });
+
+    window.downloadResume = function(studentId) {
+      // Conceptual. If you want a real placeholder file, replace alert with a real href to a PDF in your repo.
+      const s = students.find(x => x.id === studentId);
+      alert(`Prototype: “Download Resume” for ${s ? s.name : "student"} would pull a secure file from storage.`);
+    };
+
+    // ----------------------------
+    // Filters (light functional)
+    // ----------------------------
+    document.getElementById("btn-apply-filters").addEventListener("click", () => {
+      const q = (document.getElementById("filter-search").value || "").toLowerCase().trim();
+      const skill = document.getElementById("filter-skill").value;
+      const interest = document.getElementById("filter-interest").value;
+      const availability = document.getElementById("filter-availability").value;
+
+      const filtered = students.filter(s => {
+        const matchesQ =
+          !q ||
+          s.name.toLowerCase().includes(q) ||
+          s.skills.join(" ").toLowerCase().includes(q) ||
+          (s.roles || "").toLowerCase().includes(q) ||
+          (s.interest || "").toLowerCase().includes(q);
+
+        const matchesSkill = !skill || s.skills.includes(skill);
+        const matchesInterest = !interest || s.interest === interest;
+        const matchesAvail = !availability || s.availability === availability;
+
+        return matchesQ && matchesSkill && matchesInterest && matchesAvail;
+      });
+
+      renderDirectory(filtered);
+      previewEl.classList.add("hidden");
+    });
+
+    document.getElementById("btn-reset-filters").addEventListener("click", () => {
+      document.getElementById("filter-search").value = "";
+      document.getElementById("filter-skill").value = "";
+      document.getElementById("filter-interest").value = "";
+      document.getElementById("filter-availability").value = "";
+      renderDirectory(students);
+      previewEl.classList.add("hidden");
+    });
+
+    // ----------------------------
+    // Requests: Create + Track
+    // ----------------------------
+    const reqMsg = document.getElementById("req-msg");
+    const requestList = document.getElementById("request-list");
+
+    document.getElementById("btn-fill-demo-request").addEventListener("click", () => {
+      document.getElementById("req-type").value = "Speaker Session";
+      document.getElementById("req-topic").value = "Careers in Data Analytics + What skills we look for in interns";
+      document.getElementById("req-date-start").value = "";
+      document.getElementById("req-date-end").value = "";
+      document.getElementById("req-format").value = "Hybrid";
+      document.getElementById("req-audience").value = "Undergraduate Students";
+      document.getElementById("req-notes").value =
+        "Preferred timeframe: early February. 45-minute talk + 15-minute Q&A. Happy to share internship opportunities and host a resume review session.";
+      reqMsg.style.display = "none";
+    });
+
+    document.getElementById("btn-submit-request").addEventListener("click", () => {
+      const session = getSession();
+      if (!session) {
+        alert("Please login as a sponsor first (prototype).");
+        return;
+      }
+
+      const req = {
+        id: "r_" + Math.random().toString(16).slice(2),
+        sponsorEmail: session.email,
+        sponsorCompany: session.company,
+        type: document.getElementById("req-type").value,
+        topic: document.getElementById("req-topic").value.trim(),
+        dateStart: document.getElementById("req-date-start").value,
+        dateEnd: document.getElementById("req-date-end").value,
+        format: document.getElementById("req-format").value,
+        audience: document.getElementById("req-audience").value,
+        notes: document.getElementById("req-notes").value.trim(),
+        status: "Submitted",
+        createdAt: new Date().toISOString()
+      };
+
+      const current = getRequests();
+      current.unshift(req);
+      setRequests(current);
+
+      reqMsg.style.display = "block";
+      reqMsg.className = "note";
+      reqMsg.innerHTML = `<strong>Submitted!</strong> Your request has been saved in this browser (prototype).`;
+
+      renderRequests();
+    });
+
+    function renderRequests() {
+      const session = getSession();
+      const all = getRequests();
+
+      // If logged in, show only their requests; otherwise show none
+      const mine = session ? all.filter(r => r.sponsorEmail === session.email) : [];
+
+      if (!mine.length) {
+        requestList.innerHTML = `
+          <div class="req-card">
+            <h3 style="margin:0; color:#500000;">No requests yet</h3>
+            <div style="margin-top:0.5rem; color:#333;">
+              Submit an engagement request to start tracking collaboration with CMIS leadership.
+            </div>
+            <div class="status" style="margin-top:0.75rem;">Prototype</div>
+          </div>
+        `;
+        return;
+      }
+
+      requestList.innerHTML = mine.map(r => {
+        // Give a slightly “alive” feel: for older requests, show a conceptual progressed status
+        let status = r.status || "Submitted";
+        const ageMinutes = (Date.now() - new Date(r.createdAt).getTime()) / 60000;
+        if (ageMinutes > 2 && status === "Submitted") status = "Under Review";
+        if (ageMinutes > 5 && (status === "Under Review" || status === "Submitted")) status = "Scheduled";
+
+        return `
+          <div class="req-card">
+            <h3 style="margin:0; color:#500000;">${r.type}</h3>
+            <div style="margin-top:0.45rem; color:#333;">
+              <strong>Topic:</strong> ${r.topic || "—"}<br>
+              <strong>Dates:</strong> ${humanDate(r.dateStart)} → ${humanDate(r.dateEnd)}<br>
+              <strong>Format:</strong> ${r.format} | <strong>Audience:</strong> ${r.audience}
+            </div>
+            <div class="status">${status}</div>
+            <div style="margin-top:0.7rem; color:#333; font-size:0.98rem;">
+              <strong>Notes:</strong> ${r.notes ? r.notes : "—"}
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // ----------------------------
+    // Login / Logout
+    // ----------------------------
+    function doLogin(email, company) {
+      const session = { email, company, createdAt: new Date().toISOString() };
+      setSession(session);
+      showSponsorTools(session);
+    }
+
+    document.getElementById("btn-sponsor-login").addEventListener("click", () => {
+      const email = (emailInput.value || "").trim();
+      const company = (companyInput.value || "").trim();
+
+      if (!email) {
+        alert("Enter a sponsor email (prototype).");
+        return;
+      }
+      doLogin(email, company || "Sponsor Organization");
+    });
+
+    document.getElementById("btn-demo-login").addEventListener("click", () => {
+      emailInput.value = "demo.sponsor@company.com";
+      companyInput.value = "Demo Sponsor Co.";
+      doLogin("demo.sponsor@company.com", "Demo Sponsor Co.");
+    });
+
+    document.getElementById("btn-logout").addEventListener("click", () => {
+      clearSession();
+      showLogin();
+    });
+
+    document.getElementById("btn-clear-requests").addEventListener("click", () => {
+      const session = getSession();
+      if (!session) return;
+
+      const all = getRequests();
+      const kept = all.filter(r => r.sponsorEmail !== session.email);
+      setRequests(kept);
+      renderRequests();
+      alert("Prototype: cleared requests for the logged-in sponsor in this browser.");
+    });
+
+    // ----------------------------
+    // Init on load
+    // ----------------------------
+    (function init() {
+      const session = getSession();
+      if (session && session.email) {
+        showSponsorTools(session);
+      } else {
+        showLogin();
+      }
+    })();
+  </script>
 
 </body>
 </html>
