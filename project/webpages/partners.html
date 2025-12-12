@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partners | CMIS Connect</title>
+
+  <!-- Google Font: Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/project/styles/homepage.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .page-wrap {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+    }
+
+    .page-hero {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      border-left: 8px solid #500000;
+    }
+
+    .page-hero h1 {
+      margin: 0 0 0.5rem 0;
+      color: #500000;
+      font-size: 2.3rem;
+      line-height: 1.2;
+    }
+
+    .page-hero p {
+      margin: 0.5rem 0 0;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .badge-row {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      border: 2px solid rgba(80,0,0,0.12);
+      background: rgba(80,0,0,0.04);
+      color: #500000;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .section-title {
+      margin: 2rem 0 1rem;
+      color: #500000;
+      font-size: 1.8rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* tighter grids on this page */
+    .content-grid {
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .partner-card p {
+      margin: 0.4rem 0 0;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    .meta {
+      margin-top: 0.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .pill {
+      font-size: 0.9rem;
+      color: #500000;
+      border: 2px solid rgba(80,0,0,0.14);
+      background: rgba(80,0,0,0.05);
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-weight: 500;
+    }
+
+    /* Testimonials */
+    .note {
+      color: #333;
+      font-size: 1rem;
+      margin: 0.25rem 0 0.75rem;
+    }
+
+    .rating {
+      color: #500000;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 1rem;
+    }
+
+    .quote {
+      margin-top: 0.6rem;
+      color: #333;
+      font-size: 1.05rem;
+      line-height: 1.55;
+    }
+
+    .quote-by {
+      margin-top: 0.8rem;
+      color: #500000;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .subtle {
+      color: #666;
+      font-weight: 400;
+    }
+
+    /* Callout + form */
+    .callout {
+      margin-top: 2rem;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      border: 2px solid rgba(80,0,0,0.12);
+    }
+
+    .callout h3 {
+      margin: 0 0 0.5rem 0;
+      color: #500000;
+      font-size: 1.4rem;
+    }
+
+    .form-grid {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .field label {
+      display: block;
+      font-weight: 600;
+      color: #500000;
+      margin-bottom: 0.35rem;
+    }
+
+    .field input, .field select, .field textarea {
+      width: 100%;
+      padding: 0.75rem 0.85rem;
+      border-radius: 12px;
+      border: 2px solid rgba(80,0,0,0.15);
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      outline: none;
+      background: #fff;
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical;
+      grid-column: 1 / -1;
+    }
+
+    .actions {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      border: 2px solid #500000;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.08s ease;
+      user-select: none;
+    }
+
+    .btn:active { transform: scale(0.98); }
+
+    .btn-primary {
+      background: #500000;
+      color: white;
+    }
+
+    .btn-ghost {
+      background: white;
+      color: #500000;
+    }
+
+    @media (max-width: 800px) {
+      .form-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body id="partners">
+
+  <!-- Floating Logo -->
+  <a href="/project/webpages/homepage.html" class="floating-logo">
+    <img src="/project/images/tamu/cmis.png" alt="CMIS Connect Logo" height="80" width="80">
+  </a>
+
+  <!-- Header -->
+  <header>
+    <h1>CMIS Connect</h1>
+    <h2>Texas A&amp;M University</h2>
+  </header>
+
+  <!-- Navigation -->
+  <section class="top-nav">
+    <div>
+      <p>CMIS Connect</p>
+    </div>
+
+    <input id="menu-toggle" type="checkbox">
+    <label class="menu-button-container" for="menu-toggle">
+      <div class="menu-button"></div>
+    </label>
+
+    <ul class="menu">
+      <li><a href="/project/webpages/homepage.html">Home</a></li>
+      <li><a href="/project/webpages/student-hub.html">Student Hub</a></li>
+      <li><a href="/project/webpages/case-management.html">Case Mgmt</a></li>
+      <li><a href="/project/webpages/sponsor-portal.html">Sponsor Portal</a></li>
+      <li><a href="/project/webpages/mentorship.html">Mentorship</a></li>
+      <li><a href="/project/webpages/analytics.html">Analytics</a></li>
+      <li><a href="/project/webpages/partners.html" class="current">Partners</a></li>
+    </ul>
+  </section>
+
+  <main class="page-wrap">
+
+    <section class="page-hero">
+      <h1>Partners &amp; Sponsors</h1>
+      <p>
+        This page highlights companies that engage with CMIS through guest speakers, recruiting, workshops,
+        case competitions, and networking events.
+      </p>
+
+      <div class="badge-row">
+        <div class="badge">🎤 Guest Speakers</div>
+        <div class="badge">🏆 Case Competitions</div>
+        <div class="badge">💼 Recruiting</div>
+        <div class="badge">🤝 Mentorship</div>
+        <div class="badge">📚 Workshops</div>
+      </div>
+
+      <p class="note" style="margin-top:1rem;">
+        <strong>Note:</strong> Company names and testimonials below are <strong>sample/fictional</strong> for prototype demonstration.
+      </p>
+    </section>
+
+    <h2 class="section-title">Current Partners</h2>
+
+    <section class="content-grid">
+      <article class="card partner-card">
+        <h2>Maroon Ridge Analytics</h2>
+        <p>Data &amp; BI partner supporting workshops on dashboards, KPIs, and reporting fundamentals.</p>
+        <div class="meta">
+          <span class="pill">Analytics</span>
+          <span class="pill">Workshops</span>
+          <span class="pill">Recruiting</span>
+        </div>
+      </article>
+
+      <article class="card partner-card">
+        <h2>Bluebonnet Cloud Services</h2>
+        <p>Cloud partner helping students learn modern architecture, security basics, and cost governance.</p>
+        <div class="meta">
+          <span class="pill">Cloud</span>
+          <span class="pill">Security</span>
+          <span class="pill">Guest Speakers</span>
+        </div>
+      </article>
+
+      <article class="card partner-card">
+        <h2>Lone Star Systems Group</h2>
+        <p>Systems &amp; IT partner supporting mock interviews, internships, and recruiting events.</p>
+        <div class="meta">
+          <span class="pill">IT</span>
+          <span class="pill">Mentorship</span>
+          <span class="pill">Internships</span>
+        </div>
+      </article>
+
+      <article class="card partner-card">
+        <h2>AggieWorks Consulting</h2>
+        <p>Consulting partner sponsoring case competitions and providing real-world project prompts.</p>
+        <div class="meta">
+          <span class="pill">Consulting</span>
+          <span class="pill">Case Comp</span>
+          <span class="pill">Judging</span>
+        </div>
+      </article>
+
+      <article class="card partner-card">
+        <h2>Gulf Coast Cyber Lab</h2>
+        <p>Cybersecurity partner supporting hands-on sessions on risk, identity, and incident response basics.</p>
+        <div class="meta">
+          <span class="pill">Cyber</span>
+          <span class="pill">Workshops</span>
+          <span class="pill">Career Talks</span>
+        </div>
+      </article>
+
+      <article class="card partner-card">
+        <h2>PrairieLine FinTech</h2>
+        <p>FinTech partner showcasing product analytics, compliance awareness, and data-driven decisioning.</p>
+        <div class="meta">
+          <span class="pill">FinTech</span>
+          <span class="pill">Data</span>
+          <span class="pill">Networking</span>
+        </div>
+      </article>
+    </section>
+
+    <h2 class="section-title">Past Partners</h2>
+
+    <section class="content-grid">
+      <article class="card partner-card">
+        <h2>Riverbend Supply Tech</h2>
+        <p>Hosted operations-focused sessions on ERP basics, inventory analytics, and reporting.</p>
+        <div class="meta">
+          <span class="pill">ERP</span>
+          <span class="pill">Operations</span>
+        </div>
+      </article>
+
+      <article class="card partner-card">
+        <h2>Iron Oak Digital</h2>
+        <p>Supported product strategy panels and portfolio reviews for student projects.</p>
+        <div class="meta">
+          <span class="pill">Product</span>
+          <span class="pill">Strategy</span>
+        </div>
+      </article>
+
+      <article class="card partner-card">
+        <h2>Capstone Health Systems</h2>
+        <p>Presented real-world analytics use cases and data quality lessons from healthcare operations.</p>
+        <div class="meta">
+          <span class="pill">Healthcare</span>
+          <span class="pill">Analytics</span>
+        </div>
+      </article>
+
+      <article class="card partner-card">
+        <h2>Sunset Retail Labs</h2>
+        <p>Sponsored a mini-case challenge on customer segmentation and KPI design.</p>
+        <div class="meta">
+          <span class="pill">Retail</span>
+          <span class="pill">Case Comp</span>
+        </div>
+      </article>
+    </section>
+
+    <h2 class="section-title">Testimonials (Sample)</h2>
+    <p class="note">These are fictional sample quotes to demonstrate how partner feedback could appear on CMIS Connect.</p>
+
+    <section class="content-grid">
+      <article class="card">
+        <div class="rating">★★★★★</div>
+        <p class="quote">
+          “CMIS Connect made it easy to identify student talent and coordinate event involvement without back-and-forth emails.”
+        </p>
+        <div class="quote-by">Talent Programs Lead <span class="subtle">— Maroon Ridge Analytics</span></div>
+      </article>
+
+      <article class="card">
+        <div class="rating">★★★★★</div>
+        <p class="quote">
+          “The sponsor request workflow was clear and structured. We could quickly propose a workshop and confirm logistics.”
+        </p>
+        <div class="quote-by">Community Partnerships <span class="subtle">— Bluebonnet Cloud Services</span></div>
+      </article>
+
+      <article class="card">
+        <div class="rating">★★★★☆</div>
+        <p class="quote">
+          “Being able to view opt-in profiles with skills and graduation dates helped us narrow down internship candidates fast.”
+        </p>
+        <div class="quote-by">Recruiting Coordinator <span class="subtle">— Lone Star Systems Group</span></div>
+      </article>
+
+      <article class="card">
+        <div class="rating">★★★★★</div>
+        <p class="quote">
+          “The event visibility and follow-up tools kept our engagement consistent throughout the semester.”
+        </p>
+        <div class="quote-by">Engagement Manager <span class="subtle">— PrairieLine FinTech</span></div>
+      </article>
+    </section>
+
+    <h2 class="section-title">Become a Partner</h2>
+
+    <section class="callout">
+      <h3>Partner Inquiry (Prototype)</h3>
+      <p style="margin:0; color:#333;">
+        In a real CMIS Connect platform, this form would route requests to faculty/CMIS leadership for follow-up.
+        For this prototype, it demonstrates what a structured intake could look like.
+      </p>
+
+      <form onsubmit="event.preventDefault(); alert('Prototype only — form not submitted.');">
+        <div class="form-grid">
+          <div class="field">
+            <label for="company">Company Name</label>
+            <input id="company" type="text" placeholder="Example: Maroon Ridge Analytics" required>
+          </div>
+
+          <div class="field">
+            <label for="contact">Contact Email</label>
+            <input id="contact" type="email" placeholder="name@company.com" required>
+          </div>
+
+          <div class="field">
+            <label for="interest">Primary Interest</label>
+            <select id="interest" required>
+              <option value="" selected disabled>Select one</option>
+              <option>Guest speaking</option>
+              <option>Recruiting / resumes</option>
+              <option>Case competition sponsorship</option>
+              <option>Workshop hosting</option>
+              <option>Mentorship / networking</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="timeline">Ideal Timing</label>
+            <input id="timeline" type="text" placeholder="Example: Spring semester, Feb–Apr">
+          </div>
+
+          <div class="field" style="grid-column:1/-1;">
+            <label for="message">Notes</label>
+            <textarea id="message" placeholder="Tell us what you’d like to support (speaker topic, recruiting goals, etc.)."></textarea>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+          <a class="btn btn-ghost" href="/project/webpages/sponsor-portal.html">View Sponsor Portal</a>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CMIS Connect | Texas A&amp;M University. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
