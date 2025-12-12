@@ -28,6 +28,32 @@
       border-left: 8px solid #500000;
     }
 
+    /* =========================
+       PROFILE IMAGE (NEW)
+       ========================= */
+    .profile-image-wrap {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .profile-image-wrap img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #500000;
+      background: #fff;
+    }
+
+    .photo-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
     .profile-header {
       display: flex;
       justify-content: space-between;
@@ -230,6 +256,23 @@
 
     <section class="profile-card">
 
+      <!-- PROFILE IMAGE (NEW) -->
+      <div class="profile-image-wrap">
+        <img
+          id="profile-photo"
+          src="/project/images/tamu/profile-placeholder.png"
+          alt="Student Profile Photo"
+        />
+
+        <div class="photo-actions">
+          <label class="btn btn-ghost">
+            Upload Photo
+            <input id="photo-upload" type="file" accept="image/*" hidden>
+          </label>
+          <div class="muted">Prototype: image saves in browser storage.</div>
+        </div>
+      </div>
+
       <div class="profile-header">
         <div>
           <h1 id="display-name">Demo Student</h1>
@@ -237,7 +280,6 @@
         </div>
 
         <div class="top-actions">
-          <!-- Prototype: non-functional -->
           <button class="btn btn-primary" id="btn-edit" type="button">Edit Profile</button>
           <a class="btn btn-ghost" href="/project/webpages/student-hub.html">Back to Hub</a>
         </div>
@@ -324,11 +366,11 @@
 
       </div>
 
-      <!-- Sponsor view (what sponsors would see) -->
-      <section class="box" id="sponsor-view" style="margin-top:1rem;">
+      <!-- Sponsor view -->
+      <section class="box hidden" id="sponsor-view" style="margin-top:1rem;">
         <h2>Sponsor View</h2>
         <p class="muted">
-          This section simulates a sponsor-facing preview. In Sponsor View mode, personal details are limited and
+          This simulates a sponsor-facing preview. In Sponsor View mode, personal details are limited and
           sponsors see only opt-in fields.
         </p>
 
@@ -350,8 +392,8 @@
         </div>
       </section>
 
-      <!-- Faculty/Admin read-only view -->
-      <section class="box" id="faculty-view" style="margin-top:1rem;">
+      <!-- Faculty/Admin view -->
+      <section class="box hidden" id="faculty-view" style="margin-top:1rem;">
         <h2>Faculty/Admin View (Read-Only)</h2>
         <p class="muted">
           This simulates a CMIS leadership view used for oversight and support (read-only).
@@ -386,9 +428,7 @@
   </footer>
 
   <script>
-    // ---- Optional: Pull logged-in demo name/email from localStorage if you used the Student Hub prototype ----
-    // Uses the same keys you already had:
-    // USERS_KEY = "cmis_users"; SESSION_KEY = "cmis_session";
+    // ---- Pull logged-in demo name/email from localStorage (from Student Hub prototype) ----
     (function initProfile() {
       try {
         const session = JSON.parse(localStorage.getItem("cmis_session"));
@@ -400,9 +440,7 @@
             document.getElementById("display-email").textContent = user.email;
           }
         }
-      } catch (e) {
-        // ignore
-      }
+      } catch (e) {}
     })();
 
     // ---- Toggle views ----
@@ -416,10 +454,6 @@
       facultyView.classList.toggle("hidden", !facultyToggle.checked);
     }
 
-    // Default: hide both until toggled on (keeps page clean)
-    sponsorView.classList.add("hidden");
-    facultyView.classList.add("hidden");
-
     sponsorToggle.addEventListener("change", updateViews);
     facultyToggle.addEventListener("change", updateViews);
 
@@ -430,11 +464,8 @@
     const resumeStatus = document.getElementById("resume-status");
     const resumeMsg = document.getElementById("resume-msg");
 
-    // Load last saved filename (prototype only)
     const savedResumeName = localStorage.getItem("cmis_resume_name");
-    if (savedResumeName) {
-      resumeStatus.textContent = savedResumeName;
-    }
+    if (savedResumeName) resumeStatus.textContent = savedResumeName;
 
     resumeFile.addEventListener("change", () => {
       fileName.textContent = resumeFile.files?.[0]?.name || "None";
@@ -448,8 +479,6 @@
         resumeMsg.textContent = "Please choose a file first (prototype).";
         return;
       }
-
-      // Prototype: store filename only (no actual upload on GitHub Pages)
       localStorage.setItem("cmis_resume_name", picked.name);
       resumeStatus.textContent = picked.name;
 
@@ -460,6 +489,25 @@
     // ---- Edit Profile prototype ----
     document.getElementById("btn-edit").addEventListener("click", () => {
       alert("Prototype: Edit Profile would open an editable form here (requires backend to save permanently).");
+    });
+
+    // ---- Profile Photo Upload (Prototype) ----
+    const photoInput = document.getElementById("photo-upload");
+    const profilePhoto = document.getElementById("profile-photo");
+
+    const savedPhoto = localStorage.getItem("cmis_profile_photo");
+    if (savedPhoto) profilePhoto.src = savedPhoto;
+
+    photoInput.addEventListener("change", () => {
+      const file = photoInput.files?.[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = () => {
+        profilePhoto.src = reader.result;
+        localStorage.setItem("cmis_profile_photo", reader.result);
+      };
+      reader.readAsDataURL(file);
     });
   </script>
 
