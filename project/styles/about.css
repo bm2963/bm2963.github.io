@@ -9,7 +9,7 @@ section{
   font-size:28px;
 }
 header {
-  background-color:  darkorange;
+  background-color:  #500000;
   color: #fff;
   padding: 1rem 0;
   text-align: center;
@@ -64,7 +64,7 @@ nav a {
 }
 
 nav a:hover {
-  background: darkorange;
+  background: #500000;
 }
 .content-grid {
 display: grid;
@@ -88,7 +88,7 @@ transform: translateY(-5px);
 
 .card h2 {
 margin-bottom: 0.8rem;
-color: #d35400; /* SHSU orange? */
+color: #500000; /* SHSU orange? */
 }
 
 .card p {
