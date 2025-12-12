@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Competition Management | CMIS Connect</title>
+
+  <!-- Google Font: Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/project/styles/homepage.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .page-wrap {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+    }
+
+    .page-hero {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      border-left: 8px solid #500000;
+    }
+
+    .page-hero h1 {
+      margin: 0 0 0.5rem 0;
+      color: #500000;
+      font-size: 2.3rem;
+      line-height: 1.2;
+    }
+
+    .page-hero p {
+      margin: 0.5rem 0 0;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .section-title {
+      margin: 2rem 0 1rem;
+      color: #500000;
+      font-size: 1.8rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Quick capability strip */
+    .strip {
+      margin-top: 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .strip-item {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      border: 2px solid rgba(80,0,0,0.10);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+
+    .strip-item strong {
+      color: #500000;
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+
+    /* Cards on this page: keep spacing tighter */
+    .content-grid {
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    /* Simple workflow box */
+    .workflow {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      border: 2px solid rgba(80,0,0,0.12);
+    }
+
+    .workflow ol {
+      margin: 0.75rem 0 0;
+      padding-left: 1.25rem;
+      color: #333;
+    }
+
+    .workflow li {
+      margin: 0.55rem 0;
+    }
+
+    /* Placeholder for future wireframes */
+    .placeholder {
+      margin-top: 1rem;
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.25rem;
+      border: 2px dashed rgba(80,0,0,0.25);
+      color: #333;
+    }
+
+    .placeholder span {
+      color: #500000;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body id="case-management">
+
+  <!-- Floating Logo -->
+  <a href="/project/webpages/homepage.html" class="floating-logo">
+    <img src="/project/images/tamu/cmis.png" alt="CMIS Connect Logo" height="80" width="80">
+  </a>
+
+  <!-- Header -->
+  <header>
+    <h1>CMIS Connect</h1>
+    <h2>Texas A&amp;M University</h2>
+  </header>
+
+  <!-- Navigation (same structure across site) -->
+  <section class="top-nav">
+    <div>
+      <p>CMIS Connect</p>
+    </div>
+
+    <input id="menu-toggle" type="checkbox">
+    <label class="menu-button-container" for="menu-toggle">
+      <div class="menu-button"></div>
+    </label>
+
+    <ul class="menu">
+      <li><a href="/project/webpages/homepage.html">Home</a></li>
+      <li><a href="/project/webpages/about.html">About</a></li>
+      <li><a href="/project/webpages/student-hub.html">Student Hub</a></li>
+      <li><a href="/project/webpages/case-management.html" class="current">Case Mgmt</a></li>
+      <li><a href="/project/webpages/sponsor-portal.html">Sponsor Portal</a></li>
+      <li><a href="/project/webpages/mentorship.html">Mentorship</a></li>
+      <li><a href="/project/webpages/analytics.html">Analytics</a></li>
+    </ul>
+  </section>
+
+  <main class="page-wrap">
+
+    <section class="page-hero">
+      <h1>Case Competition Management</h1>
+      <p>
+        A faculty-facing module that digitizes the entire case competition lifecycle — from team setup and submissions
+        to judging assignments, scoring, and results publication.
+      </p>
+
+      <div class="strip">
+        <div class="strip-item">
+          <strong>Team Management</strong>
+          Create teams, roster students, and track eligibility.
+        </div>
+        <div class="strip-item">
+          <strong>Submission Workflow</strong>
+          Collect deliverables and enforce deadlines in one place.
+        </div>
+        <div class="strip-item">
+          <strong>Rubrics &amp; Scoring</strong>
+          Standardize evaluation and reduce manual calculation errors.
+        </div>
+        <div class="strip-item">
+          <strong>Judging Assignments</strong>
+          Assign judges, manage conflicts, and publish results.
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Core Faculty Capabilities</h2>
+
+    <section class="content-grid">
+      <article class="card">
+        <h2>Competition Setup</h2>
+        <p>
+          Create competition events, define rules, add timelines, attach case packets, and publish requirements to students.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Team &amp; Roster Management</h2>
+        <p>
+          Manage teams, student rosters, roles, and participation status. Track who is eligible and confirm registrations.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Digital Submissions</h2>
+        <p>
+          Collect slide decks, reports, and supporting files. Automatically timestamp submissions and enforce due dates.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Rubrics Builder</h2>
+        <p>
+          Build standardized rubrics by category, weight, and scoring scale. Reuse templates across semesters.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Judge Assignment</h2>
+        <p>
+          Assign judges to teams, avoid conflicts of interest, and provide judging instructions and scoring access.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Scoring &amp; Results</h2>
+        <p>
+          Aggregate scores automatically, generate rankings, and publish results. Keep an audit trail for transparency.
+        </p>
+      </article>
+    </section>
+
+    <h2 class="section-title">Competition Workflow</h2>
+
+    <section class="workflow">
+      <p style="margin:0; color:#333;">
+        CMIS Connect supports a simple, repeatable process for each competition:
+      </p>
+      <ol>
+        <li><strong>Faculty creates a competition</strong> (deadlines, rules, deliverables, rubric template).</li>
+        <li><strong>Students register and form teams</strong> (or faculty assigns teams as needed).</li>
+        <li><strong>Teams submit deliverables</strong> (slides/reports) through the platform.</li>
+        <li><strong>Faculty assigns judges</strong> and shares scoring access + instructions.</li>
+        <li><strong>Judges score using rubrics</strong> (standardized and weighted scoring).</li>
+        <li><strong>Results are published</strong> to students and sponsors (as allowed).</li>
+        <li><strong>Analytics update automatically</strong> for outcomes, participation, and engagement metrics.</li>
+      </ol>
+    </section>
+
+    <div class="placeholder">
+      <span>Optional (later):</span> Insert wireframes here for Team Management, Submission Upload, Rubric Builder, and Judge Scoring screens.
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CMIS Connect | Texas A&amp;M University. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
