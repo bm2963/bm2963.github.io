@@ -22,15 +22,70 @@
       transform: translateY(20px);
       transition: all 0.6s ease-in-out;
     }
-
     .card.reveal {
       opacity: 1;
       transform: translateY(0);
     }
 
-    * {
-      -webkit-tap-highlight-color: transparent;
+    * { -webkit-tap-highlight-color: transparent; }
+
+    /* Home-only: About section wrappers (keeps main CSS untouched) */
+    .page-wrap {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
     }
+
+    .page-hero {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      border-left: 8px solid #500000;
+    }
+
+    .page-hero h2 {
+      margin: 0 0 0.5rem 0;
+      color: #500000;
+      font-size: 2.1rem;
+      line-height: 1.2;
+    }
+
+    .page-hero p {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .section-title {
+      margin: 2rem 0 1rem;
+      color: #500000;
+      font-size: 1.8rem;
+      letter-spacing: 0.5px;
+    }
+
+    .callout {
+      margin-top: 2rem;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      border: 2px solid rgba(80,0,0,0.12);
+    }
+
+    .callout h3 {
+      margin: 0 0 0.5rem 0;
+      color: #500000;
+      font-size: 1.4rem;
+    }
+
+    .callout ul {
+      margin: 0.75rem 0 0;
+      padding-left: 1.25rem;
+      color: #333;
+    }
+
+    .callout li { margin: 0.35rem 0; }
   </style>
 </head>
 
@@ -58,18 +113,15 @@
       <div class="menu-button"></div>
     </label>
 
+    <!-- ✅ FIXED: single UL only (no nested menu UL) -->
     <ul class="menu">
-<ul class="menu">
-  <li><a href="/project/webpages/homepage.html" class="current">Home</a></li>
-  <li><a href="/project/webpages/about.html">About</a></li>
-  <li><a href="/project/webpages/student-hub.html">Student Hub</a></li>
-  <li><a href="/project/webpages/case-management.html">Case Mgmt</a></li>
-  <li><a href="/project/webpages/sponsor-portal.html">Sponsor Portal</a></li>
-  <li><a href="/project/webpages/mentorship.html">Mentorship</a></li>
-  <li><a href="/project/webpages/analytics.html">Analytics</a></li>
-</ul>
-
-
+      <li><a href="/project/webpages/homepage.html" class="current">Home</a></li>
+      <li><a href="/project/webpages/homepage.html#about">About</a></li>
+      <li><a href="/project/webpages/student-hub.html">Student Hub</a></li>
+      <li><a href="/project/webpages/case-management.html">Case Mgmt</a></li>
+      <li><a href="/project/webpages/sponsor-portal.html">Sponsor Portal</a></li>
+      <li><a href="/project/webpages/mentorship.html">Mentorship</a></li>
+      <li><a href="/project/webpages/analytics.html">Analytics</a></li>
     </ul>
   </section>
 
@@ -83,8 +135,13 @@
   <!-- Events -->
   <section class="events">
     <h2>CMIS Events &amp; Engagement</h2>
-    <iframe src="https://calendar.google.com/calendar/embed?src=d6805ad1a782e4a6ae56e3ccd0005dc2adaf6f28733fca60b3f026489cfd21db%40group.calendar.google.com&ctz=America%2FChicago" 
-    style="border: 0" width="800" height="600" frameborder="0" scrolling="no">
+    <iframe
+      src="https://calendar.google.com/calendar/embed?src=d6805ad1a782e4a6ae56e3ccd0005dc2adaf6f28733fca60b3f026489cfd21db%40group.calendar.google.com&ctz=America%2FChicago"
+      style="border: 0"
+      width="800"
+      height="600"
+      frameborder="0"
+      scrolling="no">
     </iframe>
   </section>
 
@@ -136,6 +193,86 @@
     </article>
 
   </section>
+
+  <!-- =======================
+       ABOUT (Merged)
+       ======================= -->
+  <main class="page-wrap" id="about">
+
+    <section class="page-hero">
+      <h2>About CMIS Connect</h2>
+      <p>
+        CMIS Connect is a conceptual platform designed to unify CMIS programs into one streamlined digital experience.
+        It supports students, faculty, sponsors, and alumni with a centralized space for engagement, operations, and long-term community growth.
+      </p>
+    </section>
+
+    <h2 class="section-title">Our Vision &amp; Goal</h2>
+    <section class="content-grid" style="padding:0; margin-top:1rem;">
+      <article class="card">
+        <h2>Vision</h2>
+        <p>
+          To unify all CMIS programs into one intuitive digital platform that streamlines student engagement,
+          enhances faculty operations, strengthens industry partnerships, and empowers alumni involvement.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Goal</h2>
+        <p>
+          Improve the CMIS community experience by providing one platform that supports students, faculty,
+          sponsors, and alumni — while reducing manual administrative work and improving accuracy across operations.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Why It Matters</h2>
+        <p>
+          CMIS activities often live across multiple tools and manual processes. CMIS Connect brings everything together so
+          opportunities are easier to find, workflows are more efficient, and engagement becomes measurable and sustainable.
+        </p>
+      </article>
+    </section>
+
+    <h2 class="section-title">Who It Serves</h2>
+    <section class="content-grid" style="padding:0; margin-top:1rem;">
+      <article class="card">
+        <h2>Students</h2>
+        <p>Register for events, track involvement, build a professional profile, upload resumes, and discover opportunities.</p>
+      </article>
+
+      <article class="card">
+        <h2>Faculty</h2>
+        <p>Manage competitions, logistics, communication, scoring workflows, and publishing results — all in one place.</p>
+      </article>
+
+      <article class="card">
+        <h2>Industry Partners</h2>
+        <p>Engage with opt-in student talent, request involvement, participate in events, and support CMIS initiatives.</p>
+      </article>
+
+      <article class="card">
+        <h2>Alumni</h2>
+        <p>Reconnect through mentorship, give back through involvement, and help students grow through real-world guidance.</p>
+      </article>
+    </section>
+
+    <section class="callout">
+      <h3>What this website represents</h3>
+      <p style="margin:0; color:#333;">
+        This website is a prototype that demonstrates what CMIS Connect could look like as a unified platform.
+        Each page represents a major capability area of the product.
+      </p>
+      <ul>
+        <li>Student Engagement Hub</li>
+        <li>Case Competition Management</li>
+        <li>Sponsor Access Portal</li>
+        <li>Mentorship Matching System</li>
+        <li>Administrative Analytics Dashboard</li>
+      </ul>
+    </section>
+
+  </main>
 
   <!-- Socials -->
   <div class="socials">
