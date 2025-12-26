@@ -273,3 +273,6 @@ details p{
   .nav{display:none}
   .nav-toggle{display:inline-flex}
 }
+@media (min-width: 1000px){
+  .steps{ grid-template-columns: repeat(4, 1fr); }
+}
